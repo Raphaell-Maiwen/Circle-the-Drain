@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -13,6 +14,8 @@ public class CharacterInputHandler : MonoBehaviour
     private InputAction _movementAction;
     private InputAction _rotationAction;
     private InputAction _interactAction;
+
+    [SerializeField] private InteractMessenger _interactMessenger;
 
     public Vector2 RotationInput { get; private set; }
     public bool MovementTriggered { get; private set; }
@@ -40,7 +43,11 @@ public class CharacterInputHandler : MonoBehaviour
 
         _interactAction.performed += inputInfo => InteractTriggered = true;
         _interactAction.canceled += inputInfo => InteractTriggered = false;
+
+        _interactAction.performed += _interactMessenger.SendInteractMessage;
     }
+
+    
 
     private void OnEnable()
     {
