@@ -1,5 +1,21 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-2400886423662607953
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da692e001514ec24dbc4cca1949ff7e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 13
+  hdPluginSubTargetMaterialVersions:
+    m_Keys: []
+    m_Values: 
 --- !u!21 &2100000
 Material:
   serializedVersion: 8
@@ -8,19 +24,29 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Water
-  m_Shader: {fileID: 4800000, guid: 9560d353b85e16d4b8d99f19e5ef8961, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: e36f6559982349a4db4fe245483c0fd6, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
+  m_ValidKeywords:
+  - _DISABLE_SSR_TRANSPARENT
+  - _ENABLE_FOG_ON_TRANSPARENT
+  - _SURFACE_TYPE_TRANSPARENT
   m_InvalidKeywords:
   - _ISFOAM_ON
   - _ISMASK_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
+  m_CustomRenderQueue: 2750
+  stringTagMap:
+    MotionVector: User
+    RenderType: Transparent
+  disabledShaderPasses:
+  - TransparentDepthPrepass
+  - TransparentDepthPostpass
+  - TransparentBackface
+  - RayTracingPrepass
+  - MOTIONVECTORS
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
@@ -38,7 +64,7 @@ Material:
         m_Scale: {x: 0.03, y: 0.025}
         m_Offset: {x: -0.02, y: -0.02}
     - _MaskSurface:
-        m_Texture: {fileID: 2800000, guid: 5e7ade402496dfa49a6a4df389fd3158, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 0.1, y: 0.1}
         m_Offset: {x: 0.01, y: 0.02}
     - _NormalMap:
@@ -53,21 +79,50 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _AddPrecomputedVelocity: 0
+    - _AlphaCutoffEnable: 0
+    - _AlphaDstBlend: 10
+    - _AlphaSrcBlend: 1
     - _AmbientFresnel: 6
     - _AngleOffset: 10
     - _BUILTIN_QueueControl: -1
     - _BUILTIN_QueueOffset: 0
+    - _BlendMode: 0
     - _CausticsAmount: 1
     - _Caustics_Enabled: 1
     - _Caustics_Opacity: 1
     - _Caustics_Scale: 0.05
     - _CellDensity: 10
+    - _ConservativeDepthOffsetEnable: 0
+    - _CullMode: 2
+    - _CullModeForward: 2
     - _Depth: 3.1
+    - _DepthOffsetEnable: 0
     - _Depth_Strength: 0.15
     - _Distortion_Scale: 500
     - _Distortion_Speed: 0.0001
+    - _DoubleSidedEnable: 0
+    - _DoubleSidedGIMode: 0
+    - _DoubleSidedNormalMode: 2
+    - _DstBlend: 10
+    - _DstBlend2: 10
+    - _EnableBlendModePreserveSpecularLighting: 1
+    - _EnableFogOnTransparent: 1
+    - _ExcludeFromTUAndAA: 0
     - _FoamAmount: 0.65
     - _FoamCutoff: 0.07
     - _Foam_Enabled: 1
@@ -75,17 +130,53 @@ Material:
     - _Foam_Noise_Scale: 200
     - _Foam_Size: 0
     - _Foam_Speed: 0.01
+    - _ISCAUSTICS: 0
+    - _ISFOAM: 0
     - _IsCaustics: 0
     - _IsFoam: 1
     - _IsMask: 1
+    - _MaskOpcaity: 1
+    - _MaterialID: 1
+    - _MaterialTypeMask: 2
+    - _Metallic: 0
     - _Mettalic: 0
     - _NormalStrength: 0.5
     - _Normal_Strength: 0.3
+    - _OpaqueCullMode: 2
+    - _PerPixelSorting: 0
+    - _RayTracing: 0
+    - _ReceivesSSR: 1
+    - _ReceivesSSRTransparent: 0
     - _Refraction: 0.01
+    - _RefractionModel: 0
     - _Refraction_Enabled: 0
     - _Refraction_Strength: 0.147
+    - _RenderQueueType: 3
+    - _RequireSplitLighting: 0
     - _Smoothness: 0.017
+    - _SrcBlend: 1
+    - _StencilRef: 0
+    - _StencilRefDepth: 0
+    - _StencilRefDistortionVec: 4
+    - _StencilRefGBuffer: 2
+    - _StencilRefMV: 32
+    - _StencilWriteMask: 6
+    - _StencilWriteMaskDepth: 9
+    - _StencilWriteMaskDistortionVec: 4
+    - _StencilWriteMaskGBuffer: 15
+    - _StencilWriteMaskMV: 41
+    - _SupportDecals: 1
     - _SurfaceOpacity: 1
+    - _SurfaceType: 1
+    - _TransmissionEnable: 1
+    - _TransparentBackfaceEnable: 0
+    - _TransparentCullMode: 2
+    - _TransparentDepthPostpassEnable: 0
+    - _TransparentDepthPrepassEnable: 0
+    - _TransparentSortPriority: 0
+    - _TransparentWritingMotionVec: 0
+    - _TransparentZWrite: 0
+    - _UseShadowThreshold: 0
     - _VoronoiDensity: 9
     - _VoronoiLevel: 0
     - _VoronoiOffset: 2
@@ -93,13 +184,27 @@ Material:
     - _Water_Texture_Opacity: 1
     - _WaveSize: 0.3
     - _WaveSize2: 0.15
+    - _ZTestDepthEqualForOpaque: 4
+    - _ZTestGBuffer: 4
+    - _ZTestTransparent: 4
+    - _ZWrite: 0
     m_Colors:
+    - _CausticsDisplacement: {r: 0, g: 0, b: 0, a: 0}
+    - _CausticsTiling: {r: 1, g: 1, b: 0, a: 0}
     - _ColorAmbient: {r: 0.46169454, g: 0.8172087, b: 0.9339623, a: 1}
     - _ColorDeep: {r: 0.1381274, g: 0.4551066, b: 0.754717, a: 1}
     - _ColorFoam: {r: 0.86536133, g: 0.9716981, b: 0.9598829, a: 1}
     - _ColorShallow: {r: 0.31318972, g: 0.66732496, b: 0.8018868, a: 1}
     - _ColorSurface: {r: 0.4132787, g: 0.7937468, b: 0.8867924, a: 1}
     - _Deep_Color: {r: 0, g: 0, b: 0, a: 0}
+    - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
+    - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
+    - _FoamDisplacement: {r: 0, g: 0, b: 0, a: 0}
+    - _FoamTiling: {r: 0, g: 0, b: 0, a: 0}
+    - _NormalDisplacement: {r: 0, g: 0, b: 0, a: 0}
+    - _NormalTiling: {r: 1, g: 1, b: 0, a: 0}
+    - _SurfaceDisplacement: {r: 0, g: 0, b: 0, a: 0}
+    - _SurfaceTiling: {r: 0, g: 0, b: 0, a: 0}
     - _Surface_Color: {r: 0, g: 0, b: 0, a: 0}
     - _VoronoiST: {r: 0.05, g: 0.05, b: 0.05, a: 0.05}
     - _VoronoiSpeed: {r: 1, g: 1, b: 1, a: 1}
