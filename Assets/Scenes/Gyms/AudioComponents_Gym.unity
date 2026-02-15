@@ -425,7 +425,7 @@ AudioChorusFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 586647821}
-  m_Enabled: 1
+  m_Enabled: 0
   m_DryMix: 0.5
   m_WetMix1: 1
   m_WetMix2: 0.8
@@ -571,7 +571,7 @@ AudioDistortionFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 682539485}
-  m_Enabled: 1
+  m_Enabled: 0
   m_DistortionLevel: 0.9
 --- !u!165 &682539489
 AudioHighPassFilter:
@@ -580,7 +580,7 @@ AudioHighPassFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 682539485}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CutoffFrequency: 1000
   m_HighpassResonanceQ: 5
 --- !u!1 &1098626029
@@ -863,7 +863,7 @@ AudioHighPassFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1656580863}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CutoffFrequency: 1000
   m_HighpassResonanceQ: 1
 --- !u!1 &1753889074
@@ -1335,7 +1335,7 @@ AudioReverbFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2062871566}
-  m_Enabled: 1
+  m_Enabled: 0
   m_DryLevel: 0
   m_Room: -1000
   m_RoomHF: -270
