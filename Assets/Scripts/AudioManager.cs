@@ -1,18 +1,24 @@
 using UnityEngine;
 using UnityEngine.Audio;
 using AYellowpaper.SerializedCollections;
-using NUnit.Framework.Constraints;
+using System.Collections.Generic;
+using System.Xml.Schema;
 
 public class AudioManager : MonoBehaviour
 {
     public SerializedDictionary<string, AudioClip> _bgm;
     public SerializedDictionary<string, AudioClip> _sfx;
 
-    public SerializedDictionary<string, AudioSource> _gameSounds = new SerializedDictionary<string, AudioSource>();
+    public Dictionary<string, AudioSource> _gameSounds = new Dictionary<string, AudioSource>();
 
     private void Awake()
     {
         foreach (var sound in _bgm)
+        {
+            AddSound(sound.Key, sound.Value);
+        }
+
+        foreach (var sound in _sfx)
         {
             AddSound(sound.Key, sound.Value);
         }
@@ -26,11 +32,6 @@ public class AudioManager : MonoBehaviour
         _gameSounds.Add(soundName, audioSource);
     }
 
-    private void AddAudioComponent(Component audioComponent)
-    {
-        
-    }
-
     public void PlaySound(string soundName)
     {
         if (_gameSounds.ContainsKey(soundName))
@@ -41,5 +42,25 @@ public class AudioManager : MonoBehaviour
         {
             Debug.LogError("Sound name doesn't exist");
         }
+    }
+
+    //Add channels and stuff
+    public void AddFilter(AudioDistortionFilter filter, float distortionLevel)
+    {
+        gameObject.TryGetComponent<AudioDistortionFilter>(out AudioDistortionFilter distortionFilter);
+        if (distortionFilter)
+        {
+            distortionFilter.distortionLevel += distortionLevel;
+        }
+        else
+        {
+            AudioDistortionFilter newFilter = gameObject.AddComponent<AudioDistortionFilter>();
+            newFilter.distortionLevel = distortionLevel;
+        }
+    }
+
+    public void AddFilter(AudioEchoFilter filter)
+    {
+
     }
 }
