@@ -32,11 +32,12 @@ public class AudioManager : MonoBehaviour
         _gameSounds.Add(soundName, audioSource);
     }
 
-    public void PlaySound(string soundName)
+    public void PlaySound(string soundName, bool onLoop)
     {
         if (_gameSounds.ContainsKey(soundName))
         {
             _gameSounds[soundName].Play();
+            _gameSounds[soundName].loop = onLoop;
         }
         else
         {

@@ -159,11 +159,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1197573490184309665, guid: 2e76279a2c8d6684c8a81f3b4f0afadf, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 1.5598
+      objectReference: {fileID: 0}
+    - target: {fileID: 1197573490184309665, guid: 2e76279a2c8d6684c8a81f3b4f0afadf, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.5598
       objectReference: {fileID: 0}
     - target: {fileID: 1197573490184309665, guid: 2e76279a2c8d6684c8a81f3b4f0afadf, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1
+      value: 1.5598
       objectReference: {fileID: 0}
     - target: {fileID: 1197573490184309665, guid: 2e76279a2c8d6684c8a81f3b4f0afadf, type: 3}
       propertyPath: m_LocalPosition.x
@@ -255,3 +259,4 @@ MonoBehaviour:
   _interactableCanvas: {fileID: 1180675497134667358}
   _interactMessenger: {fileID: 11400000, guid: c3fe3f675f61cbb48ae1a72ab2063f8f, type: 2}
   _root: {fileID: 6382189603179772731}
+  _audioManager: {fileID: 0}

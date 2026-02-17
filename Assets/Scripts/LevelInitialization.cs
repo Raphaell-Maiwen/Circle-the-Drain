@@ -7,6 +7,6 @@ public class LevelInitialization : MonoBehaviour
 
     void Start()
     {
-        _audioManager.PlaySound(_levelSong);
+        _audioManager.PlaySound(_levelSong, true);
     }
 }
