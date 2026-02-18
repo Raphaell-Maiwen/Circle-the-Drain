@@ -3,6 +3,7 @@ using UnityEngine;
 public class RocketCollectableTriggerZone : InteractableTriggerZone
 {
     [SerializeField] private GameObject _root;
+    [SerializeField] private CandyLevelProgress _progress;
 
     private void Awake()
     {
@@ -22,7 +23,7 @@ public class RocketCollectableTriggerZone : InteractableTriggerZone
 
     protected override void OnInteractPressed()
     {
-        //Add a rocket in inventory
+        _progress.Add();
         AudioManager.Instance.AddFilter(new AudioDistortionFilter(), 0.1f);
         Destroy(_root);
     }
