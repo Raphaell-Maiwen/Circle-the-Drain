@@ -23,7 +23,7 @@ public class RocketCollectableTriggerZone : InteractableTriggerZone
     protected override void OnInteractPressed()
     {
         //Add a rocket in inventory
-        _audioManagerMessenger.AudioManager.AddFilter(new AudioDistortionFilter(), 0.1f);
+        AudioManager.Instance.AddFilter(new AudioDistortionFilter(), 0.1f);
         Destroy(_root);
     }
 }

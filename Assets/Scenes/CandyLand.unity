@@ -8651,7 +8651,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelInitialization
   _levelSong: CaliforniaGurls
-  _audioManagerMessenger: {fileID: 0}
+  _audioManagerMessenger: {fileID: 11400000, guid: 716256d8569c2d549a06483d62ccab6b, type: 2}
 --- !u!4 &691329112
 Transform:
   m_ObjectHideFlags: 0
