@@ -3,10 +3,10 @@ using UnityEngine;
 public class LevelInitialization : MonoBehaviour
 {
     [SerializeField] private string _levelSong;
-    [SerializeField] private AudioManager _audioManager;
+    [SerializeField] private AudioManagerMessenger _audioManagerMessenger;
 
     void Start()
     {
-        _audioManager.PlaySound(_levelSong, true);
+        _audioManagerMessenger.AudioManager.PlaySound(_levelSong, true);
     }
 }

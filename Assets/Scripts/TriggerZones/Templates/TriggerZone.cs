@@ -2,6 +2,8 @@ using UnityEngine;
 
 public abstract class TriggerZone : MonoBehaviour
 {
+    [SerializeField] protected AudioManagerMessenger _audioManagerMessenger;
+
     protected void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Player")

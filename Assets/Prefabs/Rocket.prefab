@@ -256,7 +256,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7e5d2e358ff9244ebba59858babe2b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RocketCollectableTriggerZone
+  _audioManagerMessenger: {fileID: 11400000, guid: 716256d8569c2d549a06483d62ccab6b, type: 2}
   _interactableCanvas: {fileID: 1180675497134667358}
   _interactMessenger: {fileID: 11400000, guid: c3fe3f675f61cbb48ae1a72ab2063f8f, type: 2}
   _root: {fileID: 6382189603179772731}
-  _audioManager: {fileID: 0}

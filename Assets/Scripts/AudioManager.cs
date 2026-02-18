@@ -2,7 +2,6 @@ using UnityEngine;
 using UnityEngine.Audio;
 using AYellowpaper.SerializedCollections;
 using System.Collections.Generic;
-using System.Xml.Schema;
 
 public class AudioManager : MonoBehaviour
 {
