@@ -260,3 +260,4 @@ MonoBehaviour:
   _interactMessenger: {fileID: 11400000, guid: c3fe3f675f61cbb48ae1a72ab2063f8f, type: 2}
   _root: {fileID: 6382189603179772731}
   _progress: {fileID: 11400000, guid: 94a659f7522d762458bab7479e8deab2, type: 2}
+  _zoneChannel: {fileID: 11400000, guid: 0eb0eeb2cffd1c447ba76e589b1f95b8, type: 2}
