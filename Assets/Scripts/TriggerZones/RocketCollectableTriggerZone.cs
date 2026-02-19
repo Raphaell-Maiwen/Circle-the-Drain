@@ -38,7 +38,7 @@ public class RocketCollectableTriggerZone : InteractableTriggerZone
     {
         _progress.Add();
         AudioManager.Instance.AddFilter(new AudioDistortionFilter(), 0.1f);
-        _zoneChannel.PlayerExit();
+        OnPlayerExit();
         Destroy(_root);
     }
 }

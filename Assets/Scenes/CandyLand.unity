@@ -3392,15 +3392,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1760104105270699900, guid: b89466388898691498051bdd140fab2a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -907.16235
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1760104105270699900, guid: b89466388898691498051bdd140fab2a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.04492665
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1760104105270699900, guid: b89466388898691498051bdd140fab2a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 711.18256
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5906183314595851520, guid: b89466388898691498051bdd140fab2a, type: 3}
       propertyPath: _root
@@ -3409,6 +3409,10 @@ PrefabInstance:
     - target: {fileID: 6382189603179772731, guid: b89466388898691498051bdd140fab2a, type: 3}
       propertyPath: m_Name
       value: Rocket (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6382189603179772731, guid: b89466388898691498051bdd140fab2a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8910238893954217439, guid: b89466388898691498051bdd140fab2a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12229,7 +12233,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &944906208
 MonoBehaviour:
   m_ObjectHideFlags: 0

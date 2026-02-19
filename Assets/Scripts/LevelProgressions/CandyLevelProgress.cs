@@ -30,5 +30,5 @@ public class CandyLevelProgress : ScriptableObject
         }
     }
 
-    public void Reset() => Count = 0; 
+    public void Reset() => Count = 0;
 }
