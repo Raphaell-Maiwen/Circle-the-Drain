@@ -3,6 +3,7 @@ using UnityEngine.UI;
 
 public abstract class InteractableTriggerZone : TriggerZone
 {
+    //Remove this canva, eventually
     [SerializeField] private Canvas _interactableCanvas;
     [SerializeField] private InteractMessenger _interactMessenger;
 

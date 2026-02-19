@@ -11,13 +11,13 @@ public class CandyLevelProgress : ScriptableObject
     public event Action OnRocketCollected;
     public event Action OnThresholdReached;
 
-    //public bool IsThresholdReached => Count >= Threshold;
+    public bool IsThresholdReached => Count >= Threshold;
 
 
     //Temporary solution; remove this once we have our Single Entry Point
     private void OnEnable()
     {
-        Count = 0;
+        Reset();
     }
 
     public void Add()
@@ -30,11 +30,5 @@ public class CandyLevelProgress : ScriptableObject
         }
     }
 
-    public bool IsThresholdReached()
-    {
-        return Count >= Threshold;
-    }
-
-    //Call this on level load
     public void Reset() => Count = 0; 
 }
