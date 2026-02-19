@@ -222,18 +222,14 @@ PrefabInstance:
       value: InteractableTriggerZone
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 5210135283426211082, guid: 2e76279a2c8d6684c8a81f3b4f0afadf, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 4390942093872132272, guid: 2e76279a2c8d6684c8a81f3b4f0afadf, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5906183314595851520}
   m_SourcePrefab: {fileID: 100100000, guid: 2e76279a2c8d6684c8a81f3b4f0afadf, type: 3}
---- !u!223 &1180675497134667358 stripped
-Canvas:
-  m_CorrespondingSourceObject: {fileID: 1770229108533992067, guid: 2e76279a2c8d6684c8a81f3b4f0afadf, type: 3}
-  m_PrefabInstance: {fileID: 645008590075178205}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1760104105270699900 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1197573490184309665, guid: 2e76279a2c8d6684c8a81f3b4f0afadf, type: 3}
@@ -256,7 +252,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7e5d2e358ff9244ebba59858babe2b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RocketCollectableTriggerZone
-  _interactableCanvas: {fileID: 1180675497134667358}
   _interactMessenger: {fileID: 11400000, guid: c3fe3f675f61cbb48ae1a72ab2063f8f, type: 2}
   _root: {fileID: 6382189603179772731}
   _progress: {fileID: 11400000, guid: 94a659f7522d762458bab7479e8deab2, type: 2}
