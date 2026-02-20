@@ -7,8 +7,7 @@ public abstract class InteractableTriggerZone : TriggerZone
 
     protected override void OnPlayerEnter()
     {
-        _interactMessenger.OnInteractPressed.RemoveListener(OnInteractPressed);
-        _interactMessenger.OnInteractPressed.AddListener(OnInteractPressed);
+        _interactMessenger.AddListener(OnInteractPressed);
     }
 
     protected override void OnPlayerExit()

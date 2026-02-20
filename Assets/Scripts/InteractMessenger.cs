@@ -11,4 +11,10 @@ public class InteractMessenger : ScriptableObject
     {
         OnInteractPressed?.Invoke();
     }
+
+    public void AddListener(UnityAction action)
+    {
+        OnInteractPressed.RemoveListener(action);
+        OnInteractPressed.AddListener(action);
+    }
 }

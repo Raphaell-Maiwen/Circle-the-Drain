@@ -12,3 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c84dfda6964e9b44f9d21c898df37ed7, type: 3}
   m_Name: InteractMessenger
   m_EditorClassIdentifier: Assembly-CSharp::InteractMessenger
+  OnInteractPressed:
+    m_PersistentCalls:
+      m_Calls: []
+  _progress: {fileID: 11400000, guid: 94a659f7522d762458bab7479e8deab2, type: 2}
