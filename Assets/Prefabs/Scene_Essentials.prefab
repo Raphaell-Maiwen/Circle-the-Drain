@@ -526,5 +526,7 @@ MonoBehaviour:
     _serializedList:
     - Key: CaliforniaGurls
       Value: {fileID: 8300000, guid: 44a73f4aa9a6f7d47bb2c56e0de330ea, type: 3}
+    - Key: PrideMedley
+      Value: {fileID: 8300000, guid: 0d1dd0c2e7fe8d644b8d94fa2d28ee96, type: 3}
   _sfx:
     _serializedList: []

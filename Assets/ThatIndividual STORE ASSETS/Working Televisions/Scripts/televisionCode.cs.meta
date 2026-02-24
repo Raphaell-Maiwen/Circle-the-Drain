@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 83a0a01aeef464440939668bf74ffe89
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 322862
+  packageName: Working Televisions
+  packageVersion: 1.0
+  assetPath: Assets/ThatIndividual STORE ASSETS/Working Televisions/Scripts/televisionCode.cs
+  uploadId: 763961

@@ -8786,6 +8786,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelInitialization
   _levelSong: CaliforniaGurls
+  _onLoop: 1
 --- !u!4 &691329112
 Transform:
   m_ObjectHideFlags: 0

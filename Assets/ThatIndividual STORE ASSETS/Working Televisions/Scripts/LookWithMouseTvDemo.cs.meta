@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 1d2c1525277b66645a8646a911206b72
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 322862
+  packageName: Working Televisions
+  packageVersion: 1.0
+  assetPath: Assets/ThatIndividual STORE ASSETS/Working Televisions/Scripts/LookWithMouseTvDemo.cs
+  uploadId: 763961

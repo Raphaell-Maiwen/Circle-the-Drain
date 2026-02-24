@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: e263b0a37c9d3924095b8be2e8b7d7b8
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 322862
+  packageName: Working Televisions
+  packageVersion: 1.0
+  assetPath: Assets/ThatIndividual STORE ASSETS/Working Televisions/Scripts/tvRemote.cs
+  uploadId: 763961

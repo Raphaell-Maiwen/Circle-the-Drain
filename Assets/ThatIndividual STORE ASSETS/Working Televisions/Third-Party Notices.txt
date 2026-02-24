@@ -1,0 +1,16 @@
+Videos included in this package were acquired under cc0 (Public domain)- license.
+Download them from here: https://drive.google.com/file/d/12CFF-3gKJv2RWs0HQYnJthKLpWnxc54A/view?usp=sharing
+
+These public domain files are:
+artistic gloom video
+cooking video
+fruits video
+tv_static_1
+tv_static_2
+
+---
+Being in the public domain is not a license; rather, it means the
+material is not copyrighted and no license is needed. Practically
+speaking, though, if a work is in the public domain, it might as well
+have an all-permissive non-copyleft free software license. Public
+domain material is compatible with the GNU GPL.

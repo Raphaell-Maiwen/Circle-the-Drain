@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: ad3e8fce131395548ab4da0e3d4a81ae
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 322862
+  packageName: Working Televisions
+  packageVersion: 1.0
+  assetPath: Assets/ThatIndividual STORE ASSETS/Working Televisions/Scripts/PlayerMovementTvDemo.cs
+  uploadId: 763961
