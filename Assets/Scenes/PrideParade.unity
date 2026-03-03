@@ -4866,6 +4866,7 @@ MonoBehaviour:
   - {fileID: 906793453}
   - {fileID: 1404101921}
   _nightmareStartTime: 60
+  _nightmareIncreaseRate: 5
 --- !u!1001 &734072670
 PrefabInstance:
   m_ObjectHideFlags: 0

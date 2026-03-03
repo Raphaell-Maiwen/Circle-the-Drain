@@ -69,7 +69,7 @@ public class AudioManager : MonoBehaviour
     }
 
     //Add channels and stuff
-    public void AddFilter(AudioDistortionFilter filter, float distortionLevel)
+    public void AddAudioDistortionFilter(float distortionLevel)
     {
         gameObject.TryGetComponent<AudioDistortionFilter>(out AudioDistortionFilter distortionFilter);
         if (distortionFilter)
@@ -83,8 +83,22 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    public void AddFilter(AudioEchoFilter filter)
+    //Add depth?
+    public void AddChorusFilter(float delay, float rate)
     {
+        gameObject.TryGetComponent<AudioChorusFilter>(out AudioChorusFilter chorusFilter);
 
+        if (chorusFilter)
+        {
+            chorusFilter.delay += delay;
+            chorusFilter.rate += rate;
+        }
+        else
+        {
+            AudioChorusFilter newFilter = gameObject.AddComponent<AudioChorusFilter>();
+            newFilter.delay = delay;
+            newFilter.rate = rate;
+            newFilter.depth = 1f;
+        }
     }
 }

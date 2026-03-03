@@ -37,7 +37,9 @@ public class RocketCollectableTriggerZone : InteractableTriggerZone
     protected override void OnInteractPressed()
     {
         _progress.Add();
-        AudioManager.Instance.AddFilter(new AudioDistortionFilter(), 0.1f);
+
+        //Add something on Audio Manager?
+
         OnPlayerExit();
         Destroy(_root);
     }

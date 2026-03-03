@@ -6,6 +6,7 @@ public class PrideInitializer : LevelInitialization
 {
     [SerializeField] private List<Animator> _animatorList;
     [SerializeField] private float _nightmareStartTime;
+    [SerializeField] private float _nightmareIncreaseRate;
 
     void Start()
     {
@@ -32,5 +33,18 @@ public class PrideInitializer : LevelInitialization
         {
             animator.SetTrigger("walk");
         }
+
+        AudioManager.Instance.AddChorusFilter(5f, 1f);
+        AudioManager.Instance.AddAudioDistortionFilter(0.3f);
+        StartCoroutine(IncreaseNightmare());
+    }
+
+    IEnumerator IncreaseNightmare()
+    {
+        yield return new WaitForSeconds(_nightmareIncreaseRate);
+
+        AudioManager.Instance.AddChorusFilter(0f, 2f);
+        AudioManager.Instance.AddAudioDistortionFilter(0.1f);
+        StartCoroutine(IncreaseNightmare());
     }
 }
