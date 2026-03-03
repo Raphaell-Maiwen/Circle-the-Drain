@@ -18,7 +18,7 @@ namespace WorkingTelevisions
         public VideoClip[] staticVideos;
         public VideoClip[] tvVideoClips;
         [HideInInspector]public bool inRange;
-        bool brokenTrue;
+        bool broken;
         bool onOffBool = false;
         int onOffInt = 0;
         int onOffIntTARGET = 100;
@@ -29,13 +29,13 @@ namespace WorkingTelevisions
             if (hp == 0) { screen.GetComponent<Renderer>().material = screenMaterials[1]; }
             else { screen.GetComponent<Renderer>().material = screenMaterials[0]; }
         }
-        void Update()
+        /*void Update()
         {
-            if (hp != 0 && brokenTrue == false) {  }
-            if (hp == 0 && brokenTrue == false) { breakAction(); brokenTrue = true; screenVideoParent.SetActive(false); }
+            if (hp != 0 && broken == false) {  }
+            if (hp == 0 && broken == false) { breakAction(); broken = true; screenVideoParent.SetActive(false); }
             if(Fix == true) { 
                 Fix = false;
-                brokenTrue = false;
+                broken = false;
                 hp = 50;
                 sparksEffect.SetActive(false);
                 screen.GetComponent<Renderer>().material = screenMaterials[0];
@@ -43,19 +43,20 @@ namespace WorkingTelevisions
                 screenVideoParent.GetComponent<VideoPlayer>().enabled = true;
             }
             //---
-            if(inRange == true && Input.GetKeyDown(KeyCode.F) && brokenTrue == false) { onOffInt = 0; }
-            if(inRange == true && Input.GetKey(KeyCode.F) && brokenTrue == false) {
+            if(inRange == true && Input.GetKeyDown(KeyCode.F) && broken == false) { onOffInt = 0; }
+            if(inRange == true && Input.GetKey(KeyCode.F) && broken == false) {
                 if(cooldownOn == false){ onOffInt++; }
             }
-            if (inRange == true && brokenTrue == false){
+            if (inRange == true && broken == false){
                 if(Input.GetKey(KeyCode.F) && cooldownOn == false && onOffInt >= onOffIntTARGET){
                     if (onOffBool == false) { on(); }
                     else if (onOffBool == true) { off(); }
                 }
                 if (Input.GetKeyUp(KeyCode.F) && onOffInt < onOffIntTARGET && onOffBool == true) { channelChange(); }
             }
-        }
+        }*/
         //------------------------------------------------------------------------------------------------------------------------------------------
+        
         public void on(){
             if (UseStatic == false) { channelChange(); } else if (UseStatic == true) { tvStatic(); }
             StartCoroutine(Delay());
