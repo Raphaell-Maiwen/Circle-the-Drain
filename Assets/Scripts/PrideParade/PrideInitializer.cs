@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class PrideInitializer : LevelInitialization
 {
-    [SerializeField] private List<Animator> _animatorList;
+    [SerializeField] private List<Animator> walkAnimatorList;
+    [SerializeField] private List<Animator> waveAnimatorList;
     [SerializeField] private float _nightmareStartTime;
     [SerializeField] private float _nightmareIncreaseRate;
 
@@ -12,10 +13,16 @@ public class PrideInitializer : LevelInitialization
     {
         base.Start();
 
-        foreach (var animator in _animatorList)
+        foreach (var animator in walkAnimatorList)
         {
             StartCoroutine(StartWalk(animator));
         }
+
+        foreach (var animator in waveAnimatorList)
+        {
+            animator.SetTrigger("wave");
+        }
+
         StartCoroutine(StartNightmare());
     }
 
@@ -29,7 +36,7 @@ public class PrideInitializer : LevelInitialization
     {
         yield return new WaitForSeconds (_nightmareStartTime);
 
-        foreach(var animator in _animatorList)
+        foreach(var animator in walkAnimatorList)
         {
             animator.SetTrigger("walk");
         }
