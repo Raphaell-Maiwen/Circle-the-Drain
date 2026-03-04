@@ -84,7 +84,7 @@ public class AudioManager : MonoBehaviour
     }
 
     //Add depth?
-    public void AddChorusFilter(float delay, float rate)
+    public void AddChorusFilter(float delay, float rate, float capDelay = 1000f, float capRate = 1000f)
     {
         gameObject.TryGetComponent<AudioChorusFilter>(out AudioChorusFilter chorusFilter);
 
