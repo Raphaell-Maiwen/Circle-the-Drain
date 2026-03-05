@@ -1,22 +1,14 @@
 using UnityEngine;
 using WorkingTelevisions;
 
-public class TVScreenTriggerZeon : InteractableTriggerZone
+public class TVScreenTriggerZone : InteractableTriggerZone
 {
     [SerializeField] private televisionCode TelevisionCode;
 
-    protected override void OnPlayerEnter()
-    {
-        base.OnPlayerEnter();
-    }
-
-    protected override void OnPlayerExit()
-    {
-        base.OnPlayerExit();
-    }
-
     protected override void OnInteractPressed()
     {
+        GetComponent<BoxCollider>().enabled = false;
+        OnPlayerExit();
         TelevisionCode.channelChange();
     }
 }

@@ -8,6 +8,8 @@ public class BlahajTriggerZone : InteractableTriggerZone
 
     protected override void OnInteractPressed()
     {
+        GetComponent<BoxCollider>().enabled = false;
+        OnPlayerExit();
         _originalShark.SetActive(false);
         _transShark.SetActive(true);
     }
