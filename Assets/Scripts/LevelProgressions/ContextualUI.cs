@@ -1,17 +1,16 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 
-public class CandyLevelProgressMessages : MonoBehaviour
+public class ContextualUI : MonoBehaviour
 {
-    [SerializeField] private CandyLevelProgress _progress;
     [SerializeField] private InteractableTriggerZoneEventChannel[] _zoneChannels;
-    [SerializeField] private TextMeshProUGUI _teleportMessage;
     [SerializeField] private TextMeshProUGUI _zoneMessage;
+    protected UnityEvent _disableExtraUI = new UnityEvent();
+    protected UnityEvent _restoreState = new UnityEvent();
 
-    private void OnEnable()
+    protected void OnEnable()
     {
-        _progress.OnThresholdReached += ShowTeleportMessage;
-
         foreach (var channel in _zoneChannels)
         {
             channel.OnPlayerEntered += ShowZoneMessage;
@@ -19,10 +18,8 @@ public class CandyLevelProgressMessages : MonoBehaviour
         }
     }
 
-    private void OnDisable()
+    protected void OnDisable()
     {
-        _progress.OnThresholdReached -= ShowTeleportMessage;
-
         foreach (var channel in _zoneChannels)
         {
             channel.OnPlayerEntered -= ShowZoneMessage;
@@ -30,28 +27,22 @@ public class CandyLevelProgressMessages : MonoBehaviour
         }
     }
 
-    private void ShowTeleportMessage()
-    {
-        EraseAllMessages();
-        _teleportMessage.gameObject.SetActive(true);
-    }
-
     private void ShowZoneMessage(InteractableTriggerZoneEventChannel channel)
     {
-        _teleportMessage.gameObject.SetActive(false);
+        _disableExtraUI?.Invoke();
         _zoneMessage.text = channel.ResolveMessage();
         _zoneMessage.gameObject.SetActive(true);
     }
 
-    private void EraseAllMessages()
+    protected void EraseAllMessages()
     {
-        _teleportMessage.gameObject.SetActive(false);
+        _disableExtraUI?.Invoke();
         _zoneMessage.gameObject.SetActive(false);
     }
 
     private void RestoreState()
     {
         EraseAllMessages();
-        _teleportMessage.gameObject.SetActive(_progress.IsThresholdReached);
+        _restoreState?.Invoke();
     }
 }
