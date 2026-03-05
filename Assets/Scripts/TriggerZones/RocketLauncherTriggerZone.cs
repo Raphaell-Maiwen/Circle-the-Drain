@@ -6,6 +6,13 @@ public class RocketLauncherTriggerZone : InteractableTriggerZone
     [SerializeField] private CandyLevelProgress _progress;
     [SerializeField] private InteractableTriggerZoneEventChannel _zoneChannel;
 
+    private void Awake()
+    {
+        _zoneChannel.GetMessage = () => _progress.IsThresholdReached
+            ? "Right-click to launch rockets"
+            : $"You need {_progress.Threshold - _progress.Count} more rockets.";
+    }
+
     protected override void OnPlayerEnter()
     {
         base.OnPlayerEnter();

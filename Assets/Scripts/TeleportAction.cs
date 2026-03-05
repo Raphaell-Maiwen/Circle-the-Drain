@@ -34,7 +34,7 @@ public class TeleportAction : MonoBehaviour
         _messenger.AddListener(Teleport);
     }
 
-    private void DisableTeleportAction()
+    private void DisableTeleportAction(InteractableTriggerZoneEventChannel channel)
     {
         _messenger.OnInteractPressed.RemoveListener(Teleport);
     }
