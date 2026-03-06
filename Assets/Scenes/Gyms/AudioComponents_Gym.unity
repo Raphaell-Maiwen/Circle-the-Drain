@@ -285,7 +285,7 @@ GameObject:
   - component: {fileID: 586647822}
   - component: {fileID: 586647824}
   - component: {fileID: 586647826}
-  - component: {fileID: 586647825}
+  - component: {fileID: 586647827}
   m_Layer: 0
   m_Name: AudioManager
   m_TagString: Untagged
@@ -319,7 +319,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: d068d1417ed6b344baf3b024f381b58e, type: 3}
+  m_Resource: {fileID: 8300000, guid: 220433b1a0ccf9a4eb2f798858f52310, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -405,19 +405,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!168 &586647825
-AudioEchoFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 586647821}
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Delay: 5000
-  m_DecayRatio: 0.5
-  m_WetMix: 1
-  m_DryMix: 1
 --- !u!166 &586647826
 AudioChorusFilter:
   m_ObjectHideFlags: 0
@@ -430,9 +417,18 @@ AudioChorusFilter:
   m_WetMix1: 1
   m_WetMix2: 0.8
   m_WetMix3: 0.6
-  m_Delay: 100
-  m_Rate: 20
+  m_Delay: 5
+  m_Rate: 1
   m_Depth: 1
+--- !u!170 &586647827
+AudioDistortionFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 586647821}
+  m_Enabled: 1
+  m_DistortionLevel: 0.3
 --- !u!1 &682539485
 GameObject:
   m_ObjectHideFlags: 0

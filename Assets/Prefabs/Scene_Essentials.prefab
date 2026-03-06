@@ -546,8 +546,12 @@ MonoBehaviour:
     _serializedList:
     - Key: CaliforniaGurls
       Value: {fileID: 8300000, guid: 44a73f4aa9a6f7d47bb2c56e0de330ea, type: 3}
+    - Key: UrSoGayTransition
+      Value: {fileID: 8300000, guid: 1542e1f80f995f74c8cdf88cd633ca27, type: 3}
+    - Key: UrSoGayLoop
+      Value: {fileID: 8300000, guid: 220433b1a0ccf9a4eb2f798858f52310, type: 3}
     - Key: PrideMedley
-      Value: {fileID: 8300000, guid: 0d1dd0c2e7fe8d644b8d94fa2d28ee96, type: 3}
+      Value: {fileID: 8300000, guid: 707a20a5b0e402c429bd8a72aa9826fc, type: 3}
   _sfx:
     _serializedList: []
 --- !u!1001 &2119742116517216742

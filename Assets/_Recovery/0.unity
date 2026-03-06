@@ -3873,6 +3873,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8789918010455318312, guid: 052ff908569792c458ed01ffca23315b, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5460,8 +5464,7 @@ MonoBehaviour:
   - {fileID: 2010383841}
   - {fileID: 1994541287}
   - {fileID: 2005214243}
-  _transitionSong: UrSoGayTransition
-  _nightmareSong: UrSoGayLoop
+  _nightmareStartTime: 60
   _nightmareIncreaseRate: 5
 --- !u!1001 &734072670
 PrefabInstance:
@@ -11920,7 +11923,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3410444979682163857, guid: d54cd60b1b1a0604da4727f61514c721, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -18.000122
+      value: -18
       objectReference: {fileID: 0}
     - target: {fileID: 4703277841331496194, guid: d54cd60b1b1a0604da4727f61514c721, type: 3}
       propertyPath: m_LocalPosition.z

@@ -6,11 +6,15 @@ public class PrideInitializer : LevelInitialization
 {
     [SerializeField] private List<Animator> walkAnimatorList;
     [SerializeField] private List<Animator> waveAnimatorList;
-    [SerializeField] private float _nightmareStartTime;
+    [SerializeField] private string _transitionSong;
+    [SerializeField] private string _nightmareSong;
     [SerializeField] private float _nightmareIncreaseRate;
+
+    private Coroutine _increaseNightmareCoroutine;
 
     void Start()
     {
+        Debug.Log("beginning: " + Time.time);
         base.Start();
 
         foreach (var animator in walkAnimatorList)
@@ -23,7 +27,8 @@ public class PrideInitializer : LevelInitialization
             animator.SetTrigger("wave");
         }
 
-        StartCoroutine(StartNightmare());
+        StartCoroutine(StartNightmareTransition());
+        Debug.Log("end: " + Time.time);
     }
 
     IEnumerator StartWalk(Animator animator)
@@ -32,26 +37,50 @@ public class PrideInitializer : LevelInitialization
         animator.SetTrigger("walk");
     }
 
-    IEnumerator StartNightmare()
+    IEnumerator StartNightmareTransition()
     {
-        yield return new WaitForSeconds (_nightmareStartTime);
+        while (AudioManager.Instance.GetAudioSource(_levelSong).isPlaying)
+        {
+            yield return null;
+        }
+
+        Debug.Log("Now " + Time.time);
 
         foreach(var animator in walkAnimatorList)
         {
             animator.SetTrigger("walk");
         }
 
+        AudioManager.Instance.PlaySound(_transitionSong, false);
         AudioManager.Instance.AddChorusFilter(5f, 1f);
         AudioManager.Instance.AddAudioDistortionFilter(0.3f);
+
+        StartCoroutine(StartNightmare());
+        Debug.Log("Now now" + Time.time);
+    }
+
+    IEnumerator StartNightmare()
+    {
+        while (AudioManager.Instance.GetAudioSource(_transitionSong).isPlaying)
+        {
+            yield return null;
+        }
+
+        AudioManager.Instance.PlaySound(_nightmareSong, true);
         StartCoroutine(IncreaseNightmare());
     }
 
     IEnumerator IncreaseNightmare()
     {
-        yield return new WaitForSeconds(_nightmareIncreaseRate);
+        bool rateCapReached = AudioManager.Instance.AddChorusFilter(0f, 2f, 100f, 10f);
+        bool distortionCapReached = AudioManager.Instance.AddAudioDistortionFilter(0.1f, 0.6f);
 
-        AudioManager.Instance.AddChorusFilter(0f, 2f);
-        AudioManager.Instance.AddAudioDistortionFilter(0.1f);
-        StartCoroutine(IncreaseNightmare());
+        if (rateCapReached && distortionCapReached)
+        {
+            StopCoroutine(_increaseNightmareCoroutine);
+        }
+
+        yield return new WaitForSeconds(_nightmareIncreaseRate);
+        _increaseNightmareCoroutine = StartCoroutine(IncreaseNightmare());
     }
 }

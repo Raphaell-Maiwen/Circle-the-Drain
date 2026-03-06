@@ -45,46 +45,59 @@ public class AudioManager : MonoBehaviour
 
     public void PlaySound(string soundName, bool onLoop)
     {
-        if (_gameSounds.ContainsKey(soundName))
+        if (SoundExist(soundName))
         {
             _gameSounds[soundName].Play();
             _gameSounds[soundName].loop = onLoop;
-        }
-        else
-        {
-            Debug.LogError("Sound name doesn't exist");
         }
     }
 
     public void StopSound(string soundName)
     {
-        if (_gameSounds.ContainsKey(soundName))
-        {
-            _gameSounds[soundName].Stop();
-        }
+        if(SoundExist(soundName)) { _gameSounds[soundName].Stop();}
+    }
+
+    public AudioClip GetAudioClip(string soundName)
+    {
+        return SoundExist(soundName) ? _gameSounds[soundName].clip : null;
+    }
+
+    public AudioSource GetAudioSource(string soundName)
+    {
+        return SoundExist(soundName) ? _gameSounds[soundName] : null;
+    }
+
+    private bool SoundExist(string soundName)
+    {
+        if (_gameSounds.ContainsKey(soundName)) return true;
         else
         {
             Debug.LogError("Sound name doesn't exist");
+            return false; ;
         }
     }
 
     //Add channels and stuff
-    public void AddAudioDistortionFilter(float distortionLevel)
+    public bool AddAudioDistortionFilter(float distortionLevel, float capDistortion = 0.9f)
     {
         gameObject.TryGetComponent<AudioDistortionFilter>(out AudioDistortionFilter distortionFilter);
         if (distortionFilter)
         {
             distortionFilter.distortionLevel += distortionLevel;
+            distortionFilter.distortionLevel = Mathf.Min(distortionFilter.distortionLevel, capDistortion);
+            if (distortionFilter.distortionLevel >= capDistortion) return true;
+            return false;
         }
         else
         {
             AudioDistortionFilter newFilter = gameObject.AddComponent<AudioDistortionFilter>();
             newFilter.distortionLevel = distortionLevel;
+            return false;
         }
     }
 
     //Add depth?
-    public void AddChorusFilter(float delay, float rate, float capDelay = 1000f, float capRate = 1000f)
+    public bool AddChorusFilter(float delay, float rate, float capDelay = 100f, float capRate = 20f)
     {
         gameObject.TryGetComponent<AudioChorusFilter>(out AudioChorusFilter chorusFilter);
 
@@ -92,6 +105,13 @@ public class AudioManager : MonoBehaviour
         {
             chorusFilter.delay += delay;
             chorusFilter.rate += rate;
+
+            chorusFilter.delay = Mathf.Min(chorusFilter.delay, capDelay);
+            chorusFilter.rate = Mathf.Min(chorusFilter.rate, capRate);
+
+            if ((delay > 0 && chorusFilter.delay >= capDelay) ||
+            (rate > 0 && chorusFilter.rate >= capRate)) return true;
+            return false;
         }
         else
         {
@@ -99,6 +119,8 @@ public class AudioManager : MonoBehaviour
             newFilter.delay = delay;
             newFilter.rate = rate;
             newFilter.depth = 1f;
+
+            return false;
         }
     }
 }
