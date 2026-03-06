@@ -14,7 +14,6 @@ public class PrideInitializer : LevelInitialization
 
     void Start()
     {
-        Debug.Log("beginning: " + Time.time);
         base.Start();
 
         foreach (var animator in walkAnimatorList)
@@ -28,7 +27,6 @@ public class PrideInitializer : LevelInitialization
         }
 
         StartCoroutine(StartNightmareTransition());
-        Debug.Log("end: " + Time.time);
     }
 
     IEnumerator StartWalk(Animator animator)
@@ -44,8 +42,6 @@ public class PrideInitializer : LevelInitialization
             yield return null;
         }
 
-        Debug.Log("Now " + Time.time);
-
         foreach(var animator in walkAnimatorList)
         {
             animator.SetTrigger("walk");
@@ -56,7 +52,6 @@ public class PrideInitializer : LevelInitialization
         AudioManager.Instance.AddAudioDistortionFilter(0.3f);
 
         StartCoroutine(StartNightmare());
-        Debug.Log("Now now" + Time.time);
     }
 
     IEnumerator StartNightmare()

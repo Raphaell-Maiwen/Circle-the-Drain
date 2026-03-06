@@ -57,11 +57,6 @@ public class AudioManager : MonoBehaviour
         if(SoundExist(soundName)) { _gameSounds[soundName].Stop();}
     }
 
-    public AudioClip GetAudioClip(string soundName)
-    {
-        return SoundExist(soundName) ? _gameSounds[soundName].clip : null;
-    }
-
     public AudioSource GetAudioSource(string soundName)
     {
         return SoundExist(soundName) ? _gameSounds[soundName] : null;
