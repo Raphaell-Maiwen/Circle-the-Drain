@@ -5,32 +5,35 @@ EditorUserSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 4
   m_ConfigSettings:
+    GraphicsSettingsInspector_UserSettings:
+      value: 18134705175a055722080a3115371d4a0d55006876786860616b0471b8b07a68ffab74f9ee2a3a30300cea1a11320d0beb1a0c25f7060f494b4cdf1b18f3045e38cb5ad8
+      flags: 0
     RecentlyUsedSceneGuid-0:
-      value: 5555565656025d5a5f0b5e2443700644124f4a2978702561757d4e64b1e3323b
-      flags: 0
-    RecentlyUsedSceneGuid-1:
-      value: 05080105040d515d095d5f75412707444e151a29292927622b7a4b35e3e46c68
-      flags: 0
-    RecentlyUsedSceneGuid-2:
       value: 5a0903045506500d5f5d5e27497159441215407c7f2a73322c7b4863b1b26361
       flags: 0
-    RecentlyUsedSceneGuid-3:
+    RecentlyUsedSceneGuid-1:
       value: 0202520255560d5a09575d771470094415161e28787170687d704565e4b2316f
       flags: 0
-    RecentlyUsedSceneGuid-4:
+    RecentlyUsedSceneGuid-2:
       value: 02530c510104585f0c58087b4625074445151e2f7f2d25367b2b4532bab93639
       flags: 0
+    RecentlyUsedSceneGuid-3:
+      value: 055257545d060f0e0b5a5e7744745a4447164e7a782e25352e2a4c60b7b9376c
+      flags: 0
+    RecentlyUsedSceneGuid-4:
+      value: 545750535c065e0c5b5e0f7b13210744104f1e792d2e75617a714b37e0b96c68
+      flags: 0
     RecentlyUsedSceneGuid-5:
-      value: 0157055e51535a0e090a0d74487b084410161c292e7c726879791f64e7e66561
+      value: 0601550004075c5f5e5e0d27127a0d444e4e4d2c2d7e7e357f7a1f36b5e1326a
       flags: 0
     RecentlyUsedSceneGuid-6:
-      value: 055257545d060f0e0b5a5e7744745a4447164e7a782e25352e2a4c60b7b9376c
+      value: 52020d0000025b0f5a0c0a7b40760944414e407b2d2c74347e781963e4b36d3d
       flags: 0
     RecentlyUsedSceneGuid-7:
       value: 0757575301010c0c5f085d7b46730b444f4e1b2978712560757a4e61e6e26239
       flags: 0
     RecentlyUsedSceneGuid-8:
-      value: 545750535c065e0c5b5e0f7b13210744104f1e792d2e75617a714b37e0b96c68
+      value: 0157055e51535a0e090a0d74487b084410161c292e7c726879791f64e7e66561
       flags: 0
     RecentlyUsedSceneGuid-9:
       value: 0000060207535d0258570d7343775d44144f1c2b797f20667a2b4a32b2b76d6b
