@@ -5,8 +5,7 @@ using Unity.Cinemachine;
 public class RocketLauncherTriggerZone : InteractableTriggerZone
 {
     [SerializeField] private CandyLevelProgress _progress;
-    [SerializeField] private CinemachineCamera _test;
-    [SerializeField] private CinemachineCamera _main;
+    [SerializeField] private CinemachineCamera _fireworkCamera;
     
     //Firework script
     //[SerializeField] private
@@ -27,8 +26,7 @@ public class RocketLauncherTriggerZone : InteractableTriggerZone
 
             CharacterInputHandler.Instance.PlayerInput.SwitchCurrentActionMap("Cutscene");
 
-            _main.Priority = 0;
-            _test.Priority = 10;
+            _fireworkCamera.Priority = 10;
         }
     }
 }

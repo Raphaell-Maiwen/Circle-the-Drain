@@ -9,7 +9,7 @@ public class TeleportAction : MonoBehaviour
     [SerializeField] private InteractableTriggerZoneEventChannel _rocketCollectableZoneChannel;
     [SerializeField] private InteractableTriggerZoneEventChannel _rocketLaunchZoneChannel;
     [SerializeField] private GameObject _player;
-    [SerializeField] private Transform _teleportAnchor;
+    [SerializeField] private TeleportPointData[] _teleportPointArray;
 
     private void OnEnable()
     {
@@ -46,10 +46,10 @@ public class TeleportAction : MonoBehaviour
 
     private void Teleport()
     {
-        Vector3 teleportPoint = _teleportAnchor.transform.position;
+        Vector3 teleportPoint = _teleportPointArray[0].position;
         teleportPoint.y = _player.transform.position.y;
 
         _player.transform.position = teleportPoint;
-        _player.transform.rotation = _teleportAnchor.transform.rotation;
+        _player.transform.rotation = _teleportPointArray[0].rotation;
     }
 }
