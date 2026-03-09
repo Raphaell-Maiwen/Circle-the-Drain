@@ -8,6 +8,8 @@ public static class CamerasManager
 
     public static CinemachineCamera ActiveCamera = null;
 
+    public static CinemachineBrain CameraBrain = null;
+
     public static bool IsActiveCamera(CinemachineCamera camera)
     {
         return camera == ActiveCamera;
@@ -32,5 +34,10 @@ public static class CamerasManager
     public static void Unregister(CinemachineCamera camera)
     {
         cameras.Remove(camera);
+    }
+
+    public static void SetBrain(CinemachineBrain brain)
+    {
+        CameraBrain = brain;
     }
 }

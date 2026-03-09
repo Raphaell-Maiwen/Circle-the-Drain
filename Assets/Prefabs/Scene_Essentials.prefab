@@ -348,6 +348,7 @@ MonoBehaviour:
   _upDownLookRange: 60
   _rigidbody: {fileID: 5553977459211622836}
   _mainCamera: {fileID: 3286673676766712371}
+  _brain: {fileID: 2415938239053137445}
   _characterInputHandler: {fileID: 669460760359661918}
 --- !u!54 &5553977459211622836
 Rigidbody:

@@ -9,6 +9,7 @@ public class FirstPersonCharacterController : MonoBehaviour
 
     [SerializeField] private Rigidbody _rigidbody;
     [SerializeField] private CinemachineCamera _mainCamera;
+    [SerializeField] private CinemachineBrain _brain;
     [SerializeField] private CharacterInputHandler _characterInputHandler;
 
     private Vector3 _currentMovement;
@@ -28,6 +29,8 @@ public class FirstPersonCharacterController : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+
+        CamerasManager.SetBrain(_brain);
     }
 
     private void Update()

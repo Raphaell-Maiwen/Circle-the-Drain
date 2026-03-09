@@ -1228,6 +1228,57 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1695539395}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &113432498
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 113432499}
+  - component: {fileID: 113432500}
+  m_Layer: 0
+  m_Name: LOD
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &113432499
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 113432498}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.108054355, y: 0.64681476, z: 0.09329181, w: 0.7491673}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.43434817, y: 0.4343483, z: 0.43434823}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1927903197}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!205 &113432500
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 113432498}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: 0, y: 0, z: 0}
+  m_Size: 1
+  m_FadeMode: 1
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.04767776
+    fadeTransitionWidth: 0.067
+    renderers:
+    - renderer: {fileID: 1219300124}
+  m_Enabled: 0
 --- !u!1001 &125544827
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16901,6 +16952,13 @@ MonoBehaviour:
   _fireworksSong: Fireworks
   _prideParadeLevel: PrideParade
   _fireworksShowDuration: 8
+  _lodGroup: {fileID: 113432500}
+--- !u!23 &1219300124 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 1109867424022713440, guid: 63a0968ce3fea374ea4ffa24e39297a9,
+    type: 3}
+  m_PrefabInstance: {fileID: 1085984160}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1236765188
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25814,7 +25872,8 @@ Transform:
   m_LocalPosition: {x: 7.8, y: 26.9, z: -1.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 113432499}
   m_Father: {fileID: 1085984161}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1927903198
