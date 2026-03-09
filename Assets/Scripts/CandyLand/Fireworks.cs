@@ -7,6 +7,12 @@ public class Fireworks : MonoBehaviour
     [SerializeField] private string _fireworksSong;
     [SerializeField] private string _prideParadeLevel;
     [SerializeField] private float _fireworksShowDuration;
+
+    private void Awake()
+    {
+        DontDestroyOnLoad(this.gameObject);
+    }
+
     public void InitializeFireworks()
     {
         AudioManager.Instance.PlaySound(_fireworksSong);
@@ -21,5 +27,7 @@ public class Fireworks : MonoBehaviour
         AudioManager.Instance.StopAllSounds();
         SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().name);
         SceneManager.LoadSceneAsync(_prideParadeLevel, LoadSceneMode.Additive);
+
+        //When the transition is done, delete? Add an LOD and then delete?
     }
 }
