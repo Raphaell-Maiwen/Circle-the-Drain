@@ -7,7 +7,6 @@ public class RocketLauncherTriggerZone : InteractableTriggerZone
 {
     [SerializeField] private CandyLevelProgress _progress;
     [SerializeField] private CinemachineCamera _fireworkCamera;
-    [SerializeField] private string _prideParadeLevel;
     [SerializeField] private Fireworks _fireworks;
 
     private void Awake()
@@ -23,19 +22,13 @@ public class RocketLauncherTriggerZone : InteractableTriggerZone
         {
             GetComponent<BoxCollider>().enabled = false;
             OnPlayerExit();
+            _progress.LevelDone();
 
             CharacterInputHandler.Instance.PlayerInput.SwitchCurrentActionMap("Cutscene");
 
             _fireworkCamera.Priority = 10;
-            Invoke("LoadPrideParade", 30f);
             AudioManager.Instance.StopAllSounds();
             _fireworks.InitializeFireworks();
         }
-    }
-
-    private void LoadPrideParade()
-    {
-        AudioManager.Instance.StopAllSounds();
-        SceneManager.LoadSceneAsync(_prideParadeLevel, LoadSceneMode.Additive);
     }
 }

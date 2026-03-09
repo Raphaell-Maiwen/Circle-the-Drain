@@ -37,7 +37,9 @@ public class PrideInitializer : LevelInitialization
 
     IEnumerator StartNightmareTransition()
     {
-        while (AudioManager.Instance.GetAudioSource(_levelSong).isPlaying)
+        AudioManager audioManager = AudioManager.Instance;
+
+        while (audioManager.GetAudioSource(audioManager.GetLevelSong()).isPlaying)
         {
             yield return null;
         }
@@ -47,9 +49,9 @@ public class PrideInitializer : LevelInitialization
             animator.SetTrigger("walk");
         }
 
-        AudioManager.Instance.PlaySound(_transitionSong, false);
-        AudioManager.Instance.AddChorusFilter(5f, 1f);
-        AudioManager.Instance.AddAudioDistortionFilter(0.3f);
+        audioManager.PlaySound(_transitionSong, false);
+        audioManager.AddChorusFilter(5f, 1f);
+        audioManager.AddAudioDistortionFilter(0.3f);
 
         StartCoroutine(StartNightmare());
     }

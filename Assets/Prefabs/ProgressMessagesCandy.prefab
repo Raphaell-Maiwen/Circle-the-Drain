@@ -151,7 +151,7 @@ GameObject:
   - component: {fileID: 530931031396368277}
   - component: {fileID: 7802745466786705546}
   m_Layer: 5
-  m_Name: ProgressMessages
+  m_Name: ProgressMessagesCandy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

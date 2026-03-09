@@ -13,6 +13,8 @@ public class AudioManager : MonoBehaviour
 
     private Dictionary<string, AudioSource> _gameSounds = new Dictionary<string, AudioSource>();
 
+    private string _levelSong;
+
     private void Awake()
     {
         if (Instance != null) { Destroy(gameObject); return; }
@@ -41,6 +43,17 @@ public class AudioManager : MonoBehaviour
         audioSource.playOnAwake = false;
         audioSource.clip = audioClip;
         _gameSounds.Add(soundName, audioSource);
+    }
+
+    public void SetLevelSong(string songName, bool onLoop = false)
+    {
+        _levelSong = songName;
+        PlaySound(songName, onLoop);
+    }
+
+    public string GetLevelSong()
+    {
+        return _levelSong;
     }
 
     public void PlaySound(string soundName, bool onLoop = false)

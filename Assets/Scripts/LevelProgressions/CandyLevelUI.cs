@@ -11,6 +11,7 @@ public class CandyLevelUI : ContextualUI
         base.OnEnable();
 
         _progress.OnThresholdReached += ShowTeleportMessage;
+        _progress.OnLevelDone += DisableTeleportUI;
         base._disableExtraUI.AddListener(DisableTeleportUI);
         base._restoreState.AddListener(RestoreState);
     }
@@ -20,6 +21,7 @@ public class CandyLevelUI : ContextualUI
         base.OnDisable();
 
         _progress.OnThresholdReached -= ShowTeleportMessage;
+        _progress.OnLevelDone -= DisableTeleportUI;
         base._disableExtraUI.RemoveListener(DisableTeleportUI);
         base._restoreState.RemoveListener(RestoreState);
     }

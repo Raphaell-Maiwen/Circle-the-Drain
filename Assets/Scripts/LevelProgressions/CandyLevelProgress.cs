@@ -10,6 +10,7 @@ public class CandyLevelProgress : ScriptableObject
 
     public event Action OnRocketCollected;
     public event Action OnThresholdReached;
+    public event Action OnLevelDone;
 
     public bool IsThresholdReached => Count >= Threshold;
 
@@ -28,6 +29,11 @@ public class CandyLevelProgress : ScriptableObject
         {
             OnThresholdReached?.Invoke();
         }
+    }
+
+    public void LevelDone()
+    {
+        OnLevelDone?.Invoke();
     }
 
     public void Reset() => Count = 0;
