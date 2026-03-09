@@ -43,7 +43,7 @@ public class AudioManager : MonoBehaviour
         _gameSounds.Add(soundName, audioSource);
     }
 
-    public void PlaySound(string soundName, bool onLoop)
+    public void PlaySound(string soundName, bool onLoop = false)
     {
         if (SoundExist(soundName))
         {
@@ -55,6 +55,14 @@ public class AudioManager : MonoBehaviour
     public void StopSound(string soundName)
     {
         if(SoundExist(soundName)) { _gameSounds[soundName].Stop();}
+    }
+
+    public void StopAllSounds()
+    {
+        foreach (var sound in _gameSounds)
+        {
+            StopSound(sound.Key);
+        }
     }
 
     public AudioSource GetAudioSource(string soundName)

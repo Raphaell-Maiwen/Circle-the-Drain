@@ -5,8 +5,14 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/_3DStealthGame/Tutorial_Demo/Demo_Scenes/MainMenu.unity
     guid: e0afa25d30aeb924895fa68e23be7af2
+  - enabled: 1
+    path: Assets/Scenes/CandyLand.unity
+    guid: dfc5d4e72f19604499cc49c08332db6a
+  - enabled: 1
+    path: Assets/Scenes/PrideParade.unity
+    guid: c12dbf4959a134b4b8da57f67b7a0793
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

@@ -127,6 +127,51 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1275462013910317051, guid: d54cd60b1b1a0604da4727f61514c721,
+        type: 3}
+      propertyPath: _bgm._serializedList.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275462013910317051, guid: d54cd60b1b1a0604da4727f61514c721,
+        type: 3}
+      propertyPath: _bgm._serializedList.Array.data[1].Key
+      value: Fireworks
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275462013910317051, guid: d54cd60b1b1a0604da4727f61514c721,
+        type: 3}
+      propertyPath: _bgm._serializedList.Array.data[2].Key
+      value: UrSoGayTransition
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275462013910317051, guid: d54cd60b1b1a0604da4727f61514c721,
+        type: 3}
+      propertyPath: _bgm._serializedList.Array.data[3].Key
+      value: UrSoGayLoop
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275462013910317051, guid: d54cd60b1b1a0604da4727f61514c721,
+        type: 3}
+      propertyPath: _bgm._serializedList.Array.data[4].Key
+      value: PrideMedley
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275462013910317051, guid: d54cd60b1b1a0604da4727f61514c721,
+        type: 3}
+      propertyPath: _bgm._serializedList.Array.data[1].Value
+      value: 
+      objectReference: {fileID: 8300000, guid: f78151216cb94ab49b0f0b1b65546923, type: 3}
+    - target: {fileID: 1275462013910317051, guid: d54cd60b1b1a0604da4727f61514c721,
+        type: 3}
+      propertyPath: _bgm._serializedList.Array.data[2].Value
+      value: 
+      objectReference: {fileID: 8300000, guid: 1542e1f80f995f74c8cdf88cd633ca27, type: 3}
+    - target: {fileID: 1275462013910317051, guid: d54cd60b1b1a0604da4727f61514c721,
+        type: 3}
+      propertyPath: _bgm._serializedList.Array.data[3].Value
+      value: 
+      objectReference: {fileID: 8300000, guid: 220433b1a0ccf9a4eb2f798858f52310, type: 3}
+    - target: {fileID: 1275462013910317051, guid: d54cd60b1b1a0604da4727f61514c721,
+        type: 3}
+      propertyPath: _bgm._serializedList.Array.data[4].Value
+      value: 
+      objectReference: {fileID: 8300000, guid: 707a20a5b0e402c429bd8a72aa9826fc, type: 3}
     - target: {fileID: 3286673676766712371, guid: d54cd60b1b1a0604da4727f61514c721,
         type: 3}
       propertyPath: Priority.m_Value

@@ -15131,9 +15131,19 @@ PrefabInstance:
       objectReference: {fileID: 1927903198}
     - target: {fileID: 9018402443932990950, guid: 63a0968ce3fea374ea4ffa24e39297a9,
         type: 3}
+      propertyPath: _fireworks
+      value: 
+      objectReference: {fileID: 1219300122}
+    - target: {fileID: 9018402443932990950, guid: 63a0968ce3fea374ea4ffa24e39297a9,
+        type: 3}
       propertyPath: _fireworkCamera
       value: 
       objectReference: {fileID: 1927903198}
+    - target: {fileID: 9018402443932990950, guid: 63a0968ce3fea374ea4ffa24e39297a9,
+        type: 3}
+      propertyPath: _prideParadeLevel
+      value: PrideParade
+      objectReference: {fileID: 0}
     - target: {fileID: 9018402443932990950, guid: 63a0968ce3fea374ea4ffa24e39297a9,
         type: 3}
       propertyPath: _cameraMovementSpeed
@@ -15158,6 +15168,10 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1927903197}
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1470415359143671221, guid: 63a0968ce3fea374ea4ffa24e39297a9,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1219300122}
     - targetCorrespondingSourceObject: {fileID: 7725743243413133452, guid: 63a0968ce3fea374ea4ffa24e39297a9,
         type: 3}
       insertIndex: -1
@@ -16867,6 +16881,25 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1213707468}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1219300118 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1470415359143671221, guid: 63a0968ce3fea374ea4ffa24e39297a9,
+    type: 3}
+  m_PrefabInstance: {fileID: 1085984160}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1219300122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1219300118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7589aa84dc519ab49989b0178fcdeaaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Fireworks
+  _fireworksSong: Fireworks
 --- !u!1001 &1236765188
 PrefabInstance:
   m_ObjectHideFlags: 0
