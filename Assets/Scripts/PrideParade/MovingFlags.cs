@@ -6,6 +6,6 @@ public class MovingFlags : MonoBehaviour
 
     void Update()
     {
-        transform.Translate(transform.right * _speed * Time.deltaTime);
+        transform.position += transform.right * _speed * Time.deltaTime;
     }
 }
