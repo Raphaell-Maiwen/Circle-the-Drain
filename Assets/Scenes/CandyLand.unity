@@ -29231,7 +29231,7 @@ PrefabInstance:
     - target: {fileID: 1917166995779311527, guid: d54cd60b1b1a0604da4727f61514c721,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: 33
       objectReference: {fileID: 0}
     - target: {fileID: 1917166995779311527, guid: d54cd60b1b1a0604da4727f61514c721,
         type: 3}
@@ -29251,12 +29251,12 @@ PrefabInstance:
     - target: {fileID: 5553977459211622836, guid: d54cd60b1b1a0604da4727f61514c721,
         type: 3}
       propertyPath: m_UseGravity
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5553977459211622836, guid: d54cd60b1b1a0604da4727f61514c721,
         type: 3}
       propertyPath: m_Constraints
-      value: 0
+      value: 112
       objectReference: {fileID: 0}
     - target: {fileID: 6490142261982184609, guid: d54cd60b1b1a0604da4727f61514c721,
         type: 3}
@@ -29311,13 +29311,18 @@ PrefabInstance:
     - target: {fileID: 7275990854981083204, guid: d54cd60b1b1a0604da4727f61514c721,
         type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7479853191661231291, guid: d54cd60b1b1a0604da4727f61514c721,
         type: 3}
       propertyPath: m_Name
       value: Scene_Essentials
       objectReference: {fileID: 0}
+    - target: {fileID: 7491613928143439379, guid: d54cd60b1b1a0604da4727f61514c721,
+        type: 3}
+      propertyPath: _mainCamera
+      value: 
+      objectReference: {fileID: 1515885578}
     - target: {fileID: 7645538350139834778, guid: d54cd60b1b1a0604da4727f61514c721,
         type: 3}
       propertyPath: m_Enabled

@@ -1,3 +1,4 @@
+using Unity.Cinemachine;
 using UnityEngine;
 
 public class FirstPersonCharacterController : MonoBehaviour
@@ -7,7 +8,7 @@ public class FirstPersonCharacterController : MonoBehaviour
     [SerializeField] private float _upDownLookRange;
 
     [SerializeField] private Rigidbody _rigidbody;
-    [SerializeField] private Camera _mainCamera;
+    [SerializeField] private CinemachineCamera _mainCamera;
     [SerializeField] private CharacterInputHandler _characterInputHandler;
 
     private Vector3 _currentMovement;
