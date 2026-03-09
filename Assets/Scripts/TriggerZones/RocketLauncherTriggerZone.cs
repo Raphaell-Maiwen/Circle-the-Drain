@@ -1,9 +1,14 @@
-using TMPro;
+using System.Collections;
 using UnityEngine;
+using Unity.Cinemachine;
 
 public class RocketLauncherTriggerZone : InteractableTriggerZone
 {
     [SerializeField] private CandyLevelProgress _progress;
+    [SerializeField] private CinemachineCamera _test;
+    
+    //Firework script
+    //[SerializeField] private
 
     private void Awake()
     {
@@ -16,13 +21,12 @@ public class RocketLauncherTriggerZone : InteractableTriggerZone
     {
         if (_progress.IsThresholdReached)
         {
-            Debug.Log("Youpi!");
             GetComponent<BoxCollider>().enabled = false;
             OnPlayerExit();
-        }
-        else
-        {
-            Debug.Log("Non.");
+
+            CharacterInputHandler.Instance.PlayerInput.SwitchCurrentActionMap("Cutscene");
+
+            _test.Prioritize();
         }
     }
 }

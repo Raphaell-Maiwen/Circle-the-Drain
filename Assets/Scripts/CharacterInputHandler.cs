@@ -4,6 +4,9 @@ using UnityEngine.InputSystem;
 
 public class CharacterInputHandler : MonoBehaviour
 {
+    public static CharacterInputHandler Instance { get; private set; }
+    [SerializeField] public PlayerInput PlayerInput;
+
     [SerializeField] private InputActionAsset _playerControls;
     [SerializeField] private string _actionMapName = "Player";
 
@@ -24,6 +27,10 @@ public class CharacterInputHandler : MonoBehaviour
 
     private void Awake()
     {
+        if (Instance != null) { Destroy(gameObject); return; }
+        Instance = this;
+        DontDestroyOnLoad(gameObject);
+
         InputActionMap mapReference = _playerControls.FindActionMap(_actionMapName);
 
         _movementAction = mapReference.FindAction(_movement);
@@ -31,6 +38,11 @@ public class CharacterInputHandler : MonoBehaviour
         _interactAction = mapReference.FindAction(_interact);
 
         SubscribeEvents();
+    }
+
+    private void OnDestroy()
+    {
+        if (Instance == this) Instance = null;
     }
 
     public void SubscribeEvents()
