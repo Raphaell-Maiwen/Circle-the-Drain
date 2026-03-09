@@ -16,6 +16,16 @@ public class RocketLauncherTriggerZone : InteractableTriggerZone
             : $"You need {_progress.Threshold - _progress.Count} more rockets.";
     }
 
+    private void OnEnable()
+    {
+        CamerasManager.Register(_fireworkCamera);
+    }
+
+    private void OnDisable()
+    {
+        CamerasManager.Unregister(_fireworkCamera);
+    }
+
     protected override void OnInteractPressed()
     {
         if (_progress.IsThresholdReached)
@@ -26,7 +36,7 @@ public class RocketLauncherTriggerZone : InteractableTriggerZone
 
             CharacterInputHandler.Instance.PlayerInput.SwitchCurrentActionMap("Cutscene");
 
-            _fireworkCamera.Priority = 10;
+            CamerasManager.SwitchActiveCamera(_fireworkCamera);
             AudioManager.Instance.StopAllSounds();
             _fireworks.InitializeFireworks();
         }

@@ -14,6 +14,16 @@ public class FirstPersonCharacterController : MonoBehaviour
     private Vector3 _currentMovement;
     private float _verticalRotation;
 
+    private void OnEnable()
+    {
+        CamerasManager.Register(_mainCamera);
+    }
+
+    private void OnDisable()
+    {
+        CamerasManager.Unregister(_mainCamera);
+    }
+
     private void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
