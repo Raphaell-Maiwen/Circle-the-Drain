@@ -9,4 +9,7 @@ public class LevelInfo : ScriptableObject
     [SerializeField] public GameObject _UIPrefab;
     [SerializeField] public Transform _cameraStartingAnchor;
     [SerializeField] public Transform _playerStartingAnchor;
+    [SerializeField] public float _playerSpeed;
+
+    //Maybe awake function here???
 }

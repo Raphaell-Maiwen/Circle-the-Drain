@@ -40,6 +40,11 @@ public class FirstPersonCharacterController : MonoBehaviour
         HandleRotation();
     }
 
+    public void SetSpeed(float newSpeed)
+    {
+        _movementSpeed = newSpeed;
+    }
+
     private void Move()
     {
         if (_characterInputHandler.MovementTriggered)

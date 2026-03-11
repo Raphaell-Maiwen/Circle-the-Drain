@@ -6,7 +6,6 @@ public class PlayerSpawner : MonoBehaviour
 
     [SerializeField] private Transform _player;
     [SerializeField] private Transform _cameraAnchor;
-    private bool _level2;
 
     private void Awake()
     {
@@ -20,14 +19,16 @@ public class PlayerSpawner : MonoBehaviour
         if (Instance == this) Instance = null;
     }
 
-    public void SpawnPlayer(Transform playerPos, Transform cameraPos, int levelIndex)
+    public void SpawnPlayer(Transform playerPos, Transform cameraPos, LevelInfo levelInfo)
     {
         _player.transform.position = playerPos.position;
         _cameraAnchor.transform.position = cameraPos.position;
 
-        if(levelIndex == 2)
+        if(levelInfo._levelIndex == 2)
         {
             _player.GetComponent<TeleportAction>().enabled = false;
         }
+
+        _player.GetComponent<FirstPersonCharacterController>().SetSpeed(levelInfo._playerSpeed);
     }
 }

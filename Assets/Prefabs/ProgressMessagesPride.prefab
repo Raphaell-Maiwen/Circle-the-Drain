@@ -118,6 +118,7 @@ MonoBehaviour:
   _zoneChannels:
   - {fileID: 11400000, guid: 48d24f79b653c1f4cb04f69c33898481, type: 2}
   - {fileID: 11400000, guid: c8103412c30319141978bdfc8ca8a4c8, type: 2}
+  - {fileID: 11400000, guid: c1951c245aa234a4b946969edafa7de5, type: 2}
   _zoneMessage: {fileID: 2063944537916769498}
 --- !u!1 &8764475606440794464
 GameObject:
