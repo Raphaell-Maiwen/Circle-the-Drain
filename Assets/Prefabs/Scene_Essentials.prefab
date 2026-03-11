@@ -441,7 +441,8 @@ MonoBehaviour:
     type: 2}
   _rocketLaunchZoneChannel: {fileID: 11400000, guid: fbabe64171828e54586321d3aff25662,
     type: 2}
-  _player: {fileID: 5386367895610727223}
+  _player: {fileID: 4703277841331496194}
+  _camera: {fileID: 7897064300433677084}
   _teleportPointArray: []
 --- !u!1 &7479853191661231291
 GameObject:
