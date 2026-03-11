@@ -18,6 +18,7 @@ public class FirstPersonCharacterController : MonoBehaviour
     private void OnEnable()
     {
         CamerasManager.Register(_mainCamera);
+        CamerasManager.SetMainCamera(_mainCamera);
     }
 
     private void OnDisable()

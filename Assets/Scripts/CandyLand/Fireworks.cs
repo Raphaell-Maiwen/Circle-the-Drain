@@ -30,17 +30,24 @@ public class Fireworks : MonoBehaviour
         SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().name);
         SceneManager.LoadSceneAsync(_prideParadeLevel, LoadSceneMode.Additive);
 
-        StartCoroutine(DestroyTower());
+        StartCoroutine(EndLevelTransition());
     }
 
-    IEnumerator DestroyTower()
+    IEnumerator EndLevelTransition()
     {
         yield return new WaitForSeconds(2f);
+
+        //Switch camera prioti
+        CamerasManager.SwitchActiveCamera(CamerasManager.MainCamera);
+
+        yield return new WaitForSeconds(1f);
 
         while (CamerasManager.CameraBrain.IsBlending)
         {
             yield return null;
         }
+
+        CharacterInputHandler.Instance.PlayerInput.SwitchCurrentActionMap("Player");
 
         Destroy(this.gameObject);
     }

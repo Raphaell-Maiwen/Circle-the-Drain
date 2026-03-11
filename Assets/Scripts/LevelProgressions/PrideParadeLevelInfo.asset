@@ -16,3 +16,7 @@ MonoBehaviour:
   _onLoop: 0
   _UIPrefab: {fileID: 4712453289528464324, guid: b28acea0ea634f94f8dd585c7633e4a1,
     type: 3}
+  _cameraStartingAnchor: {fileID: 6332755630279627947, guid: c01ba033cb43bdf49a1d529272cbb2b3,
+    type: 3}
+  _playerStartingAnchor: {fileID: 3446786844124904784, guid: 4288577d8fda6b74db0f419a83335068,
+    type: 3}
