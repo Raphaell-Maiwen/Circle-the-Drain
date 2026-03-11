@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adba131dc6347484897df3967e6c5367, type: 3}
   m_Name: PrideParadeLevelInfo
   m_EditorClassIdentifier: Assembly-CSharp::LevelInfo
+  _levelIndex: 2
   _levelSong: PrideMedley
   _onLoop: 0
   _UIPrefab: {fileID: 4712453289528464324, guid: b28acea0ea634f94f8dd585c7633e4a1,

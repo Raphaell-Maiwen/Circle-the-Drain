@@ -18,15 +18,19 @@ public class TeleportAction : MonoBehaviour
         _rocketCollectableZoneChannel.OnPlayerExited += TryRestoreTeleportAction;
         _rocketLaunchZoneChannel.OnPlayerEntered += DisableTeleportAction;
         _rocketLaunchZoneChannel.OnPlayerExited += TryRestoreTeleportAction;
+
+        if (_progress.IsThresholdReached) _messenger.AddListener(Teleport);
     }
 
     private void OnDisable()
     {
-        _progress.OnThresholdReached += EnableTeleportAction;
+        _progress.OnThresholdReached -= EnableTeleportAction;
         _rocketCollectableZoneChannel.OnPlayerEntered -= DisableTeleportAction;
         _rocketCollectableZoneChannel.OnPlayerExited -= TryRestoreTeleportAction;
         _rocketLaunchZoneChannel.OnPlayerEntered -= DisableTeleportAction;
         _rocketLaunchZoneChannel.OnPlayerExited -= TryRestoreTeleportAction;
+
+        _messenger.OnInteractPressed.RemoveListener(Teleport);
     }
 
     private void EnableTeleportAction()

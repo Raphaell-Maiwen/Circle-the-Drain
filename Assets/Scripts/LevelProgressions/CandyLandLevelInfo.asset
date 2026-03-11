@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adba131dc6347484897df3967e6c5367, type: 3}
   m_Name: CandyLandLevelInfo
   m_EditorClassIdentifier: Assembly-CSharp::LevelInfo
+  _levelIndex: 1
   _levelSong: CaliforniaGurls
   _onLoop: 1
   _UIPrefab: {fileID: 4678980118338643471, guid: 46daeb3f7ec55db4f9e1c0dff0b456c6,
