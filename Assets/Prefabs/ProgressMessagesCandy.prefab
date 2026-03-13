@@ -256,6 +256,7 @@ MonoBehaviour:
   _zoneChannels:
   - {fileID: 11400000, guid: 0eb0eeb2cffd1c447ba76e589b1f95b8, type: 2}
   - {fileID: 11400000, guid: fbabe64171828e54586321d3aff25662, type: 2}
+  - {fileID: 11400000, guid: 1ba3a9f8bc755b74dbd2f9bcb245901e, type: 2}
   _zoneMessage: {fileID: 7174297912361505520}
   _progress: {fileID: 11400000, guid: 94a659f7522d762458bab7479e8deab2, type: 2}
   _teleportMessage: {fileID: 2877968598674010122}
