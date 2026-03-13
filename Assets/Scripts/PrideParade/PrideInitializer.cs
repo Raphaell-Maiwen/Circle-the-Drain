@@ -6,6 +6,7 @@ public class PrideInitializer : LevelInitialization
 {
     [SerializeField] private List<Animator> walkAnimatorList;
     [SerializeField] private List<Animator> waveAnimatorList;
+    [SerializeField] private List<Animator> _dogAnimatorList;
     [SerializeField] private string _transitionSong;
     [SerializeField] private string _nightmareSong;
     [SerializeField] private float _nightmareIncreaseRate;
@@ -24,6 +25,11 @@ public class PrideInitializer : LevelInitialization
         foreach (var animator in waveAnimatorList)
         {
             animator.SetTrigger("wave");
+        }
+
+        foreach (var animator in _dogAnimatorList)
+        {
+            animator.SetTrigger("walk");
         }
 
         StartCoroutine(StartNightmareTransition());
