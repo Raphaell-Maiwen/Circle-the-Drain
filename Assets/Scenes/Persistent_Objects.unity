@@ -171,7 +171,7 @@ PrefabInstance:
         type: 3}
       propertyPath: _bgm._serializedList.Array.data[4].Value
       value: 
-      objectReference: {fileID: 8300000, guid: 707a20a5b0e402c429bd8a72aa9826fc, type: 3}
+      objectReference: {fileID: 8300000, guid: c39aa58a31e05db4a8121779dea48e69, type: 3}
     - target: {fileID: 3286673676766712371, guid: d54cd60b1b1a0604da4727f61514c721,
         type: 3}
       propertyPath: Priority.m_Value
