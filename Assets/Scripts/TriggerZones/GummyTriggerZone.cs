@@ -26,7 +26,7 @@ public class GummyTriggerZone : InteractableTriggerZone
     {
         _dialogue.text = _text._dialogue[dialogueIndex];
         dialogueIndex++;
-        if(dialogueIndex == _dialogue.text.Length) dialogueIndex = 0;
+        if(dialogueIndex == _text._dialogue.Count) dialogueIndex = 0;
         _dialogueWindow.SetActive(true);
     }
 }
