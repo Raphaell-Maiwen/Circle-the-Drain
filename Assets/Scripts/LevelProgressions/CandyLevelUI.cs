@@ -5,6 +5,8 @@ public class CandyLevelUI : ContextualUI
 {
     [SerializeField] private CandyLevelProgress _progress;
     [SerializeField] private TextMeshProUGUI _teleportMessage;
+    [SerializeField] private TextMeshProUGUI _continueCollectingRocketsMessage;
+    [SerializeField] private string _continueDefaultText;
 
     private new void OnEnable()
     {
@@ -12,6 +14,7 @@ public class CandyLevelUI : ContextualUI
 
         _progress.OnThresholdReached += ShowTeleportMessage;
         _progress.OnLevelDone += DisableTeleportUI;
+        _progress.OnRocketCollected += UpdateCollectingRocketMessage;
         base._disableExtraUI.AddListener(DisableTeleportUI);
         base._restoreState.AddListener(RestoreState);
     }
@@ -22,6 +25,7 @@ public class CandyLevelUI : ContextualUI
 
         _progress.OnThresholdReached -= ShowTeleportMessage;
         _progress.OnLevelDone -= DisableTeleportUI;
+        _progress.OnRocketCollected -= UpdateCollectingRocketMessage;
         base._disableExtraUI.RemoveListener(DisableTeleportUI);
         base._restoreState.RemoveListener(RestoreState);
     }
@@ -30,15 +34,32 @@ public class CandyLevelUI : ContextualUI
     {
         base.EraseAllMessages();
         _teleportMessage.gameObject.SetActive(true);
+        _continueCollectingRocketsMessage.gameObject.SetActive(true);
     }
 
     private void DisableTeleportUI()
     {
         _teleportMessage.gameObject.SetActive(false);
+        _continueCollectingRocketsMessage.gameObject.SetActive(false);
     }
+
+    private void UpdateCollectingRocketMessage()
+    {
+        if (_progress.RocketsRemaining == 0)
+        {
+            _continueCollectingRocketsMessage.text = "";
+        }
+        else
+        {
+            _continueCollectingRocketsMessage.text = _continueDefaultText + _progress.RocketsRemaining
+            + " remaining.";
+        }
+    }
+
 
     private void RestoreState()
     {
         _teleportMessage.gameObject.SetActive(_progress.IsThresholdReached);
+        _continueCollectingRocketsMessage.gameObject.SetActive(_progress.IsThresholdReached);
     }
 }

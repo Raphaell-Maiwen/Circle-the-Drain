@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: CandyLevelProgress
   m_EditorClassIdentifier: Assembly-CSharp::CandyLevelProgress
   _threshold: 3
+  _rocketsTotal: 6

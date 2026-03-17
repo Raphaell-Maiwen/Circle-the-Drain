@@ -8,6 +8,9 @@ public class CandyLevelProgress : ScriptableObject
     [SerializeField] private int _threshold = 3;
     public int Threshold => _threshold;
 
+    [SerializeField] private int _rocketsTotal;
+    public int RocketsRemaining => _rocketsTotal - Count;
+
     public event Action OnRocketCollected;
     public event Action OnThresholdReached;
     public event Action OnLevelDone;
