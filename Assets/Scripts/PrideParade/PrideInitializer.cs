@@ -7,6 +7,7 @@ public class PrideInitializer : LevelInitialization
     [SerializeField] private List<Animator> walkAnimatorList;
     [SerializeField] private List<Animator> waveAnimatorList;
     [SerializeField] private List<Animator> _dogAnimatorList;
+    [SerializeField] private Animator _dykeLeadAnimator;
     [SerializeField] private string _transitionSong;
     [SerializeField] private string _nightmareSong;
     [SerializeField] private float _nightmareIncreaseRate;
@@ -31,6 +32,8 @@ public class PrideInitializer : LevelInitialization
         {
             animator.SetTrigger("walk");
         }
+
+        _dykeLeadAnimator.SetTrigger("idle");
 
         StartCoroutine(StartNightmareTransition());
     }
