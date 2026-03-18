@@ -49,7 +49,7 @@ public class TeleportAction : MonoBehaviour
         if (_progress.IsThresholdReached) EnableTeleportAction();
     }
 
-    private void Teleport()
+    private void Teleport(string str)
     {
         Vector3 teleportPointPosition = _teleportPointArray[0].position;
         Vector3 teleportPointRotation = _teleportPointArray[0].rotation.eulerAngles;

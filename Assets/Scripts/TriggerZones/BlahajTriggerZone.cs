@@ -6,7 +6,7 @@ public class BlahajTriggerZone : InteractableTriggerZone
     [SerializeField] private GameObject _transShark;
     //Particles??
 
-    protected override void OnInteractPressed()
+    protected override void OnInteractPressed(string str)
     {
         GetComponent<BoxCollider>().enabled = false;
         OnPlayerExit();

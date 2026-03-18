@@ -21,7 +21,7 @@ public class RocketCollectableTriggerZone : InteractableTriggerZone
         }
     }
 
-    protected override void OnInteractPressed()
+    protected override void OnInteractPressed(string str)
     {
         _progress.Add();
 

@@ -9,7 +9,7 @@ public class DumpsterTriggerZone : InteractableTriggerZone
     [SerializeField] private Transform[] _memeWaypointsArray;
     [SerializeField] private float _memeSpeed;
 
-    protected override void OnInteractPressed()
+    protected override void OnInteractPressed(string str)
     {
         _dumpster.position = _dumpsterOpenAnchor.position;
         _dumpster.rotation = _dumpsterOpenAnchor.rotation;

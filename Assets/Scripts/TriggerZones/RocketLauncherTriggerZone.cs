@@ -26,7 +26,7 @@ public class RocketLauncherTriggerZone : InteractableTriggerZone
         CamerasManager.Unregister(_fireworkCamera);
     }
 
-    protected override void OnInteractPressed()
+    protected override void OnInteractPressed(string str)
     {
         if (_progress.IsThresholdReached)
         {

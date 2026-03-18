@@ -5,7 +5,7 @@ public class TVScreenTriggerZone : InteractableTriggerZone
 {
     [SerializeField] private televisionCode TelevisionCode;
 
-    protected override void OnInteractPressed()
+    protected override void OnInteractPressed(string str)
     {
         GetComponent<BoxCollider>().enabled = false;
         OnPlayerExit();

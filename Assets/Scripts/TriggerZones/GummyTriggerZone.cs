@@ -22,7 +22,7 @@ public class GummyTriggerZone : InteractableTriggerZone
         _dialogueWindow.SetActive(false);
     }
 
-    protected override void OnInteractPressed()
+    protected override void OnInteractPressed(string str)
     {
         _dialogue.text = _text._dialogue[dialogueIndex];
         dialogueIndex++;
