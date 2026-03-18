@@ -38,7 +38,7 @@ public class RocketLauncherTriggerZone : InteractableTriggerZone
 
             CamerasManager.SwitchActiveCamera(_fireworkCamera);
             AudioManager.Instance.StopAllSounds();
-            _fireworks.InitializeFireworks();
+            StartCoroutine(_fireworks.InitializeFireworks());
         }
     }
 }

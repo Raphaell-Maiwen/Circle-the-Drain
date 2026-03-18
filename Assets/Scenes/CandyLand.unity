@@ -5153,7 +5153,7 @@ PrefabInstance:
     - target: {fileID: 4428576766145887872, guid: f45854adc9d23df418e18bbc4bfe74cc,
         type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4903552235510666400, guid: f45854adc9d23df418e18bbc4bfe74cc,
         type: 3}
@@ -5228,7 +5228,7 @@ PrefabInstance:
     - target: {fileID: 8726050008286084272, guid: f45854adc9d23df418e18bbc4bfe74cc,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12808,7 +12808,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1927903197}
     m_Modifications:
     - target: {fileID: 2794804607574606300, guid: e545cea0a4f61c04ba4b38c2f4a60649,
         type: 3}
@@ -12822,38 +12822,53 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7735073755861523161, guid: e545cea0a4f61c04ba4b38c2f4a60649,
         type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.43434817
+      objectReference: {fileID: 0}
+    - target: {fileID: 7735073755861523161, guid: e545cea0a4f61c04ba4b38c2f4a60649,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.4343483
+      objectReference: {fileID: 0}
+    - target: {fileID: 7735073755861523161, guid: e545cea0a4f61c04ba4b38c2f4a60649,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.43434823
+      objectReference: {fileID: 0}
+    - target: {fileID: 7735073755861523161, guid: e545cea0a4f61c04ba4b38c2f4a60649,
+        type: 3}
       propertyPath: m_LocalPosition.x
-      value: 148.38994
+      value: 0.4270339
       objectReference: {fileID: 0}
     - target: {fileID: 7735073755861523161, guid: e545cea0a4f61c04ba4b38c2f4a60649,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 59.67241
+      value: -2.7214198
       objectReference: {fileID: 0}
     - target: {fileID: 7735073755861523161, guid: e545cea0a4f61c04ba4b38c2f4a60649,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 301.7756
+      value: 5.611284
       objectReference: {fileID: 0}
     - target: {fileID: 7735073755861523161, guid: e545cea0a4f61c04ba4b38c2f4a60649,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7491673
       objectReference: {fileID: 0}
     - target: {fileID: 7735073755861523161, guid: e545cea0a4f61c04ba4b38c2f4a60649,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: 0.108054355
       objectReference: {fileID: 0}
     - target: {fileID: 7735073755861523161, guid: e545cea0a4f61c04ba4b38c2f4a60649,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 0.64681476
       objectReference: {fileID: 0}
     - target: {fileID: 7735073755861523161, guid: e545cea0a4f61c04ba4b38c2f4a60649,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: 0.09329181
       objectReference: {fileID: 0}
     - target: {fileID: 7735073755861523161, guid: e545cea0a4f61c04ba4b38c2f4a60649,
         type: 3}
@@ -13233,7 +13248,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &944964682
 Transform:
   m_ObjectHideFlags: 0
@@ -13767,6 +13782,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: AirBalloon_01 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8286285730029762471, guid: cf609a4e6ef141e4f88f0f3e609d3ac2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8769946999152684317, guid: cf609a4e6ef141e4f88f0f3e609d3ac2,
         type: 3}
@@ -17269,7 +17289,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Fireworks
   _fireworksSong: Fireworks
   _prideParadeLevel: PrideParade
-  _fireworksShowDuration: 30
+  _fireworksShowDuration: 10
   _lodGroup: {fileID: 113432500}
   _objectsToDeactivate:
   - {fileID: 104795647}
@@ -26397,6 +26417,7 @@ Transform:
   m_Children:
   - {fileID: 113432499}
   - {fileID: 370381312}
+  - {fileID: 2025313883}
   m_Father: {fileID: 1085984161}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1927903198
@@ -27762,6 +27783,12 @@ Transform:
 --- !u!1 &2025313881 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2794804607574606300, guid: e545cea0a4f61c04ba4b38c2f4a60649,
+    type: 3}
+  m_PrefabInstance: {fileID: 917133486}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2025313883 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7735073755861523161, guid: e545cea0a4f61c04ba4b38c2f4a60649,
     type: 3}
   m_PrefabInstance: {fileID: 917133486}
   m_PrefabAsset: {fileID: 0}
@@ -29742,5 +29769,4 @@ SceneRoots:
   - {fileID: 1085984160}
   - {fileID: 691329112}
   - {fileID: 944906210}
-  - {fileID: 917133486}
   - {fileID: 104795649}
