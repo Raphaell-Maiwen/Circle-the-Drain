@@ -1,4 +1,6 @@
+using NUnit.Framework;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -8,6 +10,8 @@ public class Fireworks : MonoBehaviour
     [SerializeField] private string _prideParadeLevel;
     [SerializeField] private float _fireworksShowDuration;
     [SerializeField] private LODGroup _lodGroup;
+    [SerializeField] private List<GameObject> _objectsToDeactivate;
+    [SerializeField] private List<GameObject> _objectsToActivate;
 
     private void Awake()
     {
@@ -17,6 +21,19 @@ public class Fireworks : MonoBehaviour
     public void InitializeFireworks()
     {
         AudioManager.Instance.PlaySound(_fireworksSong);
+
+        foreach (var obj in _objectsToDeactivate)
+        {
+            obj.gameObject.SetActive(false);
+        }
+
+        foreach (var obj in _objectsToActivate)
+        {
+            obj.gameObject.SetActive(true);
+        }
+
+        Camera.main.clearFlags = CameraClearFlags.SolidColor;
+        Camera.main.backgroundColor = Color.black;
 
         StartCoroutine(LoadPrideParade());
     }
