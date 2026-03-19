@@ -30,6 +30,7 @@ public class RocketLauncherTriggerZone : InteractableTriggerZone
     {
         if (_progress.IsThresholdReached)
         {
+            _interactMessenger.OnInteractPressed?.Invoke(null);
             GetComponent<BoxCollider>().enabled = false;
             OnPlayerExit();
             _progress.LevelDone();

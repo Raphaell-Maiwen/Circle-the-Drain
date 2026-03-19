@@ -7,6 +7,7 @@ public class TVScreenTriggerZone : InteractableTriggerZone
 
     protected override void OnInteractPressed(string str)
     {
+        _interactMessenger.OnInteractPressed?.Invoke(null);
         GetComponent<BoxCollider>().enabled = false;
         OnPlayerExit();
         TelevisionCode.channelChange();

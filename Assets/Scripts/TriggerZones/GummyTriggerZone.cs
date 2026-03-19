@@ -24,6 +24,7 @@ public class GummyTriggerZone : InteractableTriggerZone
 
     protected override void OnInteractPressed(string str)
     {
+        _interactMessenger.OnInteractPressed?.Invoke(null);
         _dialogue.text = _text._dialogue[dialogueIndex];
         dialogueIndex++;
         if(dialogueIndex == _text._dialogue.Count) dialogueIndex = 0;

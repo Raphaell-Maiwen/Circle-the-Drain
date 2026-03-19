@@ -11,6 +11,7 @@ public class DumpsterTriggerZone : InteractableTriggerZone
 
     protected override void OnInteractPressed(string str)
     {
+        _interactMessenger.OnInteractPressed?.Invoke(null);
         _dumpster.position = _dumpsterOpenAnchor.position;
         _dumpster.rotation = _dumpsterOpenAnchor.rotation;
 

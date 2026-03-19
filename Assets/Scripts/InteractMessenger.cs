@@ -5,11 +5,12 @@ using UnityEngine.InputSystem;
 
 public class InteractMessenger : ScriptableObject
 {
+    public event Action OnInteractInput;
     public UnityEvent<string> OnInteractPressed;
 
     public void SendInteractMessage(InputAction.CallbackContext context)
     {
-        OnInteractPressed?.Invoke(null);
+        OnInteractInput?.Invoke();
     }
 
     public void AddListener(UnityAction<string> action)

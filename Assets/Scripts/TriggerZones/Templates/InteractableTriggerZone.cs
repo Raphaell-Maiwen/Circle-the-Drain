@@ -3,19 +3,24 @@ using UnityEngine.UI;
 
 public abstract class InteractableTriggerZone : TriggerZone
 {
-    [SerializeField] private InteractMessenger _interactMessenger;
+    [SerializeField] protected InteractMessenger _interactMessenger;
     [SerializeField] protected InteractableTriggerZoneEventChannel _zoneChannel;
 
     protected override void OnPlayerEnter()
     {
-        _interactMessenger.AddListener(OnInteractPressed);
+        _interactMessenger.OnInteractInput += TriggerInteract;
         _zoneChannel.PlayerEnter();
     }
 
     protected override void OnPlayerExit()
     {
-        _interactMessenger.OnInteractPressed.RemoveListener(OnInteractPressed);
+        _interactMessenger.OnInteractInput -= TriggerInteract;
         _zoneChannel.PlayerExit();
+    }
+
+    private void TriggerInteract()
+    {
+        OnInteractPressed(null);
     }
 
     protected abstract void OnInteractPressed(string str);

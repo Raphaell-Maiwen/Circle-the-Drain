@@ -3,7 +3,7 @@ using UnityEngine;
 public class BookTriggerZone : InteractableTriggerZone
 {
     [SerializeField] private BookText _bookText;
-    [SerializeField] private InteractMessenger _messenger;
+    private bool _isOpened;
 
     protected override void OnPlayerEnter()
     {
@@ -17,6 +17,19 @@ public class BookTriggerZone : InteractableTriggerZone
 
     protected override void OnInteractPressed(string str)
     {
-        _messenger.OnInteractPressed?.Invoke(_bookText.BookContent);
+        _interactMessenger.OnInteractPressed?.Invoke(_bookText.BookContent);
+
+        if (!_isOpened)
+        {
+            CharacterInputHandler.Instance.PlayerInput.SwitchCurrentActionMap("Cutscene");
+            //Start Coroutine of opening book
+        }
+        else
+        {
+            CharacterInputHandler.Instance.PlayerInput.SwitchCurrentActionMap("Player");
+            //Start Coroutine of closing book
+        }
+
+        _isOpened = !_isOpened;
     }
 }

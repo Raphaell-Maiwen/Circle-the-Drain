@@ -23,6 +23,7 @@ public class RocketCollectableTriggerZone : InteractableTriggerZone
 
     protected override void OnInteractPressed(string str)
     {
+        _interactMessenger.OnInteractPressed?.Invoke(null);
         _progress.Add();
 
         //Add something on Audio Manager?

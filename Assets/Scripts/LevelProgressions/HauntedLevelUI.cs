@@ -31,7 +31,7 @@ public class HauntedLevelUI : ContextualUI
         else
         {
             _scrollViewText.text = content;
-            _scrollView.SetActive(true);
+            _scrollView.SetActive(!_scrollView.activeSelf);
         }
     }
 }
