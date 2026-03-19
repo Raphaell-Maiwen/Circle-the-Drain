@@ -14,13 +14,14 @@ public class TeleportAction : MonoBehaviour
 
     private void OnEnable()
     {
+        Debug.Log($"TeleportAction OnEnable called, frame: {Time.frameCount}", this);
         _progress.OnThresholdReached += EnableTeleportAction;
         _rocketCollectableZoneChannel.OnPlayerEntered += DisableTeleportAction;
         _rocketCollectableZoneChannel.OnPlayerExited += TryRestoreTeleportAction;
         _rocketLaunchZoneChannel.OnPlayerEntered += DisableTeleportAction;
         _rocketLaunchZoneChannel.OnPlayerExited += TryRestoreTeleportAction;
 
-        if (_progress.IsThresholdReached) _messenger.AddListener(Teleport);
+        if (_progress.IsThresholdReached) EnableTeleportAction();
     }
 
     private void OnDisable()
@@ -31,25 +32,18 @@ public class TeleportAction : MonoBehaviour
         _rocketLaunchZoneChannel.OnPlayerEntered -= DisableTeleportAction;
         _rocketLaunchZoneChannel.OnPlayerExited -= TryRestoreTeleportAction;
 
-        _messenger.OnInteractPressed.RemoveListener(Teleport);
+        _messenger.OnInteractInput -= Teleport;
     }
 
-    private void EnableTeleportAction()
-    {
-        _messenger.AddListener(Teleport);
-    }
-
-    private void DisableTeleportAction(InteractableTriggerZoneEventChannel channel)
-    {
-        _messenger.OnInteractPressed.RemoveListener(Teleport);
-    }
-
+    private void EnableTeleportAction() => _messenger.OnInteractInput += Teleport;
+    private void DisableTeleportAction(InteractableTriggerZoneEventChannel channel) => _messenger.OnInteractInput -= Teleport;
     private void TryRestoreTeleportAction()
     {
+        _messenger.OnInteractInput -= Teleport;
         if (_progress.IsThresholdReached) EnableTeleportAction();
     }
 
-    private void Teleport(string str)
+    private void Teleport()
     {
         Vector3 teleportPointPosition = _teleportPointArray[0].position;
         Vector3 teleportPointRotation = _teleportPointArray[0].rotation.eulerAngles;
