@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -30,6 +31,8 @@ public class CharacterInputHandler : MonoBehaviour
 
     public bool InteractTriggered { get; private set; }
     public bool CutsceneInteractTriggered { get; private set; }
+
+    private bool _ignoreInput = true;
 
     private void Awake()
     {
@@ -70,7 +73,7 @@ public class CharacterInputHandler : MonoBehaviour
         _cutsceneInteractAction.canceled += inputInfo => CutsceneInteractTriggered = false;
 
         _interactAction.performed += _interactMessenger.SendInteractMessage;
-        _cutsceneInteractAction.performed += _ => OnCutsceneInteract?.Invoke();
+        //_cutsceneInteractAction.performed += _ => OnCutsceneInteract?.Invoke();
 
         _interactAction.started += ctx => Debug.Log("Started");
         _interactAction.performed += ctx => Debug.Log("Pressed");
@@ -81,15 +84,30 @@ public class CharacterInputHandler : MonoBehaviour
         _cutsceneInteractAction.canceled += ctx => Debug.Log("Cutscene Canceled");
     }
 
-
-
-    private void OnEnable()
+    public void EnableToggleReadingBook()
     {
-        _playerControls.FindActionMap(_actionMapName).Enable();
+        Debug.Log("Toggle book");
+
+        _cutsceneInteractAction.performed += ToggleReadingBook;
     }
 
-    private void OnDisable()
+    private void ToggleReadingBook(InputAction.CallbackContext context)
     {
-        _playerControls.FindActionMap(_actionMapName).Disable();
+        if (!_ignoreInput)
+        {
+            _cutsceneInteractAction.performed += InvokeCutsceneInteract;
+        }
+
+        _ignoreInput = !_ignoreInput;
+    }
+
+    public void DisableToggleReadingBook()
+    {
+        _cutsceneInteractAction.performed -= InvokeCutsceneInteract;
+    }
+
+    public void InvokeCutsceneInteract(InputAction.CallbackContext context)
+    {
+        OnCutsceneInteract?.Invoke();
     }
 }

@@ -14,7 +14,6 @@ public class TeleportAction : MonoBehaviour
 
     private void OnEnable()
     {
-        Debug.Log($"TeleportAction OnEnable called, frame: {Time.frameCount}", this);
         _progress.OnThresholdReached += EnableTeleportAction;
         _rocketCollectableZoneChannel.OnPlayerEntered += DisableTeleportAction;
         _rocketCollectableZoneChannel.OnPlayerExited += TryRestoreTeleportAction;

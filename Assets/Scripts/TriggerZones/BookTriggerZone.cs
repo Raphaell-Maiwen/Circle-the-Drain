@@ -22,30 +22,25 @@ public class BookTriggerZone : InteractableTriggerZone
     {
         _isOpened = true;
         _interactMessenger.OnInteractPressed?.Invoke(_bookText.BookContent);
-        CharacterInputHandler.Instance.PlayerInput.SwitchCurrentActionMap("Cutscene");
 
-        /*_interactMessenger.OnInteractPressed?.Invoke(_bookText.BookContent);
+        CharacterInputHandler.Instance.PlayerInput.actions.FindActionMap("Player").Disable();
+        CharacterInputHandler.Instance.PlayerInput.actions.FindActionMap("Cutscene").Enable();
 
-        if (!_isOpened)
-        {
-            StartCoroutine(SwitchMapNextFrame("Cutscene"));
-            Debug.Log("Open");
-            //Start Coroutine of opening book
-        }
-        else
-        {
-            StartCoroutine(SwitchMapNextFrame("Player"));
-            Debug.Log("Close");
-            //Start Coroutine of closing book
-        }
+        Debug.Log("Tu me niaises tu");
 
-        _isOpened = !_isOpened;*/
+        CharacterInputHandler.Instance.EnableToggleReadingBook();
     }
 
     private void CloseBook()
     {
+        Debug.Log("Close book");
+
         _isOpened = false;
         _interactMessenger.OnInteractPressed?.Invoke(null);
-        CharacterInputHandler.Instance.PlayerInput.SwitchCurrentActionMap("Player");
+
+        CharacterInputHandler.Instance.PlayerInput.actions.FindActionMap("Player").Enable();
+        CharacterInputHandler.Instance.PlayerInput.actions.FindActionMap("Cutscene").Disable();
+
+        CharacterInputHandler.Instance.DisableToggleReadingBook();
     }
 }

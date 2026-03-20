@@ -14,7 +14,6 @@ public class InteractableTriggerZoneEventChannel : ScriptableObject
     public void PlayerEnter()
     {
         IsTriggered = true;
-        Debug.Log($"{name} PlayerEnter fired, listener count: {OnPlayerEntered?.GetInvocationList().Length}");
         OnPlayerEntered?.Invoke(this);
     }
 

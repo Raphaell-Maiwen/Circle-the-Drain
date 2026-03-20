@@ -13,6 +13,8 @@ public class HauntedLevelUI : ContextualUI
         base.OnEnable();
 
         _interactMessenger.OnInteractPressed.AddListener(OnInteractPressed);
+        CharacterInputHandler.Instance.OnCutsceneInteract += CloseBook;
+
     }
 
     private new void OnDisable()
@@ -20,6 +22,7 @@ public class HauntedLevelUI : ContextualUI
         base.OnDisable();
 
         _interactMessenger.OnInteractPressed.RemoveListener(OnInteractPressed);
+        CharacterInputHandler.Instance.OnCutsceneInteract -= CloseBook;
     }
 
     private void OnInteractPressed(string content)
@@ -33,5 +36,10 @@ public class HauntedLevelUI : ContextualUI
             _scrollViewText.text = content;
             _scrollView.SetActive(!_scrollView.activeSelf);
         }
+    }
+
+    private void CloseBook()
+    {
+        _scrollView.SetActive(!_scrollView.activeSelf);
     }
 }
