@@ -73,21 +73,10 @@ public class CharacterInputHandler : MonoBehaviour
         _cutsceneInteractAction.canceled += inputInfo => CutsceneInteractTriggered = false;
 
         _interactAction.performed += _interactMessenger.SendInteractMessage;
-        //_cutsceneInteractAction.performed += _ => OnCutsceneInteract?.Invoke();
-
-        _interactAction.started += ctx => Debug.Log("Started");
-        _interactAction.performed += ctx => Debug.Log("Pressed");
-        _interactAction.canceled += ctx => Debug.Log("Canceled");
-
-        _cutsceneInteractAction.started += ctx => Debug.Log("Cutscene Started");
-        _cutsceneInteractAction.performed += ctx => Debug.Log("Cutscene Pressed");
-        _cutsceneInteractAction.canceled += ctx => Debug.Log("Cutscene Canceled");
     }
 
     public void EnableToggleReadingBook()
     {
-        Debug.Log("Toggle book");
-
         _cutsceneInteractAction.performed += ToggleReadingBook;
     }
 

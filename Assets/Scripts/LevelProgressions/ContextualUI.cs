@@ -9,6 +9,8 @@ public class ContextualUI : MonoBehaviour
     protected UnityEvent _disableExtraUI = new UnityEvent();
     protected UnityEvent _restoreState = new UnityEvent();
 
+    protected InteractableTriggerZoneEventChannel _lastChannel;
+
     protected void OnEnable()
     {
         foreach (var channel in _zoneChannels)
@@ -27,11 +29,12 @@ public class ContextualUI : MonoBehaviour
         }
     }
 
-    private void ShowZoneMessage(InteractableTriggerZoneEventChannel channel)
+    protected void ShowZoneMessage(InteractableTriggerZoneEventChannel channel)
     {
         _disableExtraUI?.Invoke();
         _zoneMessage.text = channel.ResolveMessage();
         _zoneMessage.gameObject.SetActive(true);
+        _lastChannel = channel;
     }
 
     protected void EraseAllMessages()

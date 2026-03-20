@@ -35,11 +35,13 @@ public class HauntedLevelUI : ContextualUI
         {
             _scrollViewText.text = content;
             _scrollView.SetActive(!_scrollView.activeSelf);
+            EraseAllMessages();
         }
     }
 
     private void CloseBook()
     {
         _scrollView.SetActive(!_scrollView.activeSelf);
+        ShowZoneMessage(_lastChannel);
     }
 }

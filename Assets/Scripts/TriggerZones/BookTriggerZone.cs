@@ -26,15 +26,11 @@ public class BookTriggerZone : InteractableTriggerZone
         CharacterInputHandler.Instance.PlayerInput.actions.FindActionMap("Player").Disable();
         CharacterInputHandler.Instance.PlayerInput.actions.FindActionMap("Cutscene").Enable();
 
-        Debug.Log("Tu me niaises tu");
-
         CharacterInputHandler.Instance.EnableToggleReadingBook();
     }
 
     private void CloseBook()
     {
-        Debug.Log("Close book");
-
         _isOpened = false;
         _interactMessenger.OnInteractPressed?.Invoke(null);
 
