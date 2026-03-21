@@ -7,6 +7,7 @@ public class HauntedLevelUI : ContextualUI
     [SerializeField] private GameObject _scrollView;
     [SerializeField] private TextMeshProUGUI _scrollViewText;
     [SerializeField] private InteractMessenger _interactMessenger;
+    [SerializeField] private TextMeshProUGUI _closeBookMsg;
 
     private new void OnEnable()
     {
@@ -36,6 +37,7 @@ public class HauntedLevelUI : ContextualUI
             _scrollViewText.text = content;
             _scrollView.SetActive(!_scrollView.activeSelf);
             EraseAllMessages();
+            _closeBookMsg.gameObject.SetActive(true);
         }
     }
 
@@ -43,5 +45,7 @@ public class HauntedLevelUI : ContextualUI
     {
         _scrollView.SetActive(!_scrollView.activeSelf);
         ShowZoneMessage(_lastChannel);
+
+        _closeBookMsg.gameObject.SetActive(false);
     }
 }

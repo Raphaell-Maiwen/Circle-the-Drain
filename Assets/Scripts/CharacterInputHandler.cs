@@ -78,12 +78,16 @@ public class CharacterInputHandler : MonoBehaviour
     public void EnableToggleReadingBook()
     {
         _cutsceneInteractAction.performed += ToggleReadingBook;
+
+        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.visible = true;
     }
 
     private void ToggleReadingBook(InputAction.CallbackContext context)
     {
         if (!_ignoreInput)
         {
+            //Call the function rather than add the event
             _cutsceneInteractAction.performed += InvokeCutsceneInteract;
         }
 
@@ -98,5 +102,8 @@ public class CharacterInputHandler : MonoBehaviour
     public void InvokeCutsceneInteract(InputAction.CallbackContext context)
     {
         OnCutsceneInteract?.Invoke();
+
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 }
