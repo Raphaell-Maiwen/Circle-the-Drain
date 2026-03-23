@@ -779,32 +779,32 @@ PrefabInstance:
     - target: {fileID: 4703277841331496194, guid: d54cd60b1b1a0604da4727f61514c721,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 15.71
+      value: 15.76
       objectReference: {fileID: 0}
     - target: {fileID: 4703277841331496194, guid: d54cd60b1b1a0604da4727f61514c721,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.218
+      value: 0.21800002
       objectReference: {fileID: 0}
     - target: {fileID: 4703277841331496194, guid: d54cd60b1b1a0604da4727f61514c721,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 6.49
+      value: 4.92
       objectReference: {fileID: 0}
     - target: {fileID: 4703277841331496194, guid: d54cd60b1b1a0604da4727f61514c721,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.97521377
+      value: 0.9957092
       objectReference: {fileID: 0}
     - target: {fileID: 4703277841331496194, guid: d54cd60b1b1a0604da4727f61514c721,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.221265
+      value: 0.09253748
       objectReference: {fileID: 0}
     - target: {fileID: 4703277841331496194, guid: d54cd60b1b1a0604da4727f61514c721,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -25.567
+      value: 10.619
       objectReference: {fileID: 0}
     - target: {fileID: 6490142261982184609, guid: d54cd60b1b1a0604da4727f61514c721,
         type: 3}
@@ -1253,6 +1253,12 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4383365570951180718, guid: b93b204043c19be42a5cb157610766bf,
+        type: 3}
+      propertyPath: 'staticVideos.Array.data[0]'
+      value: 
+      objectReference: {fileID: 32900000, guid: d8ca84508146a54409694ac98a76231d,
+        type: 3}
     - target: {fileID: 4954795969169756920, guid: b93b204043c19be42a5cb157610766bf,
         type: 3}
       propertyPath: m_IsActive
@@ -1263,6 +1269,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: TV2 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6450596915606579862, guid: b93b204043c19be42a5cb157610766bf,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6450596915606579862, guid: b93b204043c19be42a5cb157610766bf,
+        type: 3}
+      propertyPath: m_VideoClip
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6450596915606579862, guid: b93b204043c19be42a5cb157610766bf,
+        type: 3}
+      propertyPath: m_RenderMode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6450596915606579862, guid: b93b204043c19be42a5cb157610766bf,
+        type: 3}
+      propertyPath: m_TargetTexture
+      value: 
+      objectReference: {fileID: 8400000, guid: 11218edc61c115a4cb231a4b76a874a9, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1443,6 +1469,12 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4383365570951180718, guid: b93b204043c19be42a5cb157610766bf,
+        type: 3}
+      propertyPath: 'staticVideos.Array.data[0]'
+      value: 
+      objectReference: {fileID: 32900000, guid: d8ca84508146a54409694ac98a76231d,
+        type: 3}
     - target: {fileID: 4954795969169756920, guid: b93b204043c19be42a5cb157610766bf,
         type: 3}
       propertyPath: m_IsActive
@@ -1453,6 +1485,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: TV2 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 6450596915606579862, guid: b93b204043c19be42a5cb157610766bf,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6450596915606579862, guid: b93b204043c19be42a5cb157610766bf,
+        type: 3}
+      propertyPath: m_VideoClip
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6450596915606579862, guid: b93b204043c19be42a5cb157610766bf,
+        type: 3}
+      propertyPath: m_RenderMode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6450596915606579862, guid: b93b204043c19be42a5cb157610766bf,
+        type: 3}
+      propertyPath: m_TargetTexture
+      value: 
+      objectReference: {fileID: 8400000, guid: 11218edc61c115a4cb231a4b76a874a9, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1682,18 +1734,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 749789496}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &763670963 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4383365570951180718, guid: b93b204043c19be42a5cb157610766bf,
-    type: 3}
-  m_PrefabInstance: {fileID: 707537869}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83a0a01aeef464440939668bf74ffe89, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &805211147 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 795661407807071286, guid: b93b204043c19be42a5cb157610766bf,
@@ -2029,7 +2069,7 @@ PrefabInstance:
         type: 3}
       propertyPath: 'staticVideos.Array.data[0]'
       value: 
-      objectReference: {fileID: 32900000, guid: 913cc8b302ba67448a02a4dc31be9c32,
+      objectReference: {fileID: 32900000, guid: d8ca84508146a54409694ac98a76231d,
         type: 3}
     - target: {fileID: 4954795969169756920, guid: b93b204043c19be42a5cb157610766bf,
         type: 3}
@@ -2041,6 +2081,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: TV2
       objectReference: {fileID: 0}
+    - target: {fileID: 6450596915606579862, guid: b93b204043c19be42a5cb157610766bf,
+        type: 3}
+      propertyPath: m_VideoClip
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6450596915606579862, guid: b93b204043c19be42a5cb157610766bf,
+        type: 3}
+      propertyPath: m_RenderMode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6450596915606579862, guid: b93b204043c19be42a5cb157610766bf,
+        type: 3}
+      propertyPath: m_TargetTexture
+      value: 
+      objectReference: {fileID: 8400000, guid: 11218edc61c115a4cb231a4b76a874a9, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2143,18 +2198,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 580365919}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &959780342 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4383365570951180718, guid: b93b204043c19be42a5cb157610766bf,
-    type: 3}
-  m_PrefabInstance: {fileID: 580365919}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83a0a01aeef464440939668bf74ffe89, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1021984876
 GameObject:
   m_ObjectHideFlags: 0
@@ -2454,6 +2497,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: TV2 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 5497158969287712787, guid: b93b204043c19be42a5cb157610766bf,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2731,6 +2779,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: TV2 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5497158969287712787, guid: b93b204043c19be42a5cb157610766bf,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3287,6 +3340,12 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4383365570951180718, guid: b93b204043c19be42a5cb157610766bf,
+        type: 3}
+      propertyPath: 'staticVideos.Array.data[0]'
+      value: 
+      objectReference: {fileID: 32900000, guid: d8ca84508146a54409694ac98a76231d,
+        type: 3}
     - target: {fileID: 4954795969169756920, guid: b93b204043c19be42a5cb157610766bf,
         type: 3}
       propertyPath: m_IsActive
@@ -3297,6 +3356,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: TV2 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 6450596915606579862, guid: b93b204043c19be42a5cb157610766bf,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6450596915606579862, guid: b93b204043c19be42a5cb157610766bf,
+        type: 3}
+      propertyPath: m_VideoClip
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6450596915606579862, guid: b93b204043c19be42a5cb157610766bf,
+        type: 3}
+      propertyPath: m_RenderMode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6450596915606579862, guid: b93b204043c19be42a5cb157610766bf,
+        type: 3}
+      propertyPath: m_TargetTexture
+      value: 
+      objectReference: {fileID: 8400000, guid: 11218edc61c115a4cb231a4b76a874a9, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3308,18 +3387,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1810981193}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1883078070 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4383365570951180718, guid: b93b204043c19be42a5cb157610766bf,
-    type: 3}
-  m_PrefabInstance: {fileID: 1810981193}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83a0a01aeef464440939668bf74ffe89, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1895316513 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1524064310572694625, guid: a4d59dc6cc1273e43b943863a799ef8f,
@@ -3577,6 +3644,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2081503655}
   - component: {fileID: 2081503656}
+  - component: {fileID: 2081503657}
   m_Layer: 0
   m_Name: TV_Stack
   m_TagString: Untagged
@@ -3592,8 +3660,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2081503654}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -21.21, y: -0.15000011, z: -17.81}
+  m_LocalRotation: {x: -0, y: 0.9996285, z: -0, w: -0.027255666}
+  m_LocalPosition: {x: -1.3232088, y: 0.23472941, z: 6.973649}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3604,8 +3672,21 @@ Transform:
   - {fileID: 1883078067}
   - {fileID: 959780339}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 208.69, z: 0}
 --- !u!114 &2081503656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2081503654}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b5e86d622cf13445aae0aa6e15e980b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TVStack
+  _televisionMaster: {fileID: 1949066782}
+--- !u!114 &2081503657
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3614,14 +3695,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2081503654}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b5e86d622cf13445aae0aa6e15e980b, type: 3}
+  m_Script: {fileID: 11500000, guid: 5fea6f8d8f5f7df458fb2fc7d528a009, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TVStack
-  _televisionArray:
-  - {fileID: 1949066782}
-  - {fileID: 763670963}
-  - {fileID: 1883078070}
-  - {fileID: 959780342}
+  m_EditorClassIdentifier: Assembly-CSharp::TVStaticManager
+  staticClip: {fileID: 32900000, guid: ae9e5bc08ce29c34f9eea528a03444e7, type: 3}
+  staticRenderTexture: {fileID: 8400000, guid: 11218edc61c115a4cb231a4b76a874a9, type: 2}
 --- !u!1 &2134135301
 GameObject:
   m_ObjectHideFlags: 0
