@@ -7,16 +7,11 @@ public class BookTriggerZone : InteractableTriggerZone
     [SerializeField] private Transform _bookTransform;
     [SerializeField] private Animator _bookAnimator;
     [SerializeField] private Transform _bookOpenAnchor;
+    [SerializeField] private Transform _bookClosedAnchor;
     [SerializeField] private float _openingSpeed;
     [SerializeField] private float _openingRotationSpeed;
-    private Transform _bookClosedAnchor;
     
     [SerializeField] private BookText _bookText;
-
-    private void Start()
-    {
-        _bookClosedAnchor = _bookTransform;
-    }
 
     protected override void OnPlayerEnter()
     {
@@ -91,6 +86,8 @@ public class BookTriggerZone : InteractableTriggerZone
     
     private IEnumerator AnimatingBookClosing()
     {
+        _interactMessenger.OnInteractPressed?.Invoke(_bookText.BookContent);
+        
         Vector3 distance = _bookClosedAnchor.position - _bookTransform.position;
         float angleDiff = Quaternion.Angle(_bookTransform.rotation, _bookClosedAnchor.rotation);
 
@@ -132,8 +129,6 @@ public class BookTriggerZone : InteractableTriggerZone
 
             yield return null;
         }
-        
-        _interactMessenger.OnInteractPressed?.Invoke(_bookText.BookContent);
     }
 
     private void CloseBook()
