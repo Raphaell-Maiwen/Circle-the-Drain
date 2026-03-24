@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adba131dc6347484897df3967e6c5367, type: 3}
+  m_Name: HauntedHouseLevelInfo
+  m_EditorClassIdentifier: Assembly-CSharp::LevelInfo
+  _levelIndex: 3
+  _levelSong: 
+  _onLoop: 1
+  _UIPrefab: {fileID: 8602602403849263553, guid: d23ba30935aebb2488a0155371f6f58f,
+    type: 3}
+  _cameraStartingAnchor: {fileID: 6301920697711960619, guid: 4c1e4f0f5911b274ab96b445dcffaf4d,
+    type: 3}
+  _playerStartingAnchor: {fileID: 9161910928354067159, guid: 8cc3e332c97c1544eaaccb06f0bdbc71,
+    type: 3}
+  _playerSpeed: 7

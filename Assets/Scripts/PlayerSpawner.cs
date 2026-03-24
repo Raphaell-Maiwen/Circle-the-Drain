@@ -31,4 +31,15 @@ public class PlayerSpawner : MonoBehaviour
 
         _player.GetComponent<FirstPersonCharacterController>().SetSpeed(levelInfo._playerSpeed);
     }
+
+    public void ChangePlayerSize(float newSize)
+    {
+        _player.transform.localScale = new Vector3(newSize, newSize, newSize);
+    }
+
+    public void ChangePlayerRotation(Transform playerPos, Transform cameraPos)
+    {
+        _player.transform.rotation = playerPos.rotation;
+        _cameraAnchor.transform.rotation = cameraPos.rotation;
+    }
 }
