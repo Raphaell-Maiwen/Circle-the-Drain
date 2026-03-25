@@ -40,8 +40,6 @@ public class PrideInitializer : LevelInitialization
     {
         _profile = _volume.profile;
         
-        Invoke(nameof(TestFilterFunction), 5f);
-        
         base.Start();
 
         foreach (var animator in walkAnimatorList)
@@ -61,13 +59,7 @@ public class PrideInitializer : LevelInitialization
 
         _dykeLeadAnimator.SetTrigger("idle");
 
-        //StartCoroutine(StartNightmareTransition());
-    }
-
-    private void TestFilterFunction()
-    {
-        Debug.Log("Start visual changes");
-        StartCoroutine(IncreaseNightmareVisuals(_transitionDuration));
+        StartCoroutine(StartNightmareTransition());
     }
 
     IEnumerator StartWalk(Animator animator)
@@ -91,8 +83,8 @@ public class PrideInitializer : LevelInitialization
         }
 
         audioManager.PlaySound(_transitionSong, false);
-        audioManager.AddChorusFilter(5f, 1f);
-        audioManager.AddAudioDistortionFilter(0.3f);
+        audioManager.AddChorusFilter(_startChorusDelay, _startChorusRate);
+        audioManager.AddAudioDistortionFilter(_startDistortionLevel);
 
         StartCoroutine(StartNightmare());
     }
@@ -105,30 +97,12 @@ public class PrideInitializer : LevelInitialization
         }
 
         AudioManager.Instance.PlaySound(_nightmareSong, true);
-        StartCoroutine(IncreaseNightmare());
+        StartCoroutine(IncreaseNightmare(_transitionDuration));
     }
 
-    IEnumerator IncreaseNightmare()
-    {
-        /*bool rateCapReached = AudioManager.Instance.AddChorusFilter(0f, 2f, 100f, 10f);
-        bool distortionCapReached = AudioManager.Instance.AddAudioDistortionFilter(0.1f, 0.6f);
-
-        if (rateCapReached && distortionCapReached)
-        {
-            StopCoroutine(_increaseNightmareCoroutine);
-        }*/
-
-        yield return new WaitForSeconds(_nightmareIncreaseRate);
-        _increaseNightmareCoroutine = StartCoroutine(IncreaseNightmare());
-    }
-
-    IEnumerator IncreaseNightmareVisuals(float duration)
+    IEnumerator IncreaseNightmare(float duration)
     {
         AudioManager audioManager = AudioManager.Instance;
-        
-        //audioManager.PlaySound(_transitionSong, false);
-        audioManager.AddChorusFilter(_startChorusDelay, _startChorusRate);
-        audioManager.AddAudioDistortionFilter(_startDistortionLevel);
         
         float elapsedTime = 0f;
         _volume.enabled = true;
