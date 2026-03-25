@@ -80,7 +80,7 @@ public class BookTriggerZone : InteractableTriggerZone
         }
 
         _interactMessenger.OnInteractPressed?.Invoke(_bookText.BookContent);
-        //_bookAnimator.enabled = true;
+        _bookAnimator.enabled = true;
         //_bookAnimator.SetTrigger("OpenBook");
     }
     
