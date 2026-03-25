@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.Universal;
 
 public class PrideInitializer : LevelInitialization
 {
@@ -11,11 +13,24 @@ public class PrideInitializer : LevelInitialization
     [SerializeField] private string _transitionSong;
     [SerializeField] private string _nightmareSong;
     [SerializeField] private float _nightmareIncreaseRate;
+    [SerializeField] private float _transitionDuration;
+    
+    [SerializeField] private Volume _volume;
+    LiftGammaGain gain;
 
     private Coroutine _increaseNightmareCoroutine;
 
     void Start()
     {
+        _volume.profile.TryGet<LiftGammaGain>(out gain);
+        
+        Color startColor = gain.gamma.value;
+        Color endColor = new Vector4(0.75f, 0.76f, 1.00f, 0.23f);;
+
+        StartCoroutine(IncreaseNightmareColor(startColor, endColor, _transitionDuration));
+        
+        Debug.Log(gain.gamma.value);
+        
         base.Start();
 
         foreach (var animator in walkAnimatorList)
@@ -36,6 +51,11 @@ public class PrideInitializer : LevelInitialization
         _dykeLeadAnimator.SetTrigger("idle");
 
         StartCoroutine(StartNightmareTransition());
+    }
+
+    private void TestFilterFunction()
+    {
+        gain.gamma.value = new Vector4(0.75f, 0.76f, 1.00f, 0.23f);
     }
 
     IEnumerator StartWalk(Animator animator)
@@ -89,4 +109,54 @@ public class PrideInitializer : LevelInitialization
         yield return new WaitForSeconds(_nightmareIncreaseRate);
         _increaseNightmareCoroutine = StartCoroutine(IncreaseNightmare());
     }
+
+    IEnumerator IncreaseNightmareColor(Color startColor, Color endColor, float duration)
+    {
+        float elapsedTime = 0f;
+
+        while (elapsedTime < duration)
+        {
+            float t = elapsedTime / duration;
+            
+            gain.gamma.value = Color.Lerp(startColor, endColor, t);
+            elapsedTime += Time.deltaTime;
+            
+            yield return null;
+        }
+        
+        gain.gamma.value = endColor;
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -6857,6 +6857,8 @@ MonoBehaviour:
   _transitionSong: UrSoGayTransition
   _nightmareSong: UrSoGayLoop
   _nightmareIncreaseRate: 5
+  _transitionDuration: 5
+  _volume: {fileID: 173327448}
 --- !u!1001 &734072670
 PrefabInstance:
   m_ObjectHideFlags: 0
