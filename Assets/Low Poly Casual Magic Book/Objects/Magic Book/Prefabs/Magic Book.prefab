@@ -191,6 +191,37 @@ Transform:
   - {fileID: 1063020213414488363}
   m_Father: {fileID: 612016068292759937}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2152418341781611088
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1389735596443673065}
+  m_Layer: 0
+  m_Name: Book_Close_Anchor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1389735596443673065
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2152418341781611088}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.12894917, y: -0.020573568, z: -0.0684095}
+  m_LocalScale: {x: 0.14246637, y: 0.14246637, z: 0.14246637}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2592359518822711262}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2459294242075749711
 GameObject:
   m_ObjectHideFlags: 0
@@ -391,6 +422,7 @@ Transform:
   - {fileID: 6504704619337312619}
   - {fileID: 3261536271358817594}
   - {fileID: 5202975192523508456}
+  - {fileID: 1389735596443673065}
   - {fileID: 9088949193982324019}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1297,7 +1329,9 @@ MonoBehaviour:
   _bookTransform: {fileID: 5202975192523508456}
   _bookAnimator: {fileID: 1950071256380442064}
   _bookOpenAnchor: {fileID: 9088949193982324019}
+  _bookClosedAnchor: {fileID: 1389735596443673065}
   _openingSpeed: 3
+  _openingRotationSpeed: 5
   _bookText: {fileID: 11400000, guid: 2534b47cf1b30cf4e969b85e660b8525, type: 2}
 --- !u!1001 &7228872173412039654
 PrefabInstance:
@@ -1377,7 +1411,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8296162131472133739, guid: cef78b3c12f1d1c458b42c8c5a72dda9, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
