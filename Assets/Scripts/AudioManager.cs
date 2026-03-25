@@ -94,6 +94,7 @@ public class AudioManager : MonoBehaviour
     }
 
     //Add channels and stuff
+    //Remove bools and stuff
     public bool AddAudioDistortionFilter(float distortionLevel, float capDistortion = 0.9f)
     {
         gameObject.TryGetComponent<AudioDistortionFilter>(out AudioDistortionFilter distortionFilter);
@@ -139,4 +140,77 @@ public class AudioManager : MonoBehaviour
             return false;
         }
     }
+
+    public void SetDistortionFilter(float distortionLevel, bool increment = false)
+    {
+        gameObject.TryGetComponent<AudioDistortionFilter>(out AudioDistortionFilter distortionFilter);
+        if (!distortionFilter)
+        {
+            AddAudioDistortionFilter(distortionLevel);
+        }
+        else
+        {
+            if(!increment) distortionFilter.distortionLevel = distortionLevel;
+            else distortionFilter.distortionLevel += distortionLevel;
+        }
+    }
+
+    public void SetChorusFilterDelay(float delay, bool increment = false)
+    {
+        gameObject.TryGetComponent<AudioChorusFilter>(out AudioChorusFilter chorusFilter);
+
+        if (!chorusFilter)
+        {
+            AddChorusFilter(delay, 1);
+        }
+        else
+        {
+            if (!increment) chorusFilter.delay = delay;
+            else chorusFilter.delay += delay;
+        }
+    }
+    
+    public void SetChorusFilterRate(float rate, bool increment = false)
+    {
+        gameObject.TryGetComponent<AudioChorusFilter>(out AudioChorusFilter chorusFilter);
+
+        if (!chorusFilter)
+        {
+            AddChorusFilter(1, rate);
+        }
+        else
+        {
+            if (!increment) chorusFilter.rate = rate;
+            else chorusFilter.rate += rate;
+        }
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -21,10 +21,18 @@ public class PrideInitializer : LevelInitialization
 
     [Header("Visual values")] 
     [SerializeField] private Color _endColor;
-    [SerializeField] private float _vignetteIntensity;
-    [SerializeField] private float _lightIntensity;
+    [SerializeField] private float _endVignetteIntensity;
+    [SerializeField] private float _endLightIntensity;
     [SerializeField] private float _startGrainIntensity;
     [SerializeField] private float _endGrainIntensity;
+
+    [Header("Audio values")]
+    [SerializeField] private float _startChorusRate;
+    [SerializeField] private float _endChorusRate;
+    [SerializeField] private float _startChorusDelay;
+    [SerializeField] private float _endChorusDelay;
+    [SerializeField] private float _startDistortionLevel;
+    [SerializeField] private float _endDistortionLevel;
 
     private Coroutine _increaseNightmareCoroutine;
 
@@ -53,15 +61,12 @@ public class PrideInitializer : LevelInitialization
 
         _dykeLeadAnimator.SetTrigger("idle");
 
-        StartCoroutine(StartNightmareTransition());
+        //StartCoroutine(StartNightmareTransition());
     }
 
     private void TestFilterFunction()
     {
-        Color endColor = new Vector4(0.75f, 0.76f, 1.00f, 0.23f);
-
         Debug.Log("Start visual changes");
-        
         StartCoroutine(IncreaseNightmareVisuals(_transitionDuration));
     }
 
@@ -119,6 +124,12 @@ public class PrideInitializer : LevelInitialization
 
     IEnumerator IncreaseNightmareVisuals(float duration)
     {
+        AudioManager audioManager = AudioManager.Instance;
+        
+        //audioManager.PlaySound(_transitionSong, false);
+        audioManager.AddChorusFilter(_startChorusDelay, _startChorusRate);
+        audioManager.AddAudioDistortionFilter(_startDistortionLevel);
+        
         float elapsedTime = 0f;
         _volume.enabled = true;
 
@@ -138,16 +149,28 @@ public class PrideInitializer : LevelInitialization
         {
             float t = elapsedTime / duration;
             
+            //Visuals
             liftGammaGain.gamma.value = Color.Lerp(startColor, _endColor, t);
-            vignette.intensity.value = Mathf.Lerp(0f, _vignetteIntensity, t);
+            vignette.intensity.value = Mathf.Lerp(0f, _endVignetteIntensity, t);
             filmGrain.intensity.value = Mathf.Lerp(_startGrainIntensity, _endGrainIntensity, t);
-            _light.intensity = Mathf.Lerp(startLightIntensity, _lightIntensity, t);
+            _light.intensity = Mathf.Lerp(startLightIntensity, _endLightIntensity, t);
+            
+            //Audio
+            audioManager.SetDistortionFilter(Mathf.Lerp(_startDistortionLevel, _endDistortionLevel, t));
+            audioManager.SetChorusFilterDelay(Mathf.Lerp(_startChorusDelay, _endChorusDelay, t));
+            audioManager.SetChorusFilterRate(Mathf.Lerp(_startChorusRate, _endChorusRate, t));
             
             elapsedTime += Time.deltaTime;
             yield return null;
         }
         
         liftGammaGain.gamma.value = _endColor;
+        vignette.intensity.value = _endVignetteIntensity;
+        filmGrain.intensity.value = _endGrainIntensity;
+        _light.intensity = _endLightIntensity;
+        audioManager.SetDistortionFilter(_endDistortionLevel);
+        audioManager.SetChorusFilterDelay(_endChorusDelay);
+        audioManager.SetChorusFilterRate(_endChorusRate);
     }
 }
 

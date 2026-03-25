@@ -6857,7 +6857,7 @@ MonoBehaviour:
   _transitionSong: UrSoGayTransition
   _nightmareSong: UrSoGayLoop
   _nightmareIncreaseRate: 5
-  _transitionDuration: 5
+  _transitionDuration: 20
   _volume: {fileID: 173327448}
   _light: {fileID: 1957857495}
   _endColor: {r: 0.75, g: 0.76, b: 1, a: 0.23137255}
@@ -6865,6 +6865,12 @@ MonoBehaviour:
   _lightIntensity: 0.5
   _startGrainIntensity: 0.4
   _endGrainIntensity: 0.8
+  _startChorusRate: 1
+  _endChorusRate: 10
+  _startChorusDelay: 5
+  _endChorusDelay: 100
+  _startDistortionLevel: 0.3
+  _endDistortionLevel: 0.6
 --- !u!1001 &734072670
 PrefabInstance:
   m_ObjectHideFlags: 0
