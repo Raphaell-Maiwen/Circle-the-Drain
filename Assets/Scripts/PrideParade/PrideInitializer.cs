@@ -16,18 +16,23 @@ public class PrideInitializer : LevelInitialization
     [SerializeField] private float _transitionDuration;
     
     [SerializeField] private Volume _volume;
+    private VolumeProfile _profile;
+    [SerializeField] private Light _light;
     LiftGammaGain gain;
+
+    [Header("Visual values")] 
+    [SerializeField] private Color _endColor;
+    [SerializeField] private float _vignetteIntensity;
+    [SerializeField] private float _lightIntensity;
 
     private Coroutine _increaseNightmareCoroutine;
 
     void Start()
     {
+        _profile = _volume.profile;
         _volume.profile.TryGet<LiftGammaGain>(out gain);
         
-        Color startColor = gain.gamma.value;
-        Color endColor = new Vector4(0.75f, 0.76f, 1.00f, 0.23f);;
-
-        StartCoroutine(IncreaseNightmareColor(startColor, endColor, _transitionDuration));
+        Invoke(nameof(TestFilterFunction), 5f);
         
         Debug.Log(gain.gamma.value);
         
@@ -55,7 +60,12 @@ public class PrideInitializer : LevelInitialization
 
     private void TestFilterFunction()
     {
-        gain.gamma.value = new Vector4(0.75f, 0.76f, 1.00f, 0.23f);
+        Color startColor = gain.gamma.value;
+        Color endColor = new Vector4(0.75f, 0.76f, 1.00f, 0.23f);
+
+        Debug.Log("Start visual changes");
+        
+        StartCoroutine(IncreaseNightmareVisuals(startColor, endColor, _transitionDuration));
     }
 
     IEnumerator StartWalk(Animator animator)
@@ -110,17 +120,25 @@ public class PrideInitializer : LevelInitialization
         _increaseNightmareCoroutine = StartCoroutine(IncreaseNightmare());
     }
 
-    IEnumerator IncreaseNightmareColor(Color startColor, Color endColor, float duration)
+    IEnumerator IncreaseNightmareVisuals(Color startColor, Color endColor, float duration)
     {
         float elapsedTime = 0f;
+        _volume.enabled = true;
+
+        Vignette vignette;
+        _profile.TryGet<Vignette>(out vignette);
+
+        float startLightIntensity = _light.intensity;
 
         while (elapsedTime < duration)
         {
             float t = elapsedTime / duration;
             
             gain.gamma.value = Color.Lerp(startColor, endColor, t);
-            elapsedTime += Time.deltaTime;
+            vignette.intensity.value = Mathf.Lerp(0f, _vignetteIntensity, t);
+            _light.intensity = Mathf.Lerp(startLightIntensity, _lightIntensity, t);
             
+            elapsedTime += Time.deltaTime;
             yield return null;
         }
         
