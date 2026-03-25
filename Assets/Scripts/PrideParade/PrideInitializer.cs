@@ -23,6 +23,8 @@ public class PrideInitializer : LevelInitialization
     [SerializeField] private Color _endColor;
     [SerializeField] private float _vignetteIntensity;
     [SerializeField] private float _lightIntensity;
+    [SerializeField] private float _startGrainIntensity;
+    [SerializeField] private float _endGrainIntensity;
 
     private Coroutine _increaseNightmareCoroutine;
 
@@ -120,12 +122,15 @@ public class PrideInitializer : LevelInitialization
         float elapsedTime = 0f;
         _volume.enabled = true;
 
-        LiftGammaGain gain;
-        _volume.profile.TryGet<LiftGammaGain>(out gain);
-        Color startColor = gain.gamma.value;
+        LiftGammaGain liftGammaGain;
+        _volume.profile.TryGet<LiftGammaGain>(out liftGammaGain);
+        Color startColor = liftGammaGain.gamma.value;
         
         Vignette vignette;
         _profile.TryGet<Vignette>(out vignette);
+        
+        FilmGrain filmGrain;
+        _profile.TryGet<FilmGrain>(out filmGrain);
 
         float startLightIntensity = _light.intensity;
 
@@ -133,15 +138,16 @@ public class PrideInitializer : LevelInitialization
         {
             float t = elapsedTime / duration;
             
-            gain.gamma.value = Color.Lerp(startColor, _endColor, t);
+            liftGammaGain.gamma.value = Color.Lerp(startColor, _endColor, t);
             vignette.intensity.value = Mathf.Lerp(0f, _vignetteIntensity, t);
+            filmGrain.intensity.value = Mathf.Lerp(_startGrainIntensity, _endGrainIntensity, t);
             _light.intensity = Mathf.Lerp(startLightIntensity, _lightIntensity, t);
             
             elapsedTime += Time.deltaTime;
             yield return null;
         }
         
-        gain.gamma.value = _endColor;
+        liftGammaGain.gamma.value = _endColor;
     }
 }
 

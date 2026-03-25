@@ -6863,6 +6863,8 @@ MonoBehaviour:
   _endColor: {r: 0.75, g: 0.76, b: 1, a: 0.23137255}
   _vignetteIntensity: 0.43
   _lightIntensity: 0.5
+  _startGrainIntensity: 0.4
+  _endGrainIntensity: 0.8
 --- !u!1001 &734072670
 PrefabInstance:
   m_ObjectHideFlags: 0
