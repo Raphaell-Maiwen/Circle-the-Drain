@@ -110,13 +110,13 @@ public class PrideInitializer : LevelInitialization
 
     IEnumerator IncreaseNightmare()
     {
-        bool rateCapReached = AudioManager.Instance.AddChorusFilter(0f, 2f, 100f, 10f);
+        /*bool rateCapReached = AudioManager.Instance.AddChorusFilter(0f, 2f, 100f, 10f);
         bool distortionCapReached = AudioManager.Instance.AddAudioDistortionFilter(0.1f, 0.6f);
 
         if (rateCapReached && distortionCapReached)
         {
             StopCoroutine(_increaseNightmareCoroutine);
-        }
+        }*/
 
         yield return new WaitForSeconds(_nightmareIncreaseRate);
         _increaseNightmareCoroutine = StartCoroutine(IncreaseNightmare());

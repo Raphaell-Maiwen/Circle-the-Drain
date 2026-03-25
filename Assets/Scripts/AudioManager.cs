@@ -94,51 +94,19 @@ public class AudioManager : MonoBehaviour
     }
 
     //Add channels and stuff
-    //Remove bools and stuff
-    public bool AddAudioDistortionFilter(float distortionLevel, float capDistortion = 0.9f)
+    public void AddAudioDistortionFilter(float distortionLevel)
     {
-        gameObject.TryGetComponent<AudioDistortionFilter>(out AudioDistortionFilter distortionFilter);
-        if (distortionFilter)
-        {
-            distortionFilter.distortionLevel += distortionLevel;
-            distortionFilter.distortionLevel = Mathf.Min(distortionFilter.distortionLevel, capDistortion);
-            if (distortionFilter.distortionLevel >= capDistortion) return true;
-            return false;
-        }
-        else
-        {
-            AudioDistortionFilter newFilter = gameObject.AddComponent<AudioDistortionFilter>();
-            newFilter.distortionLevel = distortionLevel;
-            return false;
-        }
+        AudioDistortionFilter newFilter = gameObject.AddComponent<AudioDistortionFilter>();
+        newFilter.distortionLevel = distortionLevel;
     }
 
     //Add depth?
-    public bool AddChorusFilter(float delay, float rate, float capDelay = 100f, float capRate = 20f)
+    public void AddChorusFilter(float delay, float rate)
     {
-        gameObject.TryGetComponent<AudioChorusFilter>(out AudioChorusFilter chorusFilter);
-
-        if (chorusFilter)
-        {
-            chorusFilter.delay += delay;
-            chorusFilter.rate += rate;
-
-            chorusFilter.delay = Mathf.Min(chorusFilter.delay, capDelay);
-            chorusFilter.rate = Mathf.Min(chorusFilter.rate, capRate);
-
-            if ((delay > 0 && chorusFilter.delay >= capDelay) ||
-            (rate > 0 && chorusFilter.rate >= capRate)) return true;
-            return false;
-        }
-        else
-        {
-            AudioChorusFilter newFilter = gameObject.AddComponent<AudioChorusFilter>();
-            newFilter.delay = delay;
-            newFilter.rate = rate;
-            newFilter.depth = 1f;
-
-            return false;
-        }
+        AudioChorusFilter newFilter = gameObject.AddComponent<AudioChorusFilter>();
+        newFilter.delay = delay;
+        newFilter.rate = rate;
+        newFilter.depth = 1f;
     }
 
     public void SetDistortionFilter(float distortionLevel, bool increment = false)
