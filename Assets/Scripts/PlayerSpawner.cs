@@ -23,6 +23,9 @@ public class PlayerSpawner : MonoBehaviour
     {
         _player.transform.position = playerPos.position;
         _cameraAnchor.transform.position = cameraPos.position;
+        
+        _player.transform.rotation = playerPos.rotation;
+        _cameraAnchor.transform.rotation = playerPos.rotation;
 
         if(levelInfo._levelIndex == 2)
         {

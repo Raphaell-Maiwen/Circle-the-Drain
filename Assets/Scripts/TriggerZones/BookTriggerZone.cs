@@ -13,6 +13,21 @@ public class BookTriggerZone : InteractableTriggerZone
     
     [SerializeField] private BookText _bookText;
 
+    private void Start()
+    {
+        /*_bookAnimator.speed = 0f;
+        _bookAnimator.Play("YOUR_ANIMATION_NAME_HERE",0,0);*/
+        
+        // Fetch the current Animation clip information for the base layer (layer 0)
+        AnimatorClipInfo[] m_CurrentClipInfo = _bookAnimator.GetCurrentAnimatorClipInfo(0);
+
+        // Access the Animation clip name (for the first clip in the list)
+        if (m_CurrentClipInfo.Length > 0)
+        {
+            Debug.Log("Current Clip Name: " + m_CurrentClipInfo[0].clip.name);
+        }
+    }
+
     protected override void OnPlayerEnter()
     {
         base.OnPlayerEnter();
@@ -42,8 +57,10 @@ public class BookTriggerZone : InteractableTriggerZone
 
         bool positionDone = false;
         bool rotationDone = false;
+        
+        Quaternion initialRotation = _bookTransform.rotation;
 
-        while(!positionDone || !rotationDone) //(distance.magnitude > 0.1f)
+        while(!positionDone || !rotationDone)
         {
             if (!positionDone)
             {
@@ -80,13 +97,14 @@ public class BookTriggerZone : InteractableTriggerZone
         }
 
         _interactMessenger.OnInteractPressed?.Invoke(_bookText.BookContent);
+        _bookTransform.rotation = initialRotation;
         _bookAnimator.enabled = true;
-        //_bookAnimator.SetTrigger("OpenBook");
     }
     
     private IEnumerator AnimatingBookClosing()
     {
-        _interactMessenger.OnInteractPressed?.Invoke(_bookText.BookContent);
+        _bookAnimator.enabled = false;
+        _bookTransform.rotation = _bookOpenAnchor.rotation;
         
         Vector3 distance = _bookClosedAnchor.position - _bookTransform.position;
         float angleDiff = Quaternion.Angle(_bookTransform.rotation, _bookClosedAnchor.rotation);
@@ -94,7 +112,7 @@ public class BookTriggerZone : InteractableTriggerZone
         bool positionDone = false;
         bool rotationDone = false;
 
-        while(!positionDone || !rotationDone) //(distance.magnitude > 0.1f)
+        while(!positionDone || !rotationDone)
         {
             if (!positionDone)
             {
