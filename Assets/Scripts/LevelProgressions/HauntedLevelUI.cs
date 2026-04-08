@@ -9,13 +9,12 @@ public class HauntedLevelUI : ContextualUI
     [SerializeField] private InteractMessenger _interactMessenger;
     [SerializeField] private TextMeshProUGUI _closeBookMsg;
 
-    private new void OnEnable()
+    private void Start()
     {
-        base.OnEnable();
+        OnEnable();
 
         _interactMessenger.OnInteractPressed.AddListener(OnInteractPressed);
         CharacterInputHandler.Instance.OnCutsceneInteract += CloseBook;
-
     }
 
     private new void OnDisable()

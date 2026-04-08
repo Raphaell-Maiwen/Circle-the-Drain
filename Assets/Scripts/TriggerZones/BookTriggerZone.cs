@@ -46,107 +46,8 @@ public class BookTriggerZone : InteractableTriggerZone
         CharacterInputHandler.Instance.PlayerInput.actions.FindActionMap("Cutscene").Enable();
 
         CharacterInputHandler.Instance.EnableToggleReadingBook();
-
-        StartCoroutine(AnimatingBookOpening());
-    }
-
-    private IEnumerator AnimatingBookOpening()
-    {
-        Vector3 distance = _bookOpenAnchor.position - _bookTransform.position;
-        float angleDiff = Quaternion.Angle(_bookTransform.rotation, _bookOpenAnchor.rotation);
-
-        bool positionDone = false;
-        bool rotationDone = false;
         
-        Quaternion initialRotation = _bookTransform.rotation;
-
-        while(!positionDone || !rotationDone)
-        {
-            if (!positionDone)
-            {
-                distance = _bookOpenAnchor.position - _bookTransform.position;
-                if (distance.magnitude <= 0.01f)
-                {
-                    _bookTransform.position = _bookOpenAnchor.position;
-                    positionDone = true;
-                }
-                else
-                {
-                    _bookTransform.position += distance.normalized * Time.deltaTime * _openingSpeed;
-                }
-            }
-            if (!rotationDone)
-            {
-                angleDiff = Quaternion.Angle(_bookTransform.rotation, _bookOpenAnchor.rotation);
-                if (angleDiff <= 0.1f)
-                {
-                    _bookTransform.rotation = _bookOpenAnchor.rotation;
-                    rotationDone = true;
-                }
-                else
-                {
-                    _bookTransform.rotation = Quaternion.Slerp(
-                        _bookTransform.rotation,
-                        _bookOpenAnchor.rotation,
-                        Time.deltaTime * _openingRotationSpeed
-                    );
-                }
-            }
-
-            yield return null;
-        }
-
-        _interactMessenger.OnInteractPressed?.Invoke(_bookText.BookContent);
-        _bookTransform.rotation = initialRotation;
-        _bookAnimator.enabled = true;
-    }
-    
-    private IEnumerator AnimatingBookClosing()
-    {
-        _bookAnimator.enabled = false;
-        _bookTransform.rotation = _bookOpenAnchor.rotation;
-        
-        Vector3 distance = _bookClosedAnchor.position - _bookTransform.position;
-        float angleDiff = Quaternion.Angle(_bookTransform.rotation, _bookClosedAnchor.rotation);
-
-        bool positionDone = false;
-        bool rotationDone = false;
-
-        while(!positionDone || !rotationDone)
-        {
-            if (!positionDone)
-            {
-                distance = _bookClosedAnchor.position - _bookTransform.position;
-                if (distance.magnitude <= 0.01f)
-                {
-                    _bookTransform.position = _bookClosedAnchor.position;
-                    positionDone = true;
-                }
-                else
-                {
-                    _bookTransform.position += distance.normalized * Time.deltaTime * _openingSpeed;
-                }
-            }
-            if (!rotationDone)
-            {
-                angleDiff = Quaternion.Angle(_bookTransform.rotation, _bookClosedAnchor.rotation);
-                if (angleDiff <= 0.1f)
-                {
-                    _bookTransform.rotation = _bookClosedAnchor.rotation;
-                    rotationDone = true;
-                }
-                else
-                {
-                    _bookTransform.rotation = Quaternion.Slerp(
-                        _bookTransform.rotation,
-                        _bookClosedAnchor.rotation,
-                        Time.deltaTime * _openingRotationSpeed
-                    );
-                }
-            }
-
-            yield return null;
-        }
+        _interactMessenger.OnInteractPressed?.Invoke(_bookText.BookContent);    
     }
 
     private void CloseBook()
@@ -157,8 +58,6 @@ public class BookTriggerZone : InteractableTriggerZone
         CharacterInputHandler.Instance.PlayerInput.actions.FindActionMap("Cutscene").Disable();
 
         CharacterInputHandler.Instance.DisableToggleReadingBook();
-        
-        StartCoroutine(AnimatingBookClosing());
     }
 }
 
