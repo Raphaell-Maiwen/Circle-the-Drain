@@ -5,16 +5,14 @@ using UnityEngine;
 
 public class BookTriggerZone : InteractableTriggerZone
 {
-    [SerializeField] private Transform _bookTransform;
     [SerializeField] private Transform _bookOpenAnchor;
     [SerializeField] private Transform _bookClosedAnchor;
-    [SerializeField] private float _changingStateSpeed;
+    [SerializeField] private float _changingStateDuration;
     [SerializeField] private GameObject _closedBookGO;
     [SerializeField] private GameObject _openedBookGO;
     
     [SerializeField] private BookText _bookText;
-
-    private float _timeSinceChangeStarted = 0f;
+    
     private Coroutine _changingStateCoroutine;
 
     protected override void OnPlayerEnter()
@@ -35,7 +33,8 @@ public class BookTriggerZone : InteractableTriggerZone
         CharacterInputHandler.Instance.PlayerInput.actions.FindActionMap("Cutscene").Enable();
 
         if(_changingStateCoroutine != null) StopCoroutine(_changingStateCoroutine);
-        _changingStateCoroutine = StartCoroutine(ChangeBookState(_bookClosedAnchor, _bookOpenAnchor, true));
+        _changingStateCoroutine = StartCoroutine(ChangeBookState(_closedBookGO.transform, _bookClosedAnchor, _bookOpenAnchor, true));
+        Debug.Log("Starting: " + _bookOpenAnchor.position);
         
         CharacterInputHandler.Instance.EnableToggleReadingBook();
         
@@ -47,7 +46,8 @@ public class BookTriggerZone : InteractableTriggerZone
         _interactMessenger.OnInteractPressed?.Invoke(null);
         
         if(_changingStateCoroutine != null) StopCoroutine(_changingStateCoroutine);
-        _changingStateCoroutine = StartCoroutine(ChangeBookState(_bookOpenAnchor, _bookClosedAnchor, false));
+        _changingStateCoroutine = StartCoroutine(ChangeBookState(_openedBookGO.transform, _bookOpenAnchor, _bookClosedAnchor, false));
+        Debug.Log("Is this thing on?");
 
         CharacterInputHandler.Instance.PlayerInput.actions.FindActionMap("Player").Enable();
         CharacterInputHandler.Instance.PlayerInput.actions.FindActionMap("Cutscene").Disable();
@@ -55,12 +55,28 @@ public class BookTriggerZone : InteractableTriggerZone
         CharacterInputHandler.Instance.DisableToggleReadingBook();
     }
 
-    IEnumerator ChangeBookState(Transform startingPos, Transform endingPos, bool isOpening)
+    //TODO: Add rotation
+    IEnumerator ChangeBookState(Transform currentBook, Transform startingPos, Transform endingPos, bool isOpening)
     {
-        //yield return new WaitForSeconds(_changingStateSpeed);
-        yield return null;
+        float elapsed = 0f;
+        
+        while(elapsed < _changingStateDuration)
+        {
+            elapsed += Time.deltaTime;
+            float t = Mathf.Clamp01(elapsed / _changingStateDuration);
+            
+            currentBook.position = Vector3.Lerp(startingPos.position, endingPos.position, t);
+            Debug.Log(currentBook.position);
+            //currentBook.rotation = Quaternion.Slerp(startRotation, _bookOpenAnchor.rotation, t);
 
-        _timeSinceChangeStarted = 0f;
+            yield return null;
+        }
+        
+        //currentBook.position = endingPos.position;
+        //currentBook.rotation = _bookOpenAnchor.rotation;
+        
+        _openedBookGO.transform.position = _bookOpenAnchor.position;
+        _closedBookGO.transform.position = _bookClosedAnchor.position;
         
         _openedBookGO.SetActive(isOpening);
         _closedBookGO.SetActive(!isOpening);
