@@ -314,7 +314,7 @@ MonoBehaviour:
   _zoneChannel: {fileID: 11400000, guid: 074c368e48be3dc459cea60647046ca8, type: 2}
   _bookOpenAnchor: {fileID: 4485793071509153129}
   _bookClosedAnchor: {fileID: 1845414626353256979}
-  _changingStateDuration: 1.5
+  _changingStateDuration: 0.8
   _closedBookGO: {fileID: 4709062022959355707}
   _openedBookGO: {fileID: 1106086411241276694}
   _bookText: {fileID: 11400000, guid: 2534b47cf1b30cf4e969b85e660b8525, type: 2}

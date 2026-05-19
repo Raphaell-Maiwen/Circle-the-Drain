@@ -40,6 +40,9 @@ public class BookTriggerZone : InteractableTriggerZone
 
     private void CloseBook()
     {
+        //CharacterInputHandler.Instance.OnCutsceneInteract -= CloseBook;
+        CharacterInputHandler.Instance.PlayerInput.actions.FindActionMap("Player").Disable();
+        
         if (_changingStateCoroutine == null)
         {
             _interactMessenger.OnInteractPressed?.Invoke(null);
@@ -78,8 +81,8 @@ public class BookTriggerZone : InteractableTriggerZone
 
     private void BookOpened()
     {
-        CharacterInputHandler.Instance.EnableToggleReadingBook();
         _interactMessenger.OnInteractPressed?.Invoke(_bookText.BookContent);
+        CharacterInputHandler.Instance.EnableToggleReadingBook();
     }
 
     private void BookClosed()

@@ -14,7 +14,6 @@ public class HauntedLevelUI : ContextualUI
         OnEnable();
 
         _interactMessenger.OnInteractPressed.AddListener(OnInteractPressed);
-        CharacterInputHandler.Instance.OnCutsceneInteract += CloseBook;
     }
 
     private new void OnDisable()
@@ -22,7 +21,6 @@ public class HauntedLevelUI : ContextualUI
         base.OnDisable();
 
         _interactMessenger.OnInteractPressed.RemoveListener(OnInteractPressed);
-        CharacterInputHandler.Instance.OnCutsceneInteract -= CloseBook;
     }
 
     private void OnInteractPressed(string content)
@@ -30,21 +28,16 @@ public class HauntedLevelUI : ContextualUI
         if (string.IsNullOrEmpty(content))
         {
             Debug.LogError("Book text is empty");
+            _scrollView.SetActive(false);
+            ShowZoneMessage(_lastChannel);
+            _closeBookMsg.gameObject.SetActive(false);
         }
         else
         {
             _scrollViewText.text = content;
-            _scrollView.SetActive(!_scrollView.activeSelf);
+            _scrollView.SetActive(true);
             EraseAllMessages();
             _closeBookMsg.gameObject.SetActive(true);
         }
-    }
-
-    private void CloseBook()
-    {
-        _scrollView.SetActive(!_scrollView.activeSelf);
-        ShowZoneMessage(_lastChannel);
-
-        _closeBookMsg.gameObject.SetActive(false);
     }
 }
