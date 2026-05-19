@@ -31,8 +31,8 @@ public class CharacterInputHandler : MonoBehaviour
 
     public bool InteractTriggered { get; private set; }
     public bool CutsceneInteractTriggered { get; private set; }
-
-    private bool _ignoreInput = true;
+    
+    private bool _skipNextCutsceneInteract = false;
 
     private void Awake()
     {
@@ -77,26 +77,27 @@ public class CharacterInputHandler : MonoBehaviour
 
     public void EnableToggleReadingBook()
     {
-        _cutsceneInteractAction.performed += ToggleReadingBook;
-
+        _skipNextCutsceneInteract = true;
+        _cutsceneInteractAction.performed += OnCutsceneInteractPerformed;
+        
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = true;
     }
-
-    private void ToggleReadingBook(InputAction.CallbackContext context)
+    
+    private void OnCutsceneInteractPerformed(InputAction.CallbackContext context)
     {
-        if (!_ignoreInput)
+        if (_skipNextCutsceneInteract)
         {
-            //Call the function rather than add the event
-            _cutsceneInteractAction.performed += InvokeCutsceneInteract;
+            _skipNextCutsceneInteract = false;
+            return;
         }
 
-        _ignoreInput = !_ignoreInput;
+        InvokeCutsceneInteract(context);
     }
 
     public void DisableToggleReadingBook()
     {
-        _cutsceneInteractAction.performed -= InvokeCutsceneInteract;
+        _cutsceneInteractAction.performed -= OnCutsceneInteractPerformed;
     }
 
     public void InvokeCutsceneInteract(InputAction.CallbackContext context)

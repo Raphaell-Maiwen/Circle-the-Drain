@@ -32,31 +32,23 @@ public class BookTriggerZone : InteractableTriggerZone
         CharacterInputHandler.Instance.PlayerInput.actions.FindActionMap("Player").Disable();
         CharacterInputHandler.Instance.PlayerInput.actions.FindActionMap("Cutscene").Enable();
 
-        if(_changingStateCoroutine != null) StopCoroutine(_changingStateCoroutine);
-        _changingStateCoroutine = StartCoroutine(ChangeBookState(_closedBookGO.transform, _bookClosedAnchor, _bookOpenAnchor, true));
-        Debug.Log("Starting: " + _bookOpenAnchor.position);
-        
-        CharacterInputHandler.Instance.EnableToggleReadingBook();
-        
-        _interactMessenger.OnInteractPressed?.Invoke(_bookText.BookContent);    
+        if(_changingStateCoroutine == null)
+        {
+            _changingStateCoroutine = StartCoroutine(ChangeBookState(_closedBookGO.transform, _bookClosedAnchor, _bookOpenAnchor, true, BookOpened));
+        }
     }
 
     private void CloseBook()
     {
-        _interactMessenger.OnInteractPressed?.Invoke(null);
-        
-        if(_changingStateCoroutine != null) StopCoroutine(_changingStateCoroutine);
-        _changingStateCoroutine = StartCoroutine(ChangeBookState(_openedBookGO.transform, _bookOpenAnchor, _bookClosedAnchor, false));
-        Debug.Log("Is this thing on?");
-
-        CharacterInputHandler.Instance.PlayerInput.actions.FindActionMap("Player").Enable();
-        CharacterInputHandler.Instance.PlayerInput.actions.FindActionMap("Cutscene").Disable();
-
-        CharacterInputHandler.Instance.DisableToggleReadingBook();
+        if (_changingStateCoroutine == null)
+        {
+            _interactMessenger.OnInteractPressed?.Invoke(null);
+            _changingStateCoroutine = StartCoroutine(ChangeBookState(_openedBookGO.transform, _bookOpenAnchor, _bookClosedAnchor, false, BookClosed));
+        }
     }
 
     //TODO: Add rotation
-    IEnumerator ChangeBookState(Transform currentBook, Transform startingPos, Transform endingPos, bool isOpening)
+    IEnumerator ChangeBookState(Transform currentBook, Transform startingPos, Transform endingPos, bool isOpening, Action endOfCoroutineAction)
     {
         float elapsed = 0f;
         
@@ -72,9 +64,6 @@ public class BookTriggerZone : InteractableTriggerZone
             yield return null;
         }
         
-        //currentBook.position = endingPos.position;
-        //currentBook.rotation = _bookOpenAnchor.rotation;
-        
         _openedBookGO.transform.position = _bookOpenAnchor.position;
         _closedBookGO.transform.position = _bookClosedAnchor.position;
         _openedBookGO.transform.rotation = _bookOpenAnchor.rotation;
@@ -83,7 +72,22 @@ public class BookTriggerZone : InteractableTriggerZone
         _openedBookGO.SetActive(isOpening);
         _closedBookGO.SetActive(!isOpening);
 
+        endOfCoroutineAction?.Invoke();
         _changingStateCoroutine = null;
+    }
+
+    private void BookOpened()
+    {
+        CharacterInputHandler.Instance.EnableToggleReadingBook();
+        _interactMessenger.OnInteractPressed?.Invoke(_bookText.BookContent);
+    }
+
+    private void BookClosed()
+    {
+        CharacterInputHandler.Instance.PlayerInput.actions.FindActionMap("Player").Enable();
+        CharacterInputHandler.Instance.PlayerInput.actions.FindActionMap("Cutscene").Disable();
+
+        CharacterInputHandler.Instance.DisableToggleReadingBook();
     }
 }
 
