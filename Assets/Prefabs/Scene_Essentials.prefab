@@ -49,6 +49,7 @@ MonoBehaviour:
   _playerControls: {fileID: -944628639613478452, guid: 9c1265597de4bdc49ac12a4d675daae6,
     type: 3}
   _actionMapName: Player
+  _cutSceneMapName: Cutscene
   _movement: Movement
   _rotation: Rotation
   _interact: Interact
@@ -728,6 +729,8 @@ MonoBehaviour:
     _serializedList:
     - Key: CaliforniaGurls
       Value: {fileID: 8300000, guid: 44a73f4aa9a6f7d47bb2c56e0de330ea, type: 3}
+    - Key: Fireworks
+      Value: {fileID: 8300000, guid: f78151216cb94ab49b0f0b1b65546923, type: 3}
     - Key: UrSoGayTransition
       Value: {fileID: 8300000, guid: 1542e1f80f995f74c8cdf88cd633ca27, type: 3}
     - Key: UrSoGayLoop

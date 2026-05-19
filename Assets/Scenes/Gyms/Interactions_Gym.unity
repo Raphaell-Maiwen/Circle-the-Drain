@@ -370,6 +370,74 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1377568952
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4837578941122574543, guid: 4c6cbe177ac347e40abe1c2f7f4fb826,
+        type: 3}
+      propertyPath: m_Name
+      value: Book_Lore (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8181584272774659434, guid: 4c6cbe177ac347e40abe1c2f7f4fb826,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4.8199716
+      objectReference: {fileID: 0}
+    - target: {fileID: 8181584272774659434, guid: 4c6cbe177ac347e40abe1c2f7f4fb826,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.38
+      objectReference: {fileID: 0}
+    - target: {fileID: 8181584272774659434, guid: 4c6cbe177ac347e40abe1c2f7f4fb826,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.32963836
+      objectReference: {fileID: 0}
+    - target: {fileID: 8181584272774659434, guid: 4c6cbe177ac347e40abe1c2f7f4fb826,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.13919188
+      objectReference: {fileID: 0}
+    - target: {fileID: 8181584272774659434, guid: 4c6cbe177ac347e40abe1c2f7f4fb826,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8181584272774659434, guid: 4c6cbe177ac347e40abe1c2f7f4fb826,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.9902655
+      objectReference: {fileID: 0}
+    - target: {fileID: 8181584272774659434, guid: 4c6cbe177ac347e40abe1c2f7f4fb826,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8181584272774659434, guid: 4c6cbe177ac347e40abe1c2f7f4fb826,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8181584272774659434, guid: 4c6cbe177ac347e40abe1c2f7f4fb826,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 196.002
+      objectReference: {fileID: 0}
+    - target: {fileID: 8181584272774659434, guid: 4c6cbe177ac347e40abe1c2f7f4fb826,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4c6cbe177ac347e40abe1c2f7f4fb826, type: 3}
 --- !u!1 &1425391936
 GameObject:
   m_ObjectHideFlags: 0
@@ -942,10 +1010,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BookTriggerZone
   _interactMessenger: {fileID: 11400000, guid: c3fe3f675f61cbb48ae1a72ab2063f8f, type: 2}
   _zoneChannel: {fileID: 11400000, guid: 074c368e48be3dc459cea60647046ca8, type: 2}
-  _bookTransform: {fileID: 5752716747062257758}
   _bookOpenAnchor: {fileID: 8773856615003393925}
   _bookClosedAnchor: {fileID: 1488503523315483487}
-  _openingSpeed: 3
+  _changingStateDuration: 0
   _closedBookGO: {fileID: 0}
   _openedBookGO: {fileID: 0}
   _bookText: {fileID: 11400000, guid: 2534b47cf1b30cf4e969b85e660b8525, type: 2}
@@ -1860,6 +1927,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Book_Lore
       objectReference: {fileID: 0}
+    - target: {fileID: 4837578941122574543, guid: 4c6cbe177ac347e40abe1c2f7f4fb826,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7107533234071058441, guid: 4c6cbe177ac347e40abe1c2f7f4fb826,
         type: 3}
       propertyPath: _bookAnimator
@@ -2399,3 +2471,4 @@ SceneRoots:
   - {fileID: 6469995025312055821}
   - {fileID: 6189707042720957181}
   - {fileID: 2063894537}
+  - {fileID: 1377568952}

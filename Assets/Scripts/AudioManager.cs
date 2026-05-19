@@ -86,11 +86,9 @@ public class AudioManager : MonoBehaviour
     private bool SoundExist(string soundName)
     {
         if (_gameSounds.ContainsKey(soundName)) return true;
-        else
-        {
-            Debug.LogError("Sound name doesn't exist");
-            return false; ;
-        }
+        
+        Debug.LogError("Sound name doesn't exist");
+        return false; ;
     }
 
     //Add channels and stuff
