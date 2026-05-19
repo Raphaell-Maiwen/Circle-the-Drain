@@ -562,6 +562,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1917166995779311527, guid: d54cd60b1b1a0604da4727f61514c721,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.79
+      objectReference: {fileID: 0}
     - target: {fileID: 6490142261982184609, guid: d54cd60b1b1a0604da4727f61514c721,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -616,6 +621,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Scene_Essentials
+      objectReference: {fileID: 0}
+    - target: {fileID: 7897064300433677084, guid: d54cd60b1b1a0604da4727f61514c721,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.79
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -933,13 +943,11 @@ MonoBehaviour:
   _interactMessenger: {fileID: 11400000, guid: c3fe3f675f61cbb48ae1a72ab2063f8f, type: 2}
   _zoneChannel: {fileID: 11400000, guid: 074c368e48be3dc459cea60647046ca8, type: 2}
   _bookTransform: {fileID: 5752716747062257758}
-  _bookAnimator: {fileID: 2085558336222078822}
   _bookOpenAnchor: {fileID: 8773856615003393925}
   _bookClosedAnchor: {fileID: 1488503523315483487}
   _openingSpeed: 3
-  _openingRotationSpeed: 5
-  startAnimationTime: 0
-  endAnimationTime: 0
+  _closedBookGO: {fileID: 0}
+  _openedBookGO: {fileID: 0}
   _bookText: {fileID: 11400000, guid: 2534b47cf1b30cf4e969b85e660b8525, type: 2}
 --- !u!4 &1590657119654017492
 Transform:
@@ -2099,6 +2107,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ProgressMessagesHaunted
+      objectReference: {fileID: 0}
+    - target: {fileID: 9105367586443121377, guid: d23ba30935aebb2488a0155371f6f58f,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -18.000122
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
