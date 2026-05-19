@@ -67,7 +67,7 @@ public class BookTriggerZone : InteractableTriggerZone
             
             currentBook.position = Vector3.Lerp(startingPos.position, endingPos.position, t);
             Debug.Log(currentBook.position);
-            //currentBook.rotation = Quaternion.Slerp(startRotation, _bookOpenAnchor.rotation, t);
+            currentBook.rotation = Quaternion.Slerp(startingPos.rotation, endingPos.rotation, t);
 
             yield return null;
         }
@@ -77,6 +77,8 @@ public class BookTriggerZone : InteractableTriggerZone
         
         _openedBookGO.transform.position = _bookOpenAnchor.position;
         _closedBookGO.transform.position = _bookClosedAnchor.position;
+        _openedBookGO.transform.rotation = _bookOpenAnchor.rotation;
+        _closedBookGO.transform.rotation = _bookClosedAnchor.rotation;
         
         _openedBookGO.SetActive(isOpening);
         _closedBookGO.SetActive(!isOpening);

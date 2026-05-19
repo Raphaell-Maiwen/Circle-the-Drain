@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4518489747804123700}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.2792, y: 2.4385, z: 0.008000016}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -312,7 +312,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BookTriggerZone
   _interactMessenger: {fileID: 11400000, guid: c3fe3f675f61cbb48ae1a72ab2063f8f, type: 2}
   _zoneChannel: {fileID: 11400000, guid: 074c368e48be3dc459cea60647046ca8, type: 2}
-  _bookTransform: {fileID: 0}
   _bookOpenAnchor: {fileID: 4485793071509153129}
   _bookClosedAnchor: {fileID: 1845414626353256979}
   _changingStateDuration: 1.5
