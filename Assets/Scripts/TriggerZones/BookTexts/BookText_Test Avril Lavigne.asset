@@ -12,4 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7571757542ed0224f8e12029ec7658e4, type: 3}
   m_Name: BookText_Test Avril Lavigne
   m_EditorClassIdentifier: Assembly-CSharp::BookText
-  _bookContent: Something Avril
+  _bookContent: "With all respect due to Melissa and what she sacrificed to replace
+    Avril Lavigne, she is the absolute opposite of Paul: did the poorest job possible
+    to hide her clone status. Part of it is not her fault: her surgeon did her dirty,
+    and really lacked the attention to details that Paul\u2019s surgeon had. Her
+    facial features look nothing alike.\r\n\r\nBut most of the plan\u2019s failure
+    is on her. She did not commit herself to replicate Avril in any way whatsoever,
+    in personality, in art, and even in handwriting. She went from a tomboywish and
+    introverted girl who wrote rebellious and angsty anthems to a feminine and outgoing
+    pop star.\r\n\r\nWeirdly enough, Katy\u2019s clone made the same mistake of completely
+    changing her tone and topics in her songs, but for some reason, that didn\u2019t
+    raise any suspicion."

@@ -12,4 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7571757542ed0224f8e12029ec7658e4, type: 3}
   m_Name: BookText_Test Womans World
   m_EditorClassIdentifier: Assembly-CSharp::BookText
-  _bookContent: "She\u2019s tried all the angles. Feminism, blablabla (Dr Luke)\n"
+  _bookContent: "She\u2019s tried all the angles. At this point, what can she do
+    to redeem herself to the fans?\r\n\r\nI\u2019m happy no one has discovered her
+    secret yet, but on the other hand, I don\u2019t understand how she just can\u2019t
+    seem to redeem herself to the fans. She\u2019s tried all the angles to be relevant
+    again, and it\u2019s just never right.\r\n\r\nShe\u2019s generously given her
+    time and wisdom to aspiring singers in American Idol, she\u2019s written beautiful
+    political and feminist anthems like Woman\u2019s World and Chained to the Rhythm.
+    She went to space to break the glass ceiling for little girls everywhere who
+    dream of being astronauts.\r\n\r\nMaybe we\u2019re being egotistical. Her albums
+    keep flopping one after the other. Even if we can\u2019t explain why, clearly
+    the fans are not satisfied with this version of Katy Perry. Maybe we should give
+    them back the original."
