@@ -42,6 +42,7 @@ public class Fireworks : MonoBehaviour
             obj.gameObject.SetActive(true);
         }
 
+        Debug.Log(SceneManager.GetActiveScene().name);
         SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().name);
 
         StartCoroutine(LoadPrideParade());
