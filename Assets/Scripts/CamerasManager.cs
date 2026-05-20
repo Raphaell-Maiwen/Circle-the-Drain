@@ -17,8 +17,10 @@ public static class CamerasManager
         return camera == ActiveCamera;
     }
 
-    public static void SwitchActiveCamera(CinemachineCamera camera)
+    public static void SwitchActiveCamera(CinemachineCamera camera, float blendSpeed = 5f)
     {
+        CameraBrain.DefaultBlend.Time = blendSpeed;
+        
         foreach (var cam in cameras)
         {
             cam.Priority = 0;
@@ -30,12 +32,12 @@ public static class CamerasManager
 
     public static void Register(CinemachineCamera camera)
     {
-        cameras.Add(camera);
+        if(camera != null) cameras.Add(camera);
     }
 
     public static void Unregister(CinemachineCamera camera)
     {
-        cameras.Remove(camera);
+        if(camera != null) cameras.Remove(camera);
     }
 
     public static void SetMainCamera(CinemachineCamera camera)

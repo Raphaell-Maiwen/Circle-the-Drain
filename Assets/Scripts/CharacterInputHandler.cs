@@ -13,6 +13,7 @@ public class CharacterInputHandler : MonoBehaviour
     [SerializeField] private InputActionAsset _playerControls;
     [SerializeField] private string _actionMapName = "Player";
     [SerializeField] private string _cutSceneMapName = "Cutscene";
+    [SerializeField] private string _dialoguesMapName = "Dialogues";
 
     [SerializeField] private string _movement = "Movement";
     [SerializeField] private string _rotation = "Rotation";
@@ -22,6 +23,7 @@ public class CharacterInputHandler : MonoBehaviour
     private InputAction _rotationAction;
     private InputAction _interactAction;
     private InputAction _cutsceneInteractAction;
+    private InputAction _dialoguesInteractAction;
 
     [SerializeField] private InteractMessenger _interactMessenger;
     public event Action OnCutsceneInteract;
@@ -49,6 +51,9 @@ public class CharacterInputHandler : MonoBehaviour
         InputActionMap cutsceneMapReference = _playerControls.FindActionMap(_cutSceneMapName);
 
         _cutsceneInteractAction = cutsceneMapReference.FindAction(_interact);
+        
+        InputActionMap dialoguesMapRefence = _playerControls.FindActionMap(_dialoguesMapName);
+        _dialoguesInteractAction = dialoguesMapRefence.FindAction(_interact);
 
         SubscribeEvents();
     }
@@ -73,6 +78,7 @@ public class CharacterInputHandler : MonoBehaviour
         _cutsceneInteractAction.canceled += inputInfo => CutsceneInteractTriggered = false;
 
         _interactAction.performed += _interactMessenger.SendInteractMessage;
+        _dialoguesInteractAction.performed += _interactMessenger.SendInteractMessage;
     }
 
     public void EnableToggleReadingBook()
