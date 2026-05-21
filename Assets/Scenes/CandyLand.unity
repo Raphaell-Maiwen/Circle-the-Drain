@@ -1961,6 +1961,12 @@ PrefabInstance:
       propertyPath: _gummyCamera
       value: 
       objectReference: {fileID: 903258151}
+    - target: {fileID: 6256976501790537246, guid: 510acfb671ea7e543b43b3333d8bd7de,
+        type: 3}
+      propertyPath: _inDialogueChannel
+      value: 
+      objectReference: {fileID: 11400000, guid: 6f0fe4f9a059ad741a9170076ef9bb7f,
+        type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -7389,6 +7395,12 @@ PrefabInstance:
       propertyPath: _gummyCamera
       value: 
       objectReference: {fileID: 1022542329}
+    - target: {fileID: 4366379984735135211, guid: 338d319c6ee05e1489f882c811731688,
+        type: 3}
+      propertyPath: _inDialogueChannel
+      value: 
+      objectReference: {fileID: 11400000, guid: 6f0fe4f9a059ad741a9170076ef9bb7f,
+        type: 2}
     - target: {fileID: 5384961050554819294, guid: 338d319c6ee05e1489f882c811731688,
         type: 3}
       propertyPath: m_IsActive
@@ -7934,6 +7946,7 @@ MonoBehaviour:
   _text: {fileID: 11400000, guid: 775d5a554ea68084ca8852c18c8b55f3, type: 2}
   _gummyCamera: {fileID: 915870825}
   _blendSpeed: 1
+  _inDialogueChannel: {fileID: 11400000, guid: 6f0fe4f9a059ad741a9170076ef9bb7f, type: 2}
 --- !u!1001 &519110540
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10393,6 +10406,7 @@ MonoBehaviour:
   _text: {fileID: 11400000, guid: 8117dd44ec711144ca8b4f94be1cb18d, type: 2}
   _gummyCamera: {fileID: 24943252}
   _blendSpeed: 1
+  _inDialogueChannel: {fileID: 11400000, guid: 6f0fe4f9a059ad741a9170076ef9bb7f, type: 2}
 --- !u!1001 &744663705
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21001,6 +21015,7 @@ MonoBehaviour:
   _text: {fileID: 0}
   _gummyCamera: {fileID: 0}
   _blendSpeed: 0
+  _inDialogueChannel: {fileID: 0}
 --- !u!1001 &1429418817
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27101,6 +27116,7 @@ MonoBehaviour:
   _text: {fileID: 0}
   _gummyCamera: {fileID: 0}
   _blendSpeed: 0
+  _inDialogueChannel: {fileID: 0}
 --- !u!1 &1898772527
 GameObject:
   m_ObjectHideFlags: 1

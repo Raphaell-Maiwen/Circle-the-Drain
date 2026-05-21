@@ -10,6 +10,7 @@ public class GummyTriggerZone : InteractableTriggerZone
     [SerializeField] private GummyText _text;
     [SerializeField] private CinemachineCamera _gummyCamera;
     [SerializeField] private float _blendSpeed;
+    [SerializeField] private InDialogEventChannel _inDialogueChannel;
 
     private int dialogueIndex = 0;
 
@@ -44,6 +45,7 @@ public class GummyTriggerZone : InteractableTriggerZone
         {
             CharacterInputHandler.Instance.PlayerInput.SwitchCurrentActionMap("Dialogues");
             CamerasManager.SwitchActiveCamera(_gummyCamera, _blendSpeed);
+            _inDialogueChannel.StartDialog();
         }
         
         _dialogue.text = _text._dialogue[dialogueIndex];
@@ -53,6 +55,7 @@ public class GummyTriggerZone : InteractableTriggerZone
             dialogueIndex = 0;
             CharacterInputHandler.Instance.PlayerInput.SwitchCurrentActionMap("Player");
             CamerasManager.SwitchActiveCamera(CamerasManager.MainCamera, _blendSpeed);
+            _inDialogueChannel.EndDialog();
         }
         
         _dialogueWindow.SetActive(true);

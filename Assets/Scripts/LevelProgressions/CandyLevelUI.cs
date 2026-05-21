@@ -7,6 +7,8 @@ public class CandyLevelUI : ContextualUI
     [SerializeField] private TextMeshProUGUI _teleportMessage;
     [SerializeField] private TextMeshProUGUI _continueCollectingRocketsMessage;
     [SerializeField] private string _continueDefaultText;
+    [SerializeField] private TextMeshProUGUI _continueDialogMessage;
+    [SerializeField] private InDialogEventChannel _dialogEventChannel;
 
     private new void OnEnable()
     {
@@ -15,6 +17,11 @@ public class CandyLevelUI : ContextualUI
         _progress.OnThresholdReached += ShowTeleportMessage;
         _progress.OnLevelDone += DisableTeleportUI;
         _progress.OnRocketCollected += UpdateCollectingRocketMessage;
+        
+        //WIP
+        _dialogEventChannel.OnStartDialog += ShowContinueDialogMessage;
+        _dialogEventChannel.OnEndDialog += HideContinueDialogMessage;
+        
         base._disableExtraUI.AddListener(DisableTeleportUI);
         base._restoreState.AddListener(RestoreState);
     }
@@ -28,6 +35,19 @@ public class CandyLevelUI : ContextualUI
         _progress.OnRocketCollected -= UpdateCollectingRocketMessage;
         base._disableExtraUI.RemoveListener(DisableTeleportUI);
         base._restoreState.RemoveListener(RestoreState);
+    }
+
+    private void ShowContinueDialogMessage()
+    {
+        base.EraseAllMessages();
+        _continueDialogMessage.gameObject.SetActive(true);
+    }
+
+    private void HideContinueDialogMessage()
+    {
+        base.EraseAllMessages();
+        ShowZoneMessage(_lastChannel);
+        _continueDialogMessage.gameObject.SetActive(false);
     }
 
     private void ShowTeleportMessage()
