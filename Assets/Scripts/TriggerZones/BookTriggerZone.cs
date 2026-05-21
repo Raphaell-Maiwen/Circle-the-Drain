@@ -40,7 +40,6 @@ public class BookTriggerZone : InteractableTriggerZone
 
     private void CloseBook()
     {
-        //CharacterInputHandler.Instance.OnCutsceneInteract -= CloseBook;
         CharacterInputHandler.Instance.PlayerInput.actions.FindActionMap("Player").Disable();
         
         if (_changingStateCoroutine == null)
@@ -49,8 +48,7 @@ public class BookTriggerZone : InteractableTriggerZone
             _changingStateCoroutine = StartCoroutine(ChangeBookState(_openedBookGO.transform, _bookOpenAnchor, _bookClosedAnchor, false, BookClosed));
         }
     }
-
-    //TODO: Add rotation
+    
     IEnumerator ChangeBookState(Transform currentBook, Transform startingPos, Transform endingPos, bool isOpening, Action endOfCoroutineAction)
     {
         float elapsed = 0f;
@@ -61,7 +59,6 @@ public class BookTriggerZone : InteractableTriggerZone
             float t = Mathf.Clamp01(elapsed / _changingStateDuration);
             
             currentBook.position = Vector3.Lerp(startingPos.position, endingPos.position, t);
-            Debug.Log(currentBook.position);
             currentBook.rotation = Quaternion.Slerp(startingPos.rotation, endingPos.rotation, t);
 
             yield return null;
