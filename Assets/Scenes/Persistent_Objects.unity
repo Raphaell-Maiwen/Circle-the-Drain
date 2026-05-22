@@ -389,6 +389,10 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5386367895610727223, guid: d54cd60b1b1a0604da4727f61514c721,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2044182591}
     - targetCorrespondingSourceObject: {fileID: 8178727333345138256, guid: d54cd60b1b1a0604da4727f61514c721,
         type: 3}
       insertIndex: -1
@@ -466,6 +470,31 @@ MonoBehaviour:
   m_BeforeTransparentBundles: []
   m_BeforeStackBundles: []
   m_AfterStackBundles: []
+--- !u!1 &2044182583 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5386367895610727223, guid: d54cd60b1b1a0604da4727f61514c721,
+    type: 3}
+  m_PrefabInstance: {fileID: 998511485}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2044182591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2044182583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0124ea117bdca3445ad8bc245b3147de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LoadLastLevelAction
+  _prideParadeProgress: {fileID: 11400000, guid: 0b2b4a87f176be94ba3112cb1e03a478,
+    type: 2}
+  _interactMessenger: {fileID: 11400000, guid: c3fe3f675f61cbb48ae1a72ab2063f8f, type: 2}
+  _zoneChannels:
+  - {fileID: 11400000, guid: 48d24f79b653c1f4cb04f69c33898481, type: 2}
+  - {fileID: 11400000, guid: c8103412c30319141978bdfc8ca8a4c8, type: 2}
+  - {fileID: 11400000, guid: c1951c245aa234a4b946969edafa7de5, type: 2}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

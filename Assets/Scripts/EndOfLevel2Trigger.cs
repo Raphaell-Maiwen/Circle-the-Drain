@@ -9,6 +9,7 @@ public class EndOfLevel2Trigger : MonoBehaviour
     [SerializeField] private VideoPlayer[] _videoPlayerArray;
     [SerializeField] private float _finalHeight;
     [SerializeField] private float _riseLength;
+    [SerializeField] private PrideParadeProgress _prideParadeProgress;
     
     private List<VideoWall> _videoWallList = new List<VideoWall>();
 
@@ -60,6 +61,7 @@ public class EndOfLevel2Trigger : MonoBehaviour
         }
         
         //Here: allow to right-click to move to next level
+        _prideParadeProgress.EndReached();
     }
     
     private struct VideoWall
