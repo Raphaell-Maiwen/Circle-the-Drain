@@ -1,10 +1,11 @@
+using System;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UIElements;
+using UnityEngine.UI;
 
 public class HauntedLevelUI : ContextualUI
 {
-    [SerializeField] private GameObject _scrollView;
+    [SerializeField] private ScrollRect _scrollView;
     [SerializeField] private TextMeshProUGUI _scrollViewText;
     [SerializeField] private InteractMessenger _interactMessenger;
     [SerializeField] private TextMeshProUGUI _closeBookMsg;
@@ -28,15 +29,16 @@ public class HauntedLevelUI : ContextualUI
         if (string.IsNullOrEmpty(content))
         {
             Debug.LogError("Book text is empty");
-            _scrollView.SetActive(false);
+            _scrollView.gameObject.SetActive(false);
             ShowZoneMessage(_lastChannel);
             _closeBookMsg.gameObject.SetActive(false);
         }
         else
         {
             _scrollViewText.text = content;
-            _scrollView.SetActive(true);
+            _scrollView.gameObject.SetActive(true);
             EraseAllMessages();
+            _scrollView.verticalNormalizedPosition = 1f;
             _closeBookMsg.gameObject.SetActive(true);
         }
     }
