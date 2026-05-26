@@ -1,11 +1,20 @@
 using System;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LoadLastLevelAction : MonoBehaviour
 {
     [SerializeField] private PrideParadeProgress _prideParadeProgress;
     [SerializeField] private InteractMessenger _interactMessenger;
     [SerializeField] private InteractableTriggerZoneEventChannel[] _zoneChannels;
+
+    [SerializeField] private float _targetFocalLength;
+    private float _initialFocalLength;
+    [SerializeField] private float _focalLengthLerpDuration;
+
+    [SerializeField] private string _alienLabLevel;
 
     private void OnEnable()
     {
@@ -44,6 +53,53 @@ public class LoadLastLevelAction : MonoBehaviour
 
     private void LoadLastLevel()
     {
-        Debug.Log("LoadLastLevel");
+        AudioManager.Instance.StopAllSounds();
+        
+        StartCoroutine(LastLevelTranstion());
+        _interactMessenger.OnInteractInput -= LoadLastLevel;
+    }
+
+    IEnumerator LastLevelTranstion()
+    {
+        //Add Depth of Field to volume???
+        
+        //To remove / for tests only
+        CamerasManager.SwitchActiveCamera(CamerasManager.MainCamera);
+        
+        CharacterInputHandler.Instance.PlayerInput.SwitchCurrentActionMap("Cutscene");
+        
+        float elapsedTime = 0;
+        _initialFocalLength = CamerasManager.GetFocalLength();
+        
+        while (elapsedTime < _focalLengthLerpDuration)
+        {
+            float t =  elapsedTime / _focalLengthLerpDuration;
+            CamerasManager.SetFocalLength(Mathf.Lerp(_initialFocalLength, _targetFocalLength, t));
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+        
+        CamerasManager.SetFocalLength(_targetFocalLength);
+        
+        SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().name);
+        SceneManager.LoadSceneAsync(_alienLabLevel, LoadSceneMode.Additive);
+        
+        elapsedTime = 0;
+        while (elapsedTime <  _focalLengthLerpDuration)
+        {
+            float t =  elapsedTime / _focalLengthLerpDuration;
+            CamerasManager.SetFocalLength(Mathf.Lerp(_targetFocalLength, _initialFocalLength, t));
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+        
+        CamerasManager.SetFocalLength(_initialFocalLength);
+        CharacterInputHandler.Instance.PlayerInput.SwitchCurrentActionMap("Player");
     }
 }
+
+
+
+
+
+

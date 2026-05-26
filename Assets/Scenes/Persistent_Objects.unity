@@ -495,6 +495,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 48d24f79b653c1f4cb04f69c33898481, type: 2}
   - {fileID: 11400000, guid: c8103412c30319141978bdfc8ca8a4c8, type: 2}
   - {fileID: 11400000, guid: c1951c245aa234a4b946969edafa7de5, type: 2}
+  _targetFocalLength: 1.5
+  _focalLengthLerpDuration: 5
+  _alienLabLevel: HauntedHouse
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

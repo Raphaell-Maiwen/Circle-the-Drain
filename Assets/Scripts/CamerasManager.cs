@@ -17,19 +17,6 @@ public static class CamerasManager
         return camera == ActiveCamera;
     }
 
-    public static void SwitchActiveCamera(CinemachineCamera camera, float blendSpeed = 5f)
-    {
-        CameraBrain.DefaultBlend.Time = blendSpeed;
-        
-        foreach (var cam in cameras)
-        {
-            cam.Priority = 0;
-        }
-
-        camera.Priority = 10;
-        ActiveCamera = camera;
-    }
-
     public static void Register(CinemachineCamera camera)
     {
         if(camera != null) cameras.Add(camera);
@@ -49,4 +36,43 @@ public static class CamerasManager
     {
         CameraBrain = brain;
     }
+    
+    public static void SwitchActiveCamera(CinemachineCamera camera, float blendSpeed = 5f)
+    {
+        CameraBrain.DefaultBlend.Time = blendSpeed;
+        
+        foreach (var cam in cameras)
+        {
+            cam.Priority = 0;
+        }
+
+        camera.Priority = 10;
+        ActiveCamera = camera;
+    }
+
+    public static void SetFocalLength(float focalLength)
+    {
+        ActiveCamera.Lens.FieldOfView = Camera.FocalLengthToFieldOfView(focalLength, Camera.main.sensorSize.y);
+    }
+
+    public static float GetFocalLength()
+    {
+        return Camera.FieldOfViewToFocalLength(ActiveCamera.Lens.FieldOfView, Camera.main.sensorSize.y);
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -60,7 +60,6 @@ public class EndOfLevel2Trigger : MonoBehaviour
             videoWall._videoPlayer.transform.position = videoWall._endingPos;
         }
         
-        //Here: allow to right-click to move to next level
         _prideParadeProgress.EndReached();
     }
     
