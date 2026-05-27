@@ -76,4 +76,10 @@ public class FirstPersonCharacterController : MonoBehaviour
         ApplyHorizontalRotation(mouseXRotation);
         ApplyVerticalRotation(mouseYRotation);
     }
+    
+    public void ResetVerticalRotation()
+    {
+        _verticalRotation = 0f;
+        _mainCamera.transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
+    }
 }

@@ -39,9 +39,9 @@ public class PrideInitializer : LevelInitialization
     void Start()
     {
         _profile = _volume.profile;
-        PlayerSpawner.Instance.ChangePlayerRotation(_levelInfo._playerStartingAnchor, _levelInfo._cameraStartingAnchor);
         
         base.Start();
+        PlayerSpawner.Instance.ChangePlayerRotation(_levelInfo._playerStartingAnchor, _levelInfo._cameraStartingAnchor);
 
         foreach (var animator in walkAnimatorList)
         {

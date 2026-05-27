@@ -26,13 +26,17 @@ public class PlayerSpawner : MonoBehaviour
         
         _player.transform.rotation = playerPos.rotation;
         _cameraAnchor.transform.rotation = playerPos.rotation;
+        
+        var firstPersonCharacterController = _player.GetComponent<FirstPersonCharacterController>();
+        
+        firstPersonCharacterController.ResetVerticalRotation();
 
         if(levelInfo._levelIndex == 2)
         {
             _player.GetComponent<TeleportAction>().enabled = false;
         }
 
-        _player.GetComponent<FirstPersonCharacterController>().SetSpeed(levelInfo._playerSpeed);
+        firstPersonCharacterController.SetSpeed(levelInfo._playerSpeed);
     }
 
     public void ChangePlayerSize(float newSize)
