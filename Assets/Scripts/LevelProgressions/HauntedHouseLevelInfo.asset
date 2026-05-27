@@ -21,4 +21,4 @@ MonoBehaviour:
     type: 3}
   _playerStartingAnchor: {fileID: 9161910928354067159, guid: 8cc3e332c97c1544eaaccb06f0bdbc71,
     type: 3}
-  _playerSpeed: 7
+  _playerSpeed: 4

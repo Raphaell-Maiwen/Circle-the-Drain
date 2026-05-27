@@ -6,7 +6,7 @@ using UnityEngine.Video;
 
 public class EndOfLevel2Trigger : MonoBehaviour
 {
-    [SerializeField] private VideoPlayer[] _videoPlayerArray;
+    [SerializeField] private GameObject[] _videoPlayerArray;
     [SerializeField] private float _finalHeight;
     [SerializeField] private float _riseLength;
     [SerializeField] private PrideParadeProgress _prideParadeProgress;
@@ -65,11 +65,11 @@ public class EndOfLevel2Trigger : MonoBehaviour
     
     private struct VideoWall
     {
-        public VideoPlayer _videoPlayer;
+        public GameObject _videoPlayer;
         public Vector3 _startingPos;
         public Vector3 _endingPos;
 
-        public VideoWall(VideoPlayer videoPlayer, Vector3 startingPos, Vector3 endingPos)
+        public VideoWall(GameObject videoPlayer, Vector3 startingPos, Vector3 endingPos)
         {
             _videoPlayer = videoPlayer;
             _startingPos = startingPos;

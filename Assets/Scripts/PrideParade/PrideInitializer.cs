@@ -39,6 +39,7 @@ public class PrideInitializer : LevelInitialization
     void Start()
     {
         _profile = _volume.profile;
+        PlayerSpawner.Instance.ChangePlayerRotation(_levelInfo._playerStartingAnchor, _levelInfo._cameraStartingAnchor);
         
         base.Start();
 
@@ -58,6 +59,7 @@ public class PrideInitializer : LevelInitialization
         }
 
         _dykeLeadAnimator.SetTrigger("idle");
+        
 
         StartCoroutine(StartNightmareTransition());
     }
