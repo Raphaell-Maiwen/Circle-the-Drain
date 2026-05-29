@@ -8,6 +8,7 @@ public class Fireworks : MonoBehaviour
 {
     [SerializeField] private string _fireworksSong;
     [SerializeField] private string _prideParadeLevel;
+    [SerializeField] private string _candyLandLevel;
     [SerializeField] private float _fireworksShowDuration;
     [SerializeField] private LODGroup _lodGroup;
     [SerializeField] private List<GameObject> _objectsToDeactivate;
@@ -41,9 +42,8 @@ public class Fireworks : MonoBehaviour
         {
             obj.gameObject.SetActive(true);
         }
-
-        Debug.Log(SceneManager.GetActiveScene().name);
-        SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().name);
+        
+        SceneManager.UnloadSceneAsync(_candyLandLevel);
 
         StartCoroutine(LoadPrideParade());
     }
