@@ -3991,6 +3991,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: EndOfLevelVideo (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 7570406525617081641, guid: 3434a2bd66cbbfd4aa9a94e682a88cdd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4650,6 +4655,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 647906407313719069, guid: 052ff908569792c458ed01ffca23315b,
+        type: 3}
+      propertyPath: m_WaitForFirstFrame
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3124707427638353182, guid: 052ff908569792c458ed01ffca23315b,
         type: 3}
       propertyPath: m_IsActive
@@ -15953,6 +15963,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: EndOfLevelVideo (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 7570406525617081641, guid: 3434a2bd66cbbfd4aa9a94e682a88cdd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -17573,6 +17588,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: EndOfLevelVideo (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7570406525617081641, guid: 3434a2bd66cbbfd4aa9a94e682a88cdd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -18498,6 +18518,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: EndOfLevelVideo (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7570406525617081641, guid: 3434a2bd66cbbfd4aa9a94e682a88cdd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -22644,6 +22669,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: EndOfLevelVideo (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7570406525617081641, guid: 3434a2bd66cbbfd4aa9a94e682a88cdd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -65776,7 +65806,7 @@ PrefabInstance:
     - target: {fileID: 7570406525617081641, guid: 3434a2bd66cbbfd4aa9a94e682a88cdd,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
