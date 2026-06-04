@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class BookTriggerZone : InteractableTriggerZone
 {
+    [SerializeField] private HauntedHouseProgress _progress;
     [SerializeField] private Transform _bookOpenAnchor;
     [SerializeField] private Transform _bookClosedAnchor;
     [SerializeField] private float _changingStateDuration;
@@ -80,6 +81,8 @@ public class BookTriggerZone : InteractableTriggerZone
     {
         _interactMessenger.OnInteractPressed?.Invoke(_bookText.BookContent);
         CharacterInputHandler.Instance.EnableToggleReadingBook();
+        
+        _progress.Read(_bookText);
     }
 
     private void BookClosed()
