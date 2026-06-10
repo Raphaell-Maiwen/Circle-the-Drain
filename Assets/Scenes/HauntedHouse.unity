@@ -1888,7 +1888,7 @@ PrefabInstance:
     - target: {fileID: 5497158969287712787, guid: b93b204043c19be42a5cb157610766bf,
         type: 3}
       propertyPath: m_Name
-      value: TV2 (1)
+      value: TV_3
       objectReference: {fileID: 0}
     - target: {fileID: 6450596915606579862, guid: b93b204043c19be42a5cb157610766bf,
         type: 3}
@@ -2195,6 +2195,118 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c6cbe177ac347e40abe1c2f7f4fb826, type: 3}
+--- !u!1 &690669011
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 690669015}
+  - component: {fileID: 690669014}
+  - component: {fileID: 690669013}
+  - component: {fileID: 690669012}
+  m_Layer: 0
+  m_Name: StartTVTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &690669012
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 690669011}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &690669013
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 690669011}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &690669014
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 690669011}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &690669015
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 690669011}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -62.35, y: 6.82, z: -3.17}
+  m_LocalScale: {x: 5.9830656, y: 3.2507, z: 1.1408}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &698919051 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2927881821367855264, guid: 8b904df0f631cf74f8f5577a55554db3,
@@ -2266,9 +2378,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4383365570951180718, guid: b93b204043c19be42a5cb157610766bf,
         type: 3}
+      propertyPath: tvVideoClips.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4383365570951180718, guid: b93b204043c19be42a5cb157610766bf,
+        type: 3}
       propertyPath: 'staticVideos.Array.data[0]'
       value: 
       objectReference: {fileID: 32900000, guid: d8ca84508146a54409694ac98a76231d,
+        type: 3}
+    - target: {fileID: 4383365570951180718, guid: b93b204043c19be42a5cb157610766bf,
+        type: 3}
+      propertyPath: 'tvVideoClips.Array.data[0]'
+      value: 
+      objectReference: {fileID: 32900000, guid: 1c9f87286b7ec76438962daef7dba68c,
         type: 3}
     - target: {fileID: 4954795969169756920, guid: b93b204043c19be42a5cb157610766bf,
         type: 3}
@@ -2278,7 +2401,7 @@ PrefabInstance:
     - target: {fileID: 5497158969287712787, guid: b93b204043c19be42a5cb157610766bf,
         type: 3}
       propertyPath: m_Name
-      value: TV2 (4)
+      value: TV_1
       objectReference: {fileID: 0}
     - target: {fileID: 6450596915606579862, guid: b93b204043c19be42a5cb157610766bf,
         type: 3}
@@ -3176,9 +3299,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4383365570951180718, guid: b93b204043c19be42a5cb157610766bf,
         type: 3}
+      propertyPath: tvVideoClips.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4383365570951180718, guid: b93b204043c19be42a5cb157610766bf,
+        type: 3}
       propertyPath: 'staticVideos.Array.data[0]'
       value: 
       objectReference: {fileID: 32900000, guid: d8ca84508146a54409694ac98a76231d,
+        type: 3}
+    - target: {fileID: 4383365570951180718, guid: b93b204043c19be42a5cb157610766bf,
+        type: 3}
+      propertyPath: 'tvVideoClips.Array.data[0]'
+      value: 
+      objectReference: {fileID: 32900000, guid: ae9e5bc08ce29c34f9eea528a03444e7,
+        type: 3}
+    - target: {fileID: 4383365570951180718, guid: b93b204043c19be42a5cb157610766bf,
+        type: 3}
+      propertyPath: 'tvVideoClips.Array.data[1]'
+      value: 
+      objectReference: {fileID: 32900000, guid: af683243fa299cf4b9d51b425e402253,
         type: 3}
     - target: {fileID: 4954795969169756920, guid: b93b204043c19be42a5cb157610766bf,
         type: 3}
@@ -3188,7 +3328,7 @@ PrefabInstance:
     - target: {fileID: 5497158969287712787, guid: b93b204043c19be42a5cb157610766bf,
         type: 3}
       propertyPath: m_Name
-      value: TV2
+      value: TV_0
       objectReference: {fileID: 0}
     - target: {fileID: 6450596915606579862, guid: b93b204043c19be42a5cb157610766bf,
         type: 3}
@@ -5687,9 +5827,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4383365570951180718, guid: b93b204043c19be42a5cb157610766bf,
         type: 3}
+      propertyPath: tvVideoClips.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4383365570951180718, guid: b93b204043c19be42a5cb157610766bf,
+        type: 3}
       propertyPath: 'staticVideos.Array.data[0]'
       value: 
       objectReference: {fileID: 32900000, guid: d8ca84508146a54409694ac98a76231d,
+        type: 3}
+    - target: {fileID: 4383365570951180718, guid: b93b204043c19be42a5cb157610766bf,
+        type: 3}
+      propertyPath: 'tvVideoClips.Array.data[0]'
+      value: 
+      objectReference: {fileID: 32900000, guid: 9c632e53fb52b3a44819969bfc730533,
         type: 3}
     - target: {fileID: 4954795969169756920, guid: b93b204043c19be42a5cb157610766bf,
         type: 3}
@@ -5699,7 +5850,7 @@ PrefabInstance:
     - target: {fileID: 5497158969287712787, guid: b93b204043c19be42a5cb157610766bf,
         type: 3}
       propertyPath: m_Name
-      value: TV2 (5)
+      value: TV_2
       objectReference: {fileID: 0}
     - target: {fileID: 6450596915606579862, guid: b93b204043c19be42a5cb157610766bf,
         type: 3}
@@ -6267,11 +6418,11 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 857493154}
-  - {fileID: 1413932597}
-  - {fileID: 805211147}
   - {fileID: 76663198}
   - {fileID: 1883078067}
   - {fileID: 959780339}
+  - {fileID: 1413932597}
+  - {fileID: 805211147}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!114 &2081503657
@@ -6286,13 +6437,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fea6f8d8f5f7df458fb2fc7d528a009, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TVStaticManager
+  _progress: {fileID: 11400000, guid: 7fa1812360bd6684ebd5bd22cec28fca, type: 2}
   _televisionMaster: {fileID: 1949066782}
-  staticClip: {fileID: 32900000, guid: ae9e5bc08ce29c34f9eea528a03444e7, type: 3}
+  staticClip: {fileID: 32900000, guid: be49eec1ad7d0624c960819ce6963271, type: 3}
   staticRenderTexture: {fileID: 8400000, guid: 11218edc61c115a4cb231a4b76a874a9, type: 2}
-  _televisionChildrenList:
+  _televisionsList:
+  - {fileID: 1949066782}
   - {fileID: 296543093}
   - {fileID: 1883078070}
   - {fileID: 1066460290}
+  _videosOrder: 00000000010000000000000002000000
 --- !u!1001 &2119652357
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16944,3 +17098,4 @@ SceneRoots:
   - {fileID: 263043631}
   - {fileID: 1129645852}
   - {fileID: 878476322}
+  - {fileID: 690669015}
