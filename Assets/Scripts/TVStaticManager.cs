@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Video;
 
@@ -9,6 +10,8 @@ public class TVStaticManager : MonoBehaviour
     public RenderTexture staticRenderTexture;
     private VideoPlayer videoPlayer;
 
+    [SerializeField] private List<televisionCode> _televisionChildrenList;
+
     void Awake()
     {
         Instance = this;
@@ -19,5 +22,27 @@ public class TVStaticManager : MonoBehaviour
         videoPlayer.Play();
         
         _televisionMaster.tvStatic();
+
+        foreach (var television in _televisionChildrenList)
+        {
+            television.tvStatic();
+        }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
