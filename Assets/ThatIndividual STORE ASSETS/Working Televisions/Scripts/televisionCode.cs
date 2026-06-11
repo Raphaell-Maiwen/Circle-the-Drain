@@ -25,9 +25,14 @@ public class televisionCode : MonoBehaviour
     bool cooldownOn = false;
     int lastRandomInt = -1;
 
+    public VideoPlayer TVPlayer { get; private set; }
+
     private int _videoIndex = 0;
-    
-    private Texture _nonStaticTexture;
+
+    private void Awake()
+    {
+        TVPlayer = screenVideoParent.GetComponent<VideoPlayer>();
+    }
 
     void Start()
     {
@@ -43,19 +48,18 @@ public class televisionCode : MonoBehaviour
     }
     public void off(){
         screenVideoParent.SetActive(false);
-        screenVideoParent.GetComponent<VideoPlayer>().Stop();
+        TVPlayer.Stop();
         StartCoroutine(Delay());
         onOffBool = !onOffBool;
     }
     public void tvStatic()
     {
         screenVideoParent.SetActive(true);
-        VideoPlayer vp = screenVideoParent.GetComponent<VideoPlayer>();
-        vp.clip = null;
+        TVPlayer.clip = null;
         
         //vp.targetTexture = Instance.staticRenderTexture;
         
-        vp.Stop(); // No need to play, the RenderTexture is already being written to
+        TVPlayer.Stop(); // No need to play, the RenderTexture is already being written to
 
         // Apply the render texture to the screen material directly
         screenVideoParent.GetComponent<Renderer>().material.mainTexture = Instance.staticRenderTexture;
@@ -64,21 +68,11 @@ public class televisionCode : MonoBehaviour
 
     public void channelChange()
     {
-        VideoPlayer vp = screenVideoParent.GetComponent<VideoPlayer>();
-        vp.targetTexture = null;
-        vp.renderMode = VideoRenderMode.MaterialOverride;
+        TVPlayer.targetTexture = null;
+        TVPlayer.renderMode = VideoRenderMode.MaterialOverride;
         
-        //play channel change audio clip
         screenVideoParent.SetActive(true);
-        screenVideoParent.GetComponent<VideoPlayer>().Stop();
-        
-        /*if(UseStatic == false) {
-            int rand = Random.Range(0, tvVideoClips.Length);
-            while(rand == lastRandomInt) { rand = Random.Range(0, tvVideoClips.Length); }
-            screenVideoParent.GetComponent<VideoPlayer>().clip = tvVideoClips[rand];
-            lastRandomInt = rand;
-        }
-        else if (UseStatic == true) { screenVideoParent.GetComponent<VideoPlayer>().clip = staticVideos[usedStaticClip]; }*/
+        TVPlayer.Stop();
 
         if (_videoIndex >= tvVideoClips.Length)
         {
@@ -86,23 +80,21 @@ public class televisionCode : MonoBehaviour
             _videoIndex = tvVideoClips.Length - 1;
         }
 
-        vp.clip = tvVideoClips[_videoIndex];
-        vp.Play();
-        //screenVideoParent.GetComponent<VideoPlayer>().clip = tvVideoClips[_videoIndex];
-        //screenVideoParent.GetComponent<VideoPlayer>().Play();
+        TVPlayer.clip = tvVideoClips[_videoIndex];
+        TVPlayer.Play();
         
         _videoIndex++;
     }
 
     public void SetLoop(bool isLooping)
     {
-        screenVideoParent.GetComponent<VideoPlayer>().isLooping = isLooping;
+        TVPlayer.isLooping = isLooping;
     }
 
     public void breakAction(){
         sparksEffect.SetActive(true);
         screen.GetComponent<Renderer>().material = screenMaterials[1];
-        screenVideoParent.GetComponent<VideoPlayer>().enabled = false;
+        TVPlayer.enabled = false;
         screenVideoParent.SetActive(false);
     }
     IEnumerator Delay() {

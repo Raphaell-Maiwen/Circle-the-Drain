@@ -10,7 +10,7 @@ public class TVStaticManager : MonoBehaviour
     public static TVStaticManager Instance;
     public VideoClip staticClip;
     public RenderTexture staticRenderTexture;
-    private VideoPlayer videoPlayer;
+    private VideoPlayer _videoPlayer;
 
     [SerializeField] private List<televisionCode> _televisionsList;
     [SerializeField] private int[] _videosOrder;
@@ -20,10 +20,10 @@ public class TVStaticManager : MonoBehaviour
     void Awake()
     {
         Instance = this;
-        videoPlayer = gameObject.AddComponent<VideoPlayer>();
-        videoPlayer.clip = staticClip;
-        videoPlayer.targetTexture = staticRenderTexture;
-        videoPlayer.isLooping = true;
+        _videoPlayer = gameObject.AddComponent<VideoPlayer>();
+        _videoPlayer.clip = staticClip;
+        _videoPlayer.targetTexture = staticRenderTexture;
+        _videoPlayer.isLooping = true;
 
         _progress.OnAllBooksRead += TurnOnTVs;
         
@@ -34,7 +34,7 @@ public class TVStaticManager : MonoBehaviour
 
     public void TurnOnTVs()
     {
-        videoPlayer.Play();
+        _videoPlayer.Play();
 
         foreach (var television in _televisionsList)
         {
@@ -50,40 +50,23 @@ public class TVStaticManager : MonoBehaviour
 
     IEnumerator PlayVideoSequence()
     {
-        var tv = _televisionsList[_videosOrder[_videoIndex]];
-        tv.channelChange();
-        _videoIndex++;
+        televisionCode tv;
         
-        //Have a variable for that in televisionCode
-        var videoPlayer = tv.screenVideoParent.GetComponent<VideoPlayer>();
-
-        yield return new WaitForSeconds(1f);
-        
-        while (videoPlayer.isPlaying)
+        while (_videoIndex < _videosOrder.Length)
         {
-            yield return null;
+            tv = _televisionsList[_videosOrder[_videoIndex]];
+            tv.channelChange();
+            
+            yield return new WaitForSeconds(1f);
+        
+            while (tv.TVPlayer.isPlaying)
+            {
+                yield return null;
+            }
+            
+            _videoIndex++;
+            _televisionsList[_videosOrder[_videoIndex - 1]].tvStatic();
         }
-        
-        tv = _televisionsList[_videosOrder[_videoIndex]];
-        tv.channelChange();
-        
-        _televisionsList[_videosOrder[_videoIndex - 1]].tvStatic();
-        _videoIndex++;
-        
-        videoPlayer = tv.screenVideoParent.GetComponent<VideoPlayer>();
-        
-        yield return new WaitForSeconds(1f);
-        
-        while (videoPlayer.isPlaying)
-        {
-            yield return null;
-        }
-        
-        tv = _televisionsList[_videosOrder[_videoIndex]];
-        tv.channelChange();
-        _televisionsList[_videosOrder[_videoIndex - 1]].tvStatic();
-
-        //Repasser le static sur tout le monde? Ou genre, garder en tête le précédent: oui
         
         //Open door
     }
