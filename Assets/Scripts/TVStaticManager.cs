@@ -21,6 +21,9 @@ public class TVStaticManager : MonoBehaviour
     
     private int _videoIndex;
 
+    [Header("Debugging variables")] [SerializeField]
+    private bool _videosOnStart;
+
     void Awake()
     {
         Instance = this;
@@ -28,12 +31,17 @@ public class TVStaticManager : MonoBehaviour
         _videoPlayer.clip = staticClip;
         _videoPlayer.targetTexture = staticRenderTexture;
         _videoPlayer.isLooping = true;
+        _videoPlayer.SetDirectAudioMute(0, true);
 
         _progress.OnAllBooksRead += TurnOnTVs;
         
-        //For testing purposes
-        /*TurnOnTVs();
-        PlayAlienCutscene();*/
+        #if UNITY_EDITOR
+        if (_videosOnStart)
+        {
+            TurnOnTVs();
+            PlayAlienCutscene();
+        }
+        #endif
     }
 
     #if UNITY_EDITOR

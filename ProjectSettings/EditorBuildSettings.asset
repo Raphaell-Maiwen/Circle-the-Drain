@@ -26,6 +26,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Persistent_Objects.unity
     guid: d935446e083079b4c85a0b382e224f53
+  - enabled: 1
+    path: Assets/Scenes/FinalCutscene.unity
+    guid: ba13e8844691bcd4e82ea4317e269f5f
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: 7c3498dbb7a63c2449849da5a1084e22
   m_configObjects:
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 2b618eaf90158074c96586f74bb85768,
       type: 2}
