@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,6 +15,9 @@ public class TVStaticManager : MonoBehaviour
 
     [SerializeField] private List<televisionCode> _televisionsList;
     [SerializeField] private int[] _videosOrder;
+
+    [SerializeField] private GameObject _enterDoor;
+    [SerializeField] private GameObject _exitDoor;
     
     private int _videoIndex;
 
@@ -28,9 +32,19 @@ public class TVStaticManager : MonoBehaviour
         _progress.OnAllBooksRead += TurnOnTVs;
         
         //For testing purposes
-        TurnOnTVs();
-        PlayAlienCutscene();
+        /*TurnOnTVs();
+        PlayAlienCutscene();*/
     }
+
+    #if UNITY_EDITOR
+    private void Start()
+    {
+        if (_progress.StartWithAllBooks)
+        {
+            _progress.TestTVRoom();
+        }
+    }
+    #endif
 
     public void TurnOnTVs()
     {
@@ -44,7 +58,7 @@ public class TVStaticManager : MonoBehaviour
 
     public void PlayAlienCutscene()
     {
-        //Close door
+        _enterDoor.SetActive(true);
         StartCoroutine(PlayVideoSequence());
     }
 
@@ -72,7 +86,8 @@ public class TVStaticManager : MonoBehaviour
             previousTv.SetLoop(true);
         }
         
-        //Open door
+        _enterDoor.SetActive(false);
+        _exitDoor.SetActive(false);
     }
 }
 

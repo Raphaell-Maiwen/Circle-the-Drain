@@ -38,7 +38,7 @@ public class LastSectionGate : InteractableTriggerZone
             go.SetActive(false);
         }
         
-        //AudioManager.Instance.PlaySound(_doorOpenSFX);
+        AudioManager.Instance.PlaySound(_doorOpenSFX);
     }
 
     protected override void OnInteractPressed(string str)

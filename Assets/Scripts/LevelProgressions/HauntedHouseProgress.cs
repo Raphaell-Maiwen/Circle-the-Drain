@@ -16,6 +16,10 @@ public class HauntedHouseProgress : ScriptableObject
     
     public bool AreAllBooksRead => BookTextsRead.Count == _bookTextsToRead.Count;
 
+    [Header("Debugging variables")]
+    [SerializeField] private bool _startWithAllBooks;
+    public bool StartWithAllBooks => _startWithAllBooks;
+
     private void OnEnable()
     {
         Reset();
@@ -39,4 +43,11 @@ public class HauntedHouseProgress : ScriptableObject
     {
         BookTextsRead.Clear();
     }
+
+    #if UNITY_EDITOR
+    public void TestTVRoom()
+    {
+        OnAllBooksRead?.Invoke();
+    }
+    #endif
 }

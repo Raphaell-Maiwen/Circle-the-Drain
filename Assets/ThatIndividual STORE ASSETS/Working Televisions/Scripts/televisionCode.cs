@@ -26,12 +26,14 @@ public class televisionCode : MonoBehaviour
     int lastRandomInt = -1;
 
     public VideoPlayer TVPlayer { get; private set; }
+    private Renderer _renderer;
 
     private int _videoIndex = 0;
 
     private void Awake()
     {
         TVPlayer = screenVideoParent.GetComponent<VideoPlayer>();
+        _renderer = screenVideoParent.GetComponent<Renderer>();
     }
 
     void Start()
@@ -62,7 +64,7 @@ public class televisionCode : MonoBehaviour
         TVPlayer.Stop(); // No need to play, the RenderTexture is already being written to
 
         // Apply the render texture to the screen material directly
-        screenVideoParent.GetComponent<Renderer>().material.mainTexture = Instance.staticRenderTexture;
+        _renderer.material.mainTexture = Instance.staticRenderTexture;
         StartCoroutine(Delay());
     }
 

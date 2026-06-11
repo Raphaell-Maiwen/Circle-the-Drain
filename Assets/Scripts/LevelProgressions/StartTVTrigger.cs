@@ -5,6 +5,10 @@ public class StartTVTrigger : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        TVStaticManager.Instance.PlayAlienCutscene();
+        if (other.tag == "Player")
+        {
+            TVStaticManager.Instance.PlayAlienCutscene();
+            Destroy(gameObject);
+        }
     }
 }
