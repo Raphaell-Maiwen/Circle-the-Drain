@@ -51,11 +51,13 @@ public class TVStaticManager : MonoBehaviour
     IEnumerator PlayVideoSequence()
     {
         televisionCode tv;
+        televisionCode previousTv;
         
         while (_videoIndex < _videosOrder.Length)
         {
             tv = _televisionsList[_videosOrder[_videoIndex]];
             tv.channelChange();
+            tv.SetLoop(false);
             
             yield return new WaitForSeconds(1f);
         
@@ -65,7 +67,9 @@ public class TVStaticManager : MonoBehaviour
             }
             
             _videoIndex++;
-            _televisionsList[_videosOrder[_videoIndex - 1]].tvStatic();
+            previousTv = _televisionsList[_videosOrder[_videoIndex - 1]];
+            previousTv.tvStatic();
+            previousTv.SetLoop(true);
         }
         
         //Open door
