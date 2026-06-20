@@ -17,6 +17,7 @@ public class ContextualUI : MonoBehaviour
         {
             channel.OnPlayerEntered += ShowZoneMessage;
             channel.OnPlayerExited += RestoreState;
+            channel.OnUpdatedMessage += UpdateZoneMessage;
         }
     }
 
@@ -26,6 +27,7 @@ public class ContextualUI : MonoBehaviour
         {
             channel.OnPlayerEntered -= ShowZoneMessage;
             channel.OnPlayerExited -= RestoreState;
+            channel.OnUpdatedMessage -= UpdateZoneMessage;
         }
     }
 
@@ -35,6 +37,11 @@ public class ContextualUI : MonoBehaviour
         _zoneMessage.text = channel.ResolveMessage();
         _zoneMessage.gameObject.SetActive(true);
         _lastChannel = channel;
+    }
+
+    public void UpdateZoneMessage(InteractableTriggerZoneEventChannel channel)
+    {
+        _zoneMessage.text = channel.ResolveMessage();
     }
 
     protected void EraseAllMessages()

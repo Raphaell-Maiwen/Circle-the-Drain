@@ -11,6 +11,8 @@ public class InteractableTriggerZoneEventChannel : ScriptableObject
     public event Action<InteractableTriggerZoneEventChannel> OnPlayerEntered;
     public event Action OnPlayerExited;
 
+    public event Action<InteractableTriggerZoneEventChannel> OnUpdatedMessage;
+
     public void PlayerEnter()
     {
         IsTriggered = true;
@@ -21,6 +23,11 @@ public class InteractableTriggerZoneEventChannel : ScriptableObject
     {
         IsTriggered = false;
         OnPlayerExited?.Invoke();
+    }
+
+    public void UpdateMessage()
+    {
+        OnUpdatedMessage?.Invoke(this);
     }
 
     public string ResolveMessage() => GetMessage != null ? GetMessage() : DefaultMessage;
