@@ -5,7 +5,9 @@ using UnityEngine.Events;
 public class ContextualUI : MonoBehaviour
 {
     [SerializeField] private InteractableTriggerZoneEventChannel[] _zoneChannels;
+    [SerializeField] private SubtitlesEventChannel _subtitlesEventChannel;
     [SerializeField] private TextMeshProUGUI _zoneMessage;
+    [SerializeField] private TextMeshProUGUI _subtitlesText;
     protected UnityEvent _disableExtraUI = new UnityEvent();
     protected UnityEvent _restoreState = new UnityEvent();
 
@@ -19,6 +21,11 @@ public class ContextualUI : MonoBehaviour
             channel.OnPlayerExited += RestoreState;
             channel.OnUpdatedMessage += UpdateZoneMessage;
         }
+
+        if (_subtitlesEventChannel)
+        {
+            _subtitlesEventChannel.OnSubtitlesUpdated += ShowSubtitles;
+        }
     }
 
     protected void OnDisable()
@@ -28,6 +35,11 @@ public class ContextualUI : MonoBehaviour
             channel.OnPlayerEntered -= ShowZoneMessage;
             channel.OnPlayerExited -= RestoreState;
             channel.OnUpdatedMessage -= UpdateZoneMessage;
+        }
+        
+        if (_subtitlesEventChannel)
+        {
+            _subtitlesEventChannel.OnSubtitlesUpdated -= ShowSubtitles;
         }
     }
 
@@ -42,6 +54,11 @@ public class ContextualUI : MonoBehaviour
     public void UpdateZoneMessage(InteractableTriggerZoneEventChannel channel)
     {
         _zoneMessage.text = channel.ResolveMessage();
+    }
+
+    public void ShowSubtitles(string text)
+    {
+        _subtitlesText.text = text;
     }
 
     protected void EraseAllMessages()
