@@ -447,6 +447,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1453004078 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7840265828723655817, guid: d23ba30935aebb2488a0155371f6f58f,
+    type: 3}
+  m_PrefabInstance: {fileID: 6469995025312055821}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 553457816dd2c1c4d8e1d5c88ae89d8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SubtitlesManager
 --- !u!1001 &2063894537
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -547,6 +559,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 74.3078
+      objectReference: {fileID: 0}
+    - target: {fileID: 3158845504133308672, guid: d23ba30935aebb2488a0155371f6f58f,
+        type: 3}
+      propertyPath: m_Events.m_Events.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3158845504133308672, guid: d23ba30935aebb2488a0155371f6f58f,
+        type: 3}
+      propertyPath: m_Events.m_Events.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1453004078}
+    - target: {fileID: 3158845504133308672, guid: d23ba30935aebb2488a0155371f6f58f,
+        type: 3}
+      propertyPath: m_Events.m_Events.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: UpdateSubtitles
+      objectReference: {fileID: 0}
+    - target: {fileID: 3158845504133308672, guid: d23ba30935aebb2488a0155371f6f58f,
+        type: 3}
+      propertyPath: m_Events.m_Events.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SubtitlesManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3165226732680217235, guid: d23ba30935aebb2488a0155371f6f58f,
         type: 3}
@@ -701,7 +733,7 @@ PrefabInstance:
     - target: {fileID: 9105367586443121377, guid: d23ba30935aebb2488a0155371f6f58f,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -17.999939
+      value: -18
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 6170018410407958364}
   - component: {fileID: 3740050991861583977}
   - component: {fileID: 7840265828723655817}
+  - component: {fileID: 8517591832792602408}
+  - component: {fileID: 3158845504133308672}
   m_Layer: 5
   m_Name: Subtitles
   m_TagString: Untagged
@@ -66,7 +68,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Test
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -152,9 +154,60 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SubtitlesManager
   _subtitles:
     _serializedList:
-    - Key: test
-      Value: {fileID: 11400000, guid: 9d0c0881f06128545b86b93cf8a1d110, type: 2}
+    - Key: reveal
+      Value: {fileID: 11400000, guid: 00a55ada665ce3d4c8c51aaa30f70030, type: 2}
+    - Key: end
+      Value: {fileID: 11400000, guid: c1eeacf4d21b2844c981f80d1620fb74, type: 2}
   _channel: {fileID: 11400000, guid: 49794a7b81f9ac04fbf267da4b86f0a1, type: 2}
+--- !u!320 &8517591832792602408
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1491442516468378231}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: 8060a3bc426a96540984bcbd44fcfb47, type: 2}
+  m_InitialState: 1
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings:
+  - key: {fileID: 2767663636906375635, guid: 8060a3bc426a96540984bcbd44fcfb47, type: 2}
+    value: {fileID: 3158845504133308672}
+  m_ExposedReferences:
+    m_References: []
+--- !u!114 &3158845504133308672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1491442516468378231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Timeline::UnityEngine.Timeline.SignalReceiver
+  m_Events:
+    m_Signals:
+    - {fileID: 11400000, guid: dc782cdc2c01734439ed97d1094cb7ba, type: 2}
+    m_Events:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1491442516468378231}
+          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_MethodName: SetActive
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: reveal
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1549507189340476058
 GameObject:
   m_ObjectHideFlags: 0
@@ -189,7 +242,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 35.00006, y: 74.307816}
+  m_AnchoredPosition: {x: 35.000122, y: 74.3078}
   m_SizeDelta: {x: 917.614, y: 29.3}
   m_Pivot: {x: 0, y: 0}
 --- !u!222 &8270575446682155276
@@ -715,7 +768,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 35.00006, y: 74.307816}
+  m_AnchoredPosition: {x: 35.000122, y: 74.3078}
   m_SizeDelta: {x: 917.614, y: 29.3}
   m_Pivot: {x: 0, y: 0}
 --- !u!222 &760872403404149071

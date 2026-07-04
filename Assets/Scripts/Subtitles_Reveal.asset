@@ -10,22 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6c0c19ec64a5951479f60bf5ff4937e2, type: 3}
-  m_Name: Subtitles_HauntedHouse
+  m_Name: Subtitles_Reveal
   m_EditorClassIdentifier: Assembly-CSharp::Subtitles
-  _subtitles:
-  - _text: Dialogue1
-    _duration: 2
-  - _text: Dialogue547537
-    _duration: 2
-  - _text: Dialoguefdwhe#hh
-    _duration: 2
-  - _text: Allo
-    _duration: 2
-  - _text: On s'aime
-    _duration: 2
-  - _text: Let's go
-    _duration: 2
-  - _text: Pikachu
-    _duration: 2
-  - _text: Kess ki spasse
+  _subtitlesData:
+  - _text: This is a reveal.
+    _duration: 5
+  - _text: Katy Perry is in love with an alien!
     _duration: 2

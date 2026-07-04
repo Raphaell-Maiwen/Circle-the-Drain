@@ -7,6 +7,8 @@ using UnityEngine.Video;
 public class TVStaticManager : MonoBehaviour
 {
     [SerializeField] private HauntedHouseProgress _progress;
+    [SerializeField] private string _subtitlesKey;
+    [SerializeField] private SubtitlesEventChannel _subtitlesEventChannel;
     [SerializeField] private televisionCode _televisionMaster;
     public static TVStaticManager Instance;
     public VideoClip staticClip;
@@ -34,14 +36,6 @@ public class TVStaticManager : MonoBehaviour
         _videoPlayer.SetDirectAudioMute(0, true);
 
         _progress.OnAllBooksRead += TurnOnTVs;
-        
-        #if UNITY_EDITOR
-        if (_videosOnStart)
-        {
-            TurnOnTVs();
-            PlayAlienCutscene();
-        }
-        #endif
     }
 
     #if UNITY_EDITOR
@@ -50,6 +44,12 @@ public class TVStaticManager : MonoBehaviour
         if (_progress.StartWithAllBooks)
         {
             _progress.TestTVRoom();
+        }
+        
+        if (_videosOnStart)
+        {
+            TurnOnTVs();
+            PlayAlienCutscene();
         }
     }
     #endif
@@ -67,6 +67,7 @@ public class TVStaticManager : MonoBehaviour
     public void PlayAlienCutscene()
     {
         _enterDoor.SetActive(true);
+        _subtitlesEventChannel.SubtitlesStarted(_subtitlesKey);
         StartCoroutine(PlayVideoSequence());
     }
 

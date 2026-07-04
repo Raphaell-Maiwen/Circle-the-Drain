@@ -12,19 +12,22 @@ public class SubtitlesManager : MonoBehaviour
 
     private int _index;
 
-    private void Start()
+    private void OnEnable()
     {
-        //Test
-        StartSubtitles("test");
+        _channel.OnSubtitlesStarted += StartSubtitles;
+    }
+
+    private void OnDisable()
+    {
+        _channel.OnSubtitlesStarted -= StartSubtitles;
     }
 
     public void StartSubtitles(string key)
     {
         _index = 0;
-        StartCoroutine(ChangeSubtitles(key));
     }
 
-    IEnumerator ChangeSubtitles(string key)
+    public void UpdateSubtitles(string key)
     {
         var subtitlesData = _subtitles[key]._subtitlesData;
         
@@ -35,9 +38,7 @@ public class SubtitlesManager : MonoBehaviour
         else
         {
             _channel.UpdateSubtitles(subtitlesData[_index].Text);
-            yield return new WaitForSeconds(subtitlesData[_index].Duration);
             _index++;
-            StartCoroutine(ChangeSubtitles(key));
         }
     }
 }
