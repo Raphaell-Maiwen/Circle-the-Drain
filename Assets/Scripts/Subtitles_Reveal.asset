@@ -13,7 +13,54 @@ MonoBehaviour:
   m_Name: Subtitles_Reveal
   m_EditorClassIdentifier: Assembly-CSharp::Subtitles
   _subtitlesData:
-  - _text: This is a reveal.
-    _duration: 5
-  - _text: Katy Perry is in love with an alien!
-    _duration: 2
+  - _text: Kiss me, ki-ki-kiss me
+  - _text: Infect me with your lovin', fill me with your poison
+  - _text: Take me, ta-ta-take me
+  - _text: Wanna be your victim, ready for abduction
+  - _text: Omg, look at her new music video!
+  - _text: She loves aliens!
+  - _text: Bring her here.
+  - _text: Infect me with your lovin', fill me with your poison
+  - _text: Infect me with your lovin', fill me with your poison
+  - _text: Infect me with your lovin', fill me with your poison
+  - _text: Infect me with your lovin', fill me with your poison
+  - _text: Infect me with your lovin', fill me with your poison
+  - _text: Infect me with your lovin', fill me with your poison
+  - _text: Infect me with your lovin', fill me with your poison
+  - _text: Infect me with your lovin', fill me with your poison
+  - _text: Infect me with your lovin', fill me with your poison
+  - _text: Infect me with your lovin', fill me with your poison
+  - _text: Infect me with your lovin', fill me with your poison
+  - _text: Infect me with your lovin', fill me with your poison
+  - _text: Infect me with your lovin', fill me with your poison
+  - _text: Infect me with your lovin', fill me with your poison
+  - _text: Infect me with your lovin', fill me with your poison
+  - _text: Infect me with your lovin', fill me with your poison
+  - _text: Infect me with your lovin', fill me with your poison
+  - _text: Your captain is hot.
+  - _text: You need to set me up with him.
+  - _text: 'Gay alien: You got it gurl.'
+  - _text: "Aliens: Yeah, that\u2019ll please him."
+  - _text: 'Gay alien: Slay.'
+  - _text: "I\u2019m still asking you about ET."
+  - _text: Oh, ok alright.
+  - _text: You wrote a song about ET.
+  - _text: "I know, but that\u2019s it, it was just a metaphor."
+  - _text: I believe in it and everything.
+  - _text: "The words didn\u2019t sound very metaphorical to me."
+  - _text: "I don\u2019t know if I would actually have intercourse with one of them."
+  - _text: "Unless they were like\u2026"
+  - _text: That was one of your lines! I wanna have sex with an alien!
+  - _text: "But I also say thing like Bon Appetit, you know\u2026"
+  - _text: Wait wait, excuse me.
+  - _text: "\u201CBon Appetit\u201D and \u201CI wanna have sex with an alien\u201D"
+  - _text: These are not equivalent sentences.
+  - _text: Well, meaning I was using food as an analogy
+  - _text: A way of speaking.
+  - _text: "And then I was using\u2026"
+  - _text: I use words like double entendres
+  - _text: And puns, and things like that.
+  - _text: Ok, I would have thought so, except the whole song was that!
+  - _text: Infect me with your lovin', fill me with your poison
+  - _text: Infect me with your lovin', fill me with your poison
+  - _text: Infect me with your lovin', fill me with your poison
