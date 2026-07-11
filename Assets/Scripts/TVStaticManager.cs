@@ -7,7 +7,7 @@ using UnityEngine.Video;
 public class TVStaticManager : MonoBehaviour
 {
     [SerializeField] private HauntedHouseProgress _progress;
-    [SerializeField] private string _subtitlesKey;
+    [SerializeField] private Subtitles _subtitlesKey;
     [SerializeField] private SubtitlesEventChannel _subtitlesEventChannel;
     [SerializeField] private televisionCode _televisionMaster;
     public static TVStaticManager Instance;

@@ -13,8 +13,6 @@ public class Subtitles : ScriptableObject
 public class SubtitlesData
 {
     [SerializeField] private string _text;
-    [SerializeField] private float _duration;
     
     public string Text => _text;
-    public float Duration => _duration;
 }

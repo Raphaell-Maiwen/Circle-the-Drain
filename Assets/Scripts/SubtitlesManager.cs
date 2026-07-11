@@ -2,15 +2,25 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using AYellowpaper.SerializedCollections;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Playables;
 
 public class SubtitlesManager : MonoBehaviour
 {
-    //Identifier avec le SO direct?
-    [SerializeField] private SerializedDictionary<string, Subtitles> _subtitles;
     [SerializeField] private SubtitlesEventChannel _channel;
+    //For testing purposes
+    [SerializeField] private Subtitles _currentSubtitles;
+    [SerializeField] private PlayableDirector _director;
 
     private int _index;
+
+    //Test
+    /*private void Start()
+    {
+        _channel.OnSubtitlesStarted += StartSubtitles;
+        StartSubtitles(_currentSubtitles);
+    }*/
 
     private void OnEnable()
     {
@@ -22,18 +32,26 @@ public class SubtitlesManager : MonoBehaviour
         _channel.OnSubtitlesStarted -= StartSubtitles;
     }
 
-    public void StartSubtitles(string key)
+    public void StartSubtitles(Subtitles subtitles)
     {
         _index = 0;
+        _currentSubtitles = subtitles;
+        _director.Play();
     }
 
-    public void UpdateSubtitles(string key)
+    public void TestTimeline()
     {
-        var subtitlesData = _subtitles[key]._subtitlesData;
+        Debug.Log("Test " + Time.time);
+    }
+
+    public void UpdateSubtitles()
+    {
+        var subtitlesData = _currentSubtitles._subtitlesData;
         
         if (_index >= subtitlesData.Count)
         {
             _channel.UpdateSubtitles("");
+            _director.Stop();
         }
         else
         {

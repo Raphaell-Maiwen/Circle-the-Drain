@@ -4,12 +4,12 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "SubtitlesEventChannel", menuName = "Scriptable Objects/SubtitlesEventChannel")]
 public class SubtitlesEventChannel : ScriptableObject
 {
-    public event Action<string> OnSubtitlesStarted;
+    public event Action<Subtitles> OnSubtitlesStarted;
     public event Action<string> OnSubtitlesUpdated;
 
-    public void SubtitlesStarted(string key)
+    public void SubtitlesStarted(Subtitles subtitles)
     {
-        OnSubtitlesStarted?.Invoke(key);
+        OnSubtitlesStarted?.Invoke(subtitles);
     }
 
     public void UpdateSubtitles(string text)
