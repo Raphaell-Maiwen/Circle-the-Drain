@@ -9002,7 +9002,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TVStaticManager
   _progress: {fileID: 11400000, guid: 7fa1812360bd6684ebd5bd22cec28fca, type: 2}
-  _subtitlesKey: {fileID: 0}
+  _subtitlesKey: {fileID: 11400000, guid: 00a55ada665ce3d4c8c51aaa30f70030, type: 2}
   _subtitlesEventChannel: {fileID: 11400000, guid: 49794a7b81f9ac04fbf267da4b86f0a1,
     type: 2}
   _televisionMaster: {fileID: 1949066782}

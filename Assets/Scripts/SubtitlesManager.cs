@@ -39,11 +39,6 @@ public class SubtitlesManager : MonoBehaviour
         _director.Play();
     }
 
-    public void TestTimeline()
-    {
-        Debug.Log("Test " + Time.time);
-    }
-
     public void UpdateSubtitles()
     {
         var subtitlesData = _currentSubtitles._subtitlesData;
