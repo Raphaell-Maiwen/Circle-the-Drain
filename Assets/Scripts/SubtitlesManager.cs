@@ -41,6 +41,7 @@ public class SubtitlesManager : MonoBehaviour
 
     public void UpdateSubtitles()
     {
+        Debug.Log("index " + _index);
         var subtitlesData = _currentSubtitles._subtitlesData;
         
         if (_index >= subtitlesData.Count)
