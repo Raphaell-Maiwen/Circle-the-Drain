@@ -21,11 +21,11 @@ public class SubtitlesManager : MonoBehaviour
     private int _index;
 
     //Test
-    private void Start()
+    /*private void Start()
     {
         _channel.OnSubtitlesStarted += StartSubtitles;
         StartSubtitles(_currentSubtitles);
-    }
+    }*/
 
     private void OnEnable()
     {
