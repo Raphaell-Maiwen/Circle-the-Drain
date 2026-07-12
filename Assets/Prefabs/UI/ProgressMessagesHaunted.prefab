@@ -154,6 +154,9 @@ MonoBehaviour:
   _channel: {fileID: 11400000, guid: 49794a7b81f9ac04fbf267da4b86f0a1, type: 2}
   _currentSubtitles: {fileID: 11400000, guid: 00a55ada665ce3d4c8c51aaa30f70030, type: 2}
   _director: {fileID: 7663375532599294915}
+  _timeline: {fileID: 11400000, guid: 1a552de5ddba9734bbe338ef8974c541, type: 2}
+  _subtitleSignalAsset: {fileID: 11400000, guid: 1c7ff466395195e48add32e0843cb1d3,
+    type: 2}
 --- !u!114 &8405190447600218877
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -168,7 +171,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.Timeline::UnityEngine.Timeline.SignalReceiver
   m_Events:
     m_Signals:
-    - {fileID: 11400000, guid: dc782cdc2c01734439ed97d1094cb7ba, type: 2}
+    - {fileID: 11400000, guid: 1c7ff466395195e48add32e0843cb1d3, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
@@ -607,7 +610,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -18, y: 0.00000020345033}
+  m_AnchoredPosition: {x: -18.000061, y: 0.00000020345033}
   m_SizeDelta: {x: 0, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5853161282929628264

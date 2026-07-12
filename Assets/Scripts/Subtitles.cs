@@ -15,4 +15,7 @@ public class SubtitlesData
     [SerializeField] private string _text;
     
     public string Text => _text;
+
+    [SerializeField] private double _timeStamp = 100;
+    public double TimeStamp => _timeStamp;
 }

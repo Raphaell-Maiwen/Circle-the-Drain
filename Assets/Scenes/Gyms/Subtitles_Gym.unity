@@ -763,6 +763,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 00a55ada665ce3d4c8c51aaa30f70030,
         type: 2}
+    - target: {fileID: 8405190447600218877, guid: d23ba30935aebb2488a0155371f6f58f,
+        type: 3}
+      propertyPath: 'm_Events.m_Signals.Array.data[0]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 1c7ff466395195e48add32e0843cb1d3,
+        type: 2}
     - target: {fileID: 8517591832792602408, guid: d23ba30935aebb2488a0155371f6f58f,
         type: 3}
       propertyPath: m_Enabled
