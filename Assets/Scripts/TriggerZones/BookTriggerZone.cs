@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Cinemachine;
 using UnityEngine;
 
 public class BookTriggerZone : InteractableTriggerZone
@@ -13,8 +14,20 @@ public class BookTriggerZone : InteractableTriggerZone
     [SerializeField] private GameObject _openedBookGO;
     
     [SerializeField] private BookText _bookText;
+    [SerializeField] private CinemachineCamera _bookCamera;
+    [SerializeField] private float _blendSpeed;
     
     private Coroutine _changingStateCoroutine;
+
+    private void OnEnable()
+    {
+        CamerasManager.Register(_bookCamera);
+    }
+
+    private void OnDisable()
+    {
+        CamerasManager.Unregister(_bookCamera);
+    }
 
     protected override void OnPlayerEnter()
     {
@@ -32,7 +45,9 @@ public class BookTriggerZone : InteractableTriggerZone
     {
         CharacterInputHandler.Instance.PlayerInput.actions.FindActionMap("Player").Disable();
         CharacterInputHandler.Instance.PlayerInput.actions.FindActionMap("Cutscene").Enable();
-
+        
+        CamerasManager.SwitchActiveCamera(_bookCamera, _blendSpeed);
+        
         if(_changingStateCoroutine == null)
         {
             _changingStateCoroutine = StartCoroutine(ChangeBookState(_closedBookGO.transform, _bookClosedAnchor, _bookOpenAnchor, true, BookOpened));
@@ -47,6 +62,7 @@ public class BookTriggerZone : InteractableTriggerZone
         {
             _interactMessenger.OnInteractPressed?.Invoke(null);
             _changingStateCoroutine = StartCoroutine(ChangeBookState(_openedBookGO.transform, _bookOpenAnchor, _bookClosedAnchor, false, BookClosed));
+            CamerasManager.SwitchActiveCamera(CamerasManager.MainCamera, _blendSpeed);
         }
     }
     
