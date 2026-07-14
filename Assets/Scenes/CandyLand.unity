@@ -18559,7 +18559,7 @@ MonoBehaviour:
   _fireworksSong: Fireworks
   _prideParadeLevel: PrideParade
   _candyLandLevel: CandyLand
-  _fireworksShowDuration: 10
+  _fireworksShowDuration: 30
   _lodGroup: {fileID: 113432500}
   _objectsToDeactivate:
   - {fileID: 104795647}
