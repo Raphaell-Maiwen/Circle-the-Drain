@@ -12,13 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d33cca06153da6642a3ff85e342758f3, type: 3}
   m_Name: HauntedHouseProgress
   m_EditorClassIdentifier: Assembly-CSharp::HauntedHouseProgress
-  BookTextsRead:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  BookTextsRead: []
   _bookTextsToRead:
   - {fileID: 11400000, guid: c34b52bdb99147747b4c523f16df3dc4, type: 2}
   - {fileID: 11400000, guid: 339ba14f74410ab4e9f0a40373317039, type: 2}
@@ -26,4 +20,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 82f94198cd0b9114089835fc83c7a763, type: 2}
   - {fileID: 11400000, guid: a06b7b1247cf2f646a3a4b6d0dd470d0, type: 2}
   - {fileID: 11400000, guid: f0a07022de5d4e44e94e35d40cc5bbf0, type: 2}
-  _startWithAllBooks: 1
+  _startWithAllBooks: 0

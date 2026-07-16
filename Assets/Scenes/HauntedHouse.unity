@@ -1853,6 +1853,10 @@ PrefabInstance:
       value: Door_To_Last_Corridor
       objectReference: {fileID: 0}
     - target: {fileID: 1842708414955614, guid: 141a3c088bae48f42a579375904a411c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1842708414955614, guid: 141a3c088bae48f42a579375904a411c, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -2847,6 +2851,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Book_Lore (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4837578941122574543, guid: 4c6cbe177ac347e40abe1c2f7f4fb826,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4925834832302562270, guid: 4c6cbe177ac347e40abe1c2f7f4fb826,
         type: 3}
@@ -6256,7 +6265,7 @@ MonoBehaviour:
   _renderer: {fileID: 1269452093}
   _collider: {fileID: 1269452097}
   _speed: 0.45
-  _test: 1
+  _test: 0
 --- !u!65 &1269452097
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6272,7 +6281,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3

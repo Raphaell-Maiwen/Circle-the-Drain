@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using Unity.Cinemachine;
 using System.Collections.Generic;
@@ -11,6 +12,8 @@ public static class CamerasManager
     public static CinemachineBrain CameraBrain = null;
 
     public static CinemachineCamera MainCamera = null;
+    
+    public static GameObject MainCameraGO = null;
 
     public static bool IsActiveCamera(CinemachineCamera camera)
     {
@@ -30,6 +33,7 @@ public static class CamerasManager
     public static void SetMainCamera(CinemachineCamera camera)
     {
         MainCamera = camera;
+        MainCameraGO = camera.gameObject;
     }
 
     public static void SetBrain(CinemachineBrain brain)
@@ -58,6 +62,13 @@ public static class CamerasManager
     public static float GetFocalLength()
     {
         return Camera.FieldOfViewToFocalLength(ActiveCamera.Lens.FieldOfView, Camera.main.sensorSize.y);
+    }
+
+    public static IEnumerator ResetCamera()
+    {
+        MainCameraGO.SetActive(false);
+        yield return null;
+        MainCameraGO.SetActive(true);
     }
 }
 

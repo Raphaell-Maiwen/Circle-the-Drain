@@ -14,6 +14,7 @@ public class LoadLastLevelAction : MonoBehaviour
     private float _initialFocalLength;
     [SerializeField] private float _focalLengthLerpDuration;
 
+    [SerializeField] private string _prideLevel;
     [SerializeField] private string _alienLabLevel;
 
     private void OnEnable()
@@ -81,8 +82,10 @@ public class LoadLastLevelAction : MonoBehaviour
         
         CamerasManager.SetFocalLength(_targetFocalLength);
         
-        SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().name);
+        SceneManager.UnloadSceneAsync(_prideLevel);
         SceneManager.LoadSceneAsync(_alienLabLevel, LoadSceneMode.Additive);
+
+        //StartCoroutine(CamerasManager.ResetCamera());
         
         elapsedTime = 0;
         while (elapsedTime <  _focalLengthLerpDuration)
