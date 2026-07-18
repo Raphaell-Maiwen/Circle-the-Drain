@@ -192,6 +192,29 @@ PrefabInstance:
       propertyPath: _prideLevel
       value: PrideParade
       objectReference: {fileID: 0}
+    - target: {fileID: 8796798603470598530, guid: d54cd60b1b1a0604da4727f61514c721,
+        type: 3}
+      propertyPath: _disableTeleportChannels.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8796798603470598530, guid: d54cd60b1b1a0604da4727f61514c721,
+        type: 3}
+      propertyPath: '_disableTeleportChannels.Array.data[0]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 1ba3a9f8bc755b74dbd2f9bcb245901e,
+        type: 2}
+    - target: {fileID: 8796798603470598530, guid: d54cd60b1b1a0604da4727f61514c721,
+        type: 3}
+      propertyPath: '_disableTeleportChannels.Array.data[1]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 0eb0eeb2cffd1c447ba76e589b1f95b8,
+        type: 2}
+    - target: {fileID: 8796798603470598530, guid: d54cd60b1b1a0604da4727f61514c721,
+        type: 3}
+      propertyPath: '_disableTeleportChannels.Array.data[2]'
+      value: 
+      objectReference: {fileID: 11400000, guid: fbabe64171828e54586321d3aff25662,
+        type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

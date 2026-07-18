@@ -6,10 +6,7 @@ public class TeleportAction : MonoBehaviour
 {
     [SerializeField] private CandyLevelProgress _progress;
     [SerializeField] private InteractMessenger _messenger;
-    [SerializeField] private InteractableTriggerZoneEventChannel _rocketCollectableZoneChannel;
-    [SerializeField] private InteractableTriggerZoneEventChannel _rocketLaunchZoneChannel;
-    
-    
+    [SerializeField] private InteractableTriggerZoneEventChannel[] _disableTeleportChannels;
     
     [SerializeField] private Transform _player;
     [SerializeField] private Transform _camera;
@@ -18,10 +15,12 @@ public class TeleportAction : MonoBehaviour
     private void OnEnable()
     {
         _progress.OnThresholdReached += EnableTeleportAction;
-        _rocketCollectableZoneChannel.OnPlayerEntered += DisableTeleportAction;
-        _rocketCollectableZoneChannel.OnPlayerExited += TryRestoreTeleportAction;
-        _rocketLaunchZoneChannel.OnPlayerEntered += DisableTeleportAction;
-        _rocketLaunchZoneChannel.OnPlayerExited += TryRestoreTeleportAction;
+
+        foreach (var channel in _disableTeleportChannels)
+        {
+            channel.OnPlayerEntered += DisableTeleportAction;
+            channel.OnPlayerExited += TryRestoreTeleportAction;
+        }
 
         if (_progress.IsThresholdReached) EnableTeleportAction();
     }
@@ -29,10 +28,12 @@ public class TeleportAction : MonoBehaviour
     private void OnDisable()
     {
         _progress.OnThresholdReached -= EnableTeleportAction;
-        _rocketCollectableZoneChannel.OnPlayerEntered -= DisableTeleportAction;
-        _rocketCollectableZoneChannel.OnPlayerExited -= TryRestoreTeleportAction;
-        _rocketLaunchZoneChannel.OnPlayerEntered -= DisableTeleportAction;
-        _rocketLaunchZoneChannel.OnPlayerExited -= TryRestoreTeleportAction;
+        
+        foreach (var channel in _disableTeleportChannels)
+        {
+            channel.OnPlayerEntered -= DisableTeleportAction;
+            channel.OnPlayerExited -= TryRestoreTeleportAction;
+        }
 
         _messenger.OnInteractInput -= Teleport;
     }
