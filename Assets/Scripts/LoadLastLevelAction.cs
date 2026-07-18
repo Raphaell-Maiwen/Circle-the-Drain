@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -62,9 +63,6 @@ public class LoadLastLevelAction : MonoBehaviour
 
     IEnumerator LastLevelTranstion()
     {
-        //Add Depth of Field to volume???
-        
-        //To remove / for tests only
         CamerasManager.SwitchActiveCamera(CamerasManager.MainCamera);
         
         CharacterInputHandler.Instance.PlayerInput.SwitchCurrentActionMap("Cutscene");
@@ -84,8 +82,6 @@ public class LoadLastLevelAction : MonoBehaviour
         
         SceneManager.UnloadSceneAsync(_prideLevel);
         SceneManager.LoadSceneAsync(_alienLabLevel, LoadSceneMode.Additive);
-
-        //StartCoroutine(CamerasManager.ResetCamera());
         
         elapsedTime = 0;
         while (elapsedTime <  _focalLengthLerpDuration)

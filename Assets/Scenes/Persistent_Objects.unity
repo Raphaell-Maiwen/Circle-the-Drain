@@ -187,6 +187,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Scene_Essentials
       objectReference: {fileID: 0}
+    - target: {fileID: 7645538350139834778, guid: d54cd60b1b1a0604da4727f61514c721,
+        type: 3}
+      propertyPath: m_OcclusionCulling
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8783736431894321111, guid: d54cd60b1b1a0604da4727f61514c721,
         type: 3}
       propertyPath: _prideLevel
