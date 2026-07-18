@@ -8,6 +8,9 @@ public class TeleportAction : MonoBehaviour
     [SerializeField] private InteractMessenger _messenger;
     [SerializeField] private InteractableTriggerZoneEventChannel _rocketCollectableZoneChannel;
     [SerializeField] private InteractableTriggerZoneEventChannel _rocketLaunchZoneChannel;
+    
+    
+    
     [SerializeField] private Transform _player;
     [SerializeField] private Transform _camera;
     [SerializeField] private TeleportPointData[] _teleportPointArray;

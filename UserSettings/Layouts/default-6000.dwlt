@@ -218,8 +218,8 @@ MonoBehaviour:
     y: 0
     width: 939.3334
     height: 426
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 226}
+  m_MaxSize: {x: 4002, y: 4026}
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
@@ -354,7 +354,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 42.666668
+    y: 0
     width: 1706.6666
     height: 36
   m_SerializedDataModeController:
@@ -620,8 +620,8 @@ MonoBehaviour:
     m_TextWithWhitespace: "Game\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 722
-    y: 504.6667
+    x: 723
+    y: 24
     width: 557.3334
     height: 468
   m_SerializedDataModeController:
@@ -682,7 +682,7 @@ MonoBehaviour:
       width: 557.3334
       height: 447
     m_Scale: {x: 1.5, y: 1.5}
-    m_Translation: {x: 278.66666, y: 223.5}
+    m_Translation: {x: 278.66666, y: 223.50003}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
@@ -690,7 +690,7 @@ MonoBehaviour:
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
       x: -185.77777
-      y: -149
+      y: -149.00002
       width: 371.55557
       height: 298
     m_MinimalGUI: 1
@@ -725,7 +725,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 78.66667
+    y: 24
     width: 341
     height: 400
   m_SerializedDataModeController:
@@ -744,10 +744,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs:
-      - m_Data: -46360
+      m_SelectedIDs: []
       m_LastClickedID:
-        m_Data: -46360
+        m_Data: 0
       m_ExpandedIDs:
       - m_Data: -46360
       - m_Data: -46356
@@ -804,8 +803,8 @@ MonoBehaviour:
     m_TextWithWhitespace: "Scene\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 342
-    y: 78.66667
+    x: 343
+    y: 24
     width: 937.3334
     height: 400
   m_SerializedDataModeController:
@@ -1498,7 +1497,7 @@ MonoBehaviour:
   m_Rotation:
     m_Target: {x: -0.23382367, y: 0.13597925, z: -0.03312506, w: -0.962215}
     speed: 2
-    m_Value: {x: -0.2338098, y: 0.13597117, z: -0.033123095, w: -0.9621579}
+    m_Value: {x: -0.23382367, y: 0.13597925, z: -0.03312506, w: -0.962215}
   m_Size:
     m_Target: 2.740883
     speed: 2
@@ -1659,43 +1658,41 @@ MonoBehaviour:
       m_Data: 65712
     m_ExpandedIDs:
     - m_Data: 0
-    - m_Data: 65014
-    - m_Data: 65016
-    - m_Data: 65018
-    - m_Data: 65020
-    - m_Data: 65022
-    - m_Data: 65024
-    - m_Data: 65026
-    - m_Data: 65028
-    - m_Data: 65030
-    - m_Data: 65032
-    - m_Data: 65034
-    - m_Data: 65036
-    - m_Data: 65038
-    - m_Data: 65040
-    - m_Data: 65042
-    - m_Data: 65044
-    - m_Data: 65046
-    - m_Data: 65048
-    - m_Data: 65050
-    - m_Data: 65052
-    - m_Data: 65054
-    - m_Data: 65056
-    - m_Data: 65058
-    - m_Data: 65060
-    - m_Data: 65062
-    - m_Data: 65064
-    - m_Data: 65066
-    - m_Data: 65068
-    - m_Data: 65070
-    - m_Data: 65072
-    - m_Data: 65074
-    - m_Data: 65076
-    - m_Data: 65078
-    - m_Data: 65080
-    - m_Data: 65082
-    - m_Data: 65684
-    - m_Data: 1000000000
+    - m_Data: 67096
+    - m_Data: 67098
+    - m_Data: 67100
+    - m_Data: 67102
+    - m_Data: 67104
+    - m_Data: 67106
+    - m_Data: 67108
+    - m_Data: 67110
+    - m_Data: 67112
+    - m_Data: 67114
+    - m_Data: 67116
+    - m_Data: 67118
+    - m_Data: 67120
+    - m_Data: 67122
+    - m_Data: 67124
+    - m_Data: 67126
+    - m_Data: 67128
+    - m_Data: 67130
+    - m_Data: 67132
+    - m_Data: 67134
+    - m_Data: 67136
+    - m_Data: 67138
+    - m_Data: 67140
+    - m_Data: 67142
+    - m_Data: 67144
+    - m_Data: 67146
+    - m_Data: 67148
+    - m_Data: 67150
+    - m_Data: 67152
+    - m_Data: 67154
+    - m_Data: 67156
+    - m_Data: 67158
+    - m_Data: 67160
+    - m_Data: 67162
+    - m_Data: 67164
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1728,41 +1725,41 @@ MonoBehaviour:
       m_Data: 0
     m_ExpandedIDs:
     - m_Data: 0
-    - m_Data: 65014
-    - m_Data: 65016
-    - m_Data: 65018
-    - m_Data: 65020
-    - m_Data: 65022
-    - m_Data: 65024
-    - m_Data: 65026
-    - m_Data: 65028
-    - m_Data: 65030
-    - m_Data: 65032
-    - m_Data: 65034
-    - m_Data: 65036
-    - m_Data: 65038
-    - m_Data: 65040
-    - m_Data: 65042
-    - m_Data: 65044
-    - m_Data: 65046
-    - m_Data: 65048
-    - m_Data: 65050
-    - m_Data: 65052
-    - m_Data: 65054
-    - m_Data: 65056
-    - m_Data: 65058
-    - m_Data: 65060
-    - m_Data: 65062
-    - m_Data: 65064
-    - m_Data: 65066
-    - m_Data: 65068
-    - m_Data: 65070
-    - m_Data: 65072
-    - m_Data: 65074
-    - m_Data: 65076
-    - m_Data: 65078
-    - m_Data: 65080
-    - m_Data: 65082
+    - m_Data: 67096
+    - m_Data: 67098
+    - m_Data: 67100
+    - m_Data: 67102
+    - m_Data: 67104
+    - m_Data: 67106
+    - m_Data: 67108
+    - m_Data: 67110
+    - m_Data: 67112
+    - m_Data: 67114
+    - m_Data: 67116
+    - m_Data: 67118
+    - m_Data: 67120
+    - m_Data: 67122
+    - m_Data: 67124
+    - m_Data: 67126
+    - m_Data: 67128
+    - m_Data: 67130
+    - m_Data: 67132
+    - m_Data: 67134
+    - m_Data: 67136
+    - m_Data: 67138
+    - m_Data: 67140
+    - m_Data: 67142
+    - m_Data: 67144
+    - m_Data: 67146
+    - m_Data: 67148
+    - m_Data: 67150
+    - m_Data: 67152
+    - m_Data: 67154
+    - m_Data: 67156
+    - m_Data: 67158
+    - m_Data: 67160
+    - m_Data: 67162
+    - m_Data: 67164
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1851,7 +1848,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 504.6667
+    y: 24
     width: 721
     height: 468
   m_SerializedDataModeController:
@@ -1889,8 +1886,8 @@ MonoBehaviour:
     m_TextWithWhitespace: "Inspector\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 1281.3334
-    y: 78.66667
+    x: 1282.3334
+    y: 24
     width: 424.33325
     height: 894
   m_SerializedDataModeController:
@@ -1960,4 +1957,4 @@ MonoBehaviour:
     m_DynamicPanelBehavior: 0
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: -46360
+  m_LastSelectedObjectID: 0
