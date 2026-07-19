@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 75b78332da0b9a14f8685add49ea0b84, type: 3}
-  m_Name: GummyText_LollipopForest
+  m_Name: GummyText_GoldenCoast
   m_EditorClassIdentifier: Assembly-CSharp::GummyText
   _dialogue:
-  - I wish we could always stay
-  - in that dreamy era.
-  - Do you think we can?
+  - You could travel the world
+  - But nothing comes close
+  - To the orange coast.
