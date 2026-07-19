@@ -20,6 +20,7 @@ public class TVStaticManager : MonoBehaviour
 
     [SerializeField] private GameObject _enterDoor;
     [SerializeField] private GameObject _exitDoor;
+    [SerializeField] private List<GameObject> _objectsToDisable;
     
     private int _videoIndex;
 
@@ -67,6 +68,12 @@ public class TVStaticManager : MonoBehaviour
     public void PlayAlienCutscene()
     {
         _enterDoor.SetActive(true);
+
+        foreach (var obj in _objectsToDisable)
+        {
+            obj.SetActive(false);
+        }
+        
         _subtitlesEventChannel.SubtitlesStarted(_subtitlesKey);
         StartCoroutine(PlayVideoSequence());
     }
@@ -97,6 +104,11 @@ public class TVStaticManager : MonoBehaviour
         
         _enterDoor.SetActive(false);
         _exitDoor.SetActive(false);
+        
+        foreach (var obj in _objectsToDisable)
+        {
+            obj.SetActive(true);
+        }
     }
 }
 

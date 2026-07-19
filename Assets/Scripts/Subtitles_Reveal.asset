@@ -22,25 +22,27 @@ MonoBehaviour:
   - _text: Wanna be your victim, ready for abduction
     _timeStamp: 9.9
   - _text: Omg, look at her new music video!
-    _timeStamp: 12.638
+    _timeStamp: 13
   - _text: She loves aliens!
-    _timeStamp: 14.5
+    _timeStamp: 14.8
   - _text: Bring her here.
-    _timeStamp: 17.1
+    _timeStamp: 17.5
   - _text: "That\u2019s what I\u2019m saying."
-    _timeStamp: 19.394
+    _timeStamp: 19.45
   - _text: I think artists are who we will have to reach for
-    _timeStamp: 20.938
-  - _text: To find out how to touch the sense
+    _timeStamp: 21.2
+  - _text: To find out how to touch the senses
     _timeStamp: 25.108
   - _text: Of aliens we have yet to imagine.
     _timeStamp: 27.986
+  - _text: ' '
+    _timeStamp: 30.5
   - _text: Welcome aboard Katy Perry!
     _timeStamp: 43.794
+  - _text: ' '
+    _timeStamp: 46
   - _text: I need to, I want to hear about your alien love.
     _timeStamp: 56.098
-  - _text: I mean,
-    _timeStamp: 59.935
   - _text: "You\u2019ve given some love to aliens in ET."
     _timeStamp: 60.042
   - _text: "I mean, I don\u2019t know. When you see all the movies, you think"
@@ -70,7 +72,9 @@ MonoBehaviour:
   - _text: "Aliens: Yeah, that\u2019ll please him."
     _timeStamp: 111.134
   - _text: 'Gay alien: Slay.'
-    _timeStamp: 113.095
+    _timeStamp: 113.5
+  - _text: ' '
+    _timeStamp: 114.5
   - _text: "I\u2019m still asking you about ET."
     _timeStamp: 117.057
   - _text: Oh, ok alright.
@@ -89,7 +93,7 @@ MonoBehaviour:
     _timeStamp: 130.594
   - _text: That was one of your lines! I wanna have sex with an alien!
     _timeStamp: 131.386
-  - _text: "But I also say thing like Bon Appetit, you know\u2026"
+  - _text: "But I also say things like Bon Appetit, you know\u2026"
     _timeStamp: 134.348
   - _text: Wait wait, excuse me.
     _timeStamp: 139.686
@@ -118,7 +122,7 @@ MonoBehaviour:
   - _text: And I'm ready to go, lead me into the light
     _timeStamp: 169.466
   - _text: Why are there 7 billion people
-    _timeStamp: 173.011
+    _timeStamp: 173.311
   - _text: And why does each one of us
     _timeStamp: 175.764
   - _text: Have our own fingerprint?
@@ -131,12 +135,16 @@ MonoBehaviour:
     _timeStamp: 187.466
   - _text: Would you rather we were all the same?
     _timeStamp: 188.634
+  - _text: ' '
+    _timeStamp: 190.634
   - _text: "Clone: I\u2019m Katy Perry. I\u2019m 32 years old."
     _timeStamp: 195.641
   - _text: "I\u2019m a pop sensation."
     _timeStamp: 205.067
   - _text: "I\u2019m currently working on my album Witness."
     _timeStamp: 206.318
+  - _text: ' '
+    _timeStamp: 209.318
   - _text: "Here\u2019s something that freaks me out every day."
     _timeStamp: 215.786
   - _text: Every morning I wake up and I say
@@ -161,6 +169,8 @@ MonoBehaviour:
     _timeStamp: 233.011
   - _text: '[Explosion noises]'
     _timeStamp: 234.137
+  - _text: ' '
+    _timeStamp: 320.431
   - _text: So, would you
     _timeStamp: 242.044
   - _text: If an alien came, would you
@@ -188,15 +198,15 @@ MonoBehaviour:
   - _text: "Don\u2019t sayyyyyy, goodbye."
     _timeStamp: 270.906
   - _text: Delighted to learn that Katy Perry loves space aliens!
-    _timeStamp: 278.914
+    _timeStamp: 279.114
   - _text: Especially hot ones.
-    _timeStamp: 282.96
+    _timeStamp: 283.36
   - _text: Not thermodynamically, just in appearance.
     _timeStamp: 285.462
   - _text: That would be me!
     _timeStamp: 290.3
   - _text: Kiss me, ki-ki-kiss me
-    _timeStamp: 291.635
+    _timeStamp: 292
   - _text: Infect me with your lovin', fill me with your poison.
     _timeStamp: 294.596
   - _text: Take me, ta-ta-take me
@@ -211,5 +221,5 @@ MonoBehaviour:
     _timeStamp: 311.345
   - _text: Extraterrestrial
     _timeStamp: 314.431
-  - _text: Extraterrestrial
-    _timeStamp: 314.431
+  - _text: ' '
+    _timeStamp: 320.431
