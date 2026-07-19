@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
+using UnityEngine.Video;
 
 public class PrideInitializer : LevelInitialization
 {
+    [SerializeField] private VideoPlayer[] _videoPlayersArray;
     [SerializeField] private List<Animator> walkAnimatorList;
     [SerializeField] private List<Animator> waveAnimatorList;
     [SerializeField] private List<Animator> _dogAnimatorList;
@@ -59,9 +61,18 @@ public class PrideInitializer : LevelInitialization
         }
 
         _dykeLeadAnimator.SetTrigger("idle");
-        
 
+        StartCoroutine(StartVideos());
         StartCoroutine(StartNightmareTransition());
+    }
+
+    IEnumerator StartVideos()
+    {
+        yield return new WaitForSeconds(2.5f);
+        foreach (var video in _videoPlayersArray)
+        {
+            video.Play();
+        }
     }
 
     IEnumerator StartWalk(Animator animator)

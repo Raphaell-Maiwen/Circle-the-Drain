@@ -6,7 +6,8 @@ using UnityEngine.Video;
 
 public class EndOfLevel2Trigger : MonoBehaviour
 {
-    [SerializeField] private GameObject[] _videoPlayerArray;
+    [SerializeField] private GameObject[] _nightmareVideoPlayerArray;
+    [SerializeField] private VideoPlayer[] _initialVideoPlayersArray;
     [SerializeField] private float _finalHeight;
     [SerializeField] private float _riseLength;
     [SerializeField] private PrideParadeProgress _prideParadeProgress;
@@ -15,7 +16,7 @@ public class EndOfLevel2Trigger : MonoBehaviour
 
     private void Start()
     {
-        foreach (var videoPlayer in _videoPlayerArray)
+        foreach (var videoPlayer in _nightmareVideoPlayerArray)
         {
             var startingPos = videoPlayer.transform.position;
             var endingPos = videoPlayer.transform.position;
@@ -35,6 +36,11 @@ public class EndOfLevel2Trigger : MonoBehaviour
 
     private IEnumerator EndOfParade()
     {
+        foreach (var video in _initialVideoPlayersArray)
+        {
+            video.Stop();
+        }
+        
         foreach (var videoWall in _videoWallList)
         {
             videoWall._videoPlayer.gameObject.SetActive(true);
