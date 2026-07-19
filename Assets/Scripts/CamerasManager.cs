@@ -63,13 +63,6 @@ public static class CamerasManager
     {
         return Camera.FieldOfViewToFocalLength(ActiveCamera.Lens.FieldOfView, Camera.main.sensorSize.y);
     }
-
-    public static IEnumerator ResetCamera()
-    {
-        MainCameraGO.SetActive(false);
-        yield return null;
-        MainCameraGO.SetActive(true);
-    }
 }
 
 

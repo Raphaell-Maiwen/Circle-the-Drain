@@ -28,6 +28,8 @@ namespace StealthGame
 
         void Start()
         {
+            Debug.Log(gameObject.name);
+            
             m_EndScreen = uiDocument.rootVisualElement.Q<VisualElement>("EndScreen");
             m_CaughtScreen = uiDocument.rootVisualElement.Q<VisualElement>("CaughtScreen");
 
