@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7571757542ed0224f8e12029ec7658e4, type: 3}
   m_Name: BookText_Test Paul McCartner
   m_EditorClassIdentifier: Assembly-CSharp::BookText
-  _bookContent: "Paul\u2019s clone was the best at this job. Same humor, same energy\u2026
-    And once rumours started spreading, he actually leaned into it, which seems to
-    be the best strategy. Don\u2019t act defensive about a rumor, and people immediately
-    give less power to it. \r\n\r\nHe was a bit too careless sometimes, forgetting
-    to pretend to be left-handed like the real Paul, or doing a good enough job with
-    his aftercare for his facial surgery to hide the scar, but all things considered,
-    he did as good as someone can realistically do to keep the truth a secret."
+  _bookContent: "Paul McCartney\u2019s clone was the best at this job. Same humor,
+    same energy\u2026 And once rumours started spreading, he actually leaned into
+    it, which seems to be the best strategy. Don\u2019t act defensive about a rumor,
+    and people immediately give less power to it. \r\n\r\nHe was a bit too careless
+    sometimes, forgetting to pretend to be left-handed like the real Paul, or doing
+    a good enough job with his aftercare for his facial surgery to hide the scar,
+    but all things considered, he did as good as someone can realistically do to
+    keep the truth a secret."
