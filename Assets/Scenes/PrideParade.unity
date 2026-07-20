@@ -7094,6 +7094,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PrideInitializer
   _levelInfo: {fileID: 11400000, guid: 797e900c556c7b1499f2c5d48560f2a3, type: 2}
+  _videoPlayersArray: []
   walkAnimatorList:
   - {fileID: 1726449364}
   - {fileID: 471974359}
@@ -22098,13 +22099,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a42ed09e1e1c744db0ddff70a01d4a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EndOfLevel2Trigger
-  _videoPlayerArray:
+  _nightmareVideoPlayerArray:
   - {fileID: 1813705680}
   - {fileID: 1943488853}
   - {fileID: 808068756}
   - {fileID: 2047209080}
   - {fileID: 488506817}
   - {fileID: 1989717332}
+  _initialVideoPlayersArray:
+  - {fileID: 2041218572}
+  - {fileID: 681369494}
+  - {fileID: 1101248639}
+  - {fileID: 363971315}
   _finalHeight: 9.2345
   _riseLength: 2
   _prideParadeProgress: {fileID: 11400000, guid: 0b2b4a87f176be94ba3112cb1e03a478,
