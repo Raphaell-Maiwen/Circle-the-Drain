@@ -1523,6 +1523,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 126939388}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &136524778 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6382189603179772731, guid: b89466388898691498051bdd140fab2a,
+    type: 3}
+  m_PrefabInstance: {fileID: 232412566}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &140941417
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1643,7 +1649,7 @@ PrefabInstance:
     - target: {fileID: 8910238893954217439, guid: b89466388898691498051bdd140fab2a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 229.23
+      value: 228.53
       objectReference: {fileID: 0}
     - target: {fileID: 8910238893954217439, guid: b89466388898691498051bdd140fab2a,
         type: 3}
@@ -1653,12 +1659,12 @@ PrefabInstance:
     - target: {fileID: 8910238893954217439, guid: b89466388898691498051bdd140fab2a,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 209.07307
+      value: 210.13
       objectReference: {fileID: 0}
     - target: {fileID: 8910238893954217439, guid: b89466388898691498051bdd140fab2a,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9697128
+      value: 0.9728769
       objectReference: {fileID: 0}
     - target: {fileID: 8910238893954217439, guid: b89466388898691498051bdd140fab2a,
         type: 3}
@@ -1668,7 +1674,7 @@ PrefabInstance:
     - target: {fileID: 8910238893954217439, guid: b89466388898691498051bdd140fab2a,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.24424836
+      value: 0.23132351
       objectReference: {fileID: 0}
     - target: {fileID: 8910238893954217439, guid: b89466388898691498051bdd140fab2a,
         type: 3}
@@ -1683,7 +1689,7 @@ PrefabInstance:
     - target: {fileID: 8910238893954217439, guid: b89466388898691498051bdd140fab2a,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -28.275
+      value: 26.75
       objectReference: {fileID: 0}
     - target: {fileID: 8910238893954217439, guid: b89466388898691498051bdd140fab2a,
         type: 3}
@@ -3450,7 +3456,7 @@ PrefabInstance:
         type: 3}
       propertyPath: _root
       value: 
-      objectReference: {fileID: 398523836}
+      objectReference: {fileID: 136524778}
     - target: {fileID: 6382189603179772731, guid: b89466388898691498051bdd140fab2a,
         type: 3}
       propertyPath: m_Name
@@ -5802,12 +5808,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2915921341820715729, guid: 86e67d38d05929e4d8bb42118aaf2f08,
     type: 3}
   m_PrefabInstance: {fileID: 391692517}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &398523836 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6382189603179772731, guid: b89466388898691498051bdd140fab2a,
-    type: 3}
-  m_PrefabInstance: {fileID: 142611857}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &399966335 stripped
 GameObject:
@@ -18800,7 +18800,7 @@ MonoBehaviour:
   _fireworksSong: Fireworks
   _prideParadeLevel: PrideParade
   _candyLandLevel: CandyLand
-  _fireworksShowDuration: 30
+  _fireworksShowDuration: 19
   _lodGroup: {fileID: 113432500}
   _objectsToDeactivate:
   - {fileID: 104795647}
