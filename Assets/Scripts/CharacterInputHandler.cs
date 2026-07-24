@@ -29,6 +29,7 @@ public class CharacterInputHandler : MonoBehaviour
     public event Action OnCutsceneInteract;
 
     public Vector2 RotationInput { get; private set; }
+    public bool IsGamepadRotation { get; private set; }
     public bool MovementTriggered { get; private set; }
 
     public bool InteractTriggered { get; private set; }
@@ -65,7 +66,11 @@ public class CharacterInputHandler : MonoBehaviour
 
     public void SubscribeEvents()
     {
-        _rotationAction.performed += inputInfo => RotationInput = inputInfo.ReadValue<Vector2>();
+        _rotationAction.performed += inputInfo =>
+        {
+            RotationInput = inputInfo.ReadValue<Vector2>();
+            IsGamepadRotation = inputInfo.control.device is Gamepad;
+        };
         _rotationAction.canceled += inputInfo => RotationInput = Vector2.zero;
 
         _movementAction.performed += inputInfo => MovementTriggered = true;

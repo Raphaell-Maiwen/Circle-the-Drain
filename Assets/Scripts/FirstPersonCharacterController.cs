@@ -5,6 +5,7 @@ public class FirstPersonCharacterController : MonoBehaviour
 {
     [SerializeField] private float _movementSpeed;
     [SerializeField] private float _mouseSensitivity;
+    [SerializeField] private float _gamepadSensitivity;
     [SerializeField] private float _upDownLookRange;
 
     [SerializeField] private Rigidbody _rigidbody;
@@ -70,11 +71,25 @@ public class FirstPersonCharacterController : MonoBehaviour
 
     private void HandleRotation()
     {
-        float mouseXRotation = _characterInputHandler.RotationInput.x * _mouseSensitivity;
-        float mouseYRotation = _characterInputHandler.RotationInput.y * _mouseSensitivity;
+        Vector2 rotationInput = _characterInputHandler.RotationInput;
+        bool isGamepad = _characterInputHandler.IsGamepadRotation;
 
-        ApplyHorizontalRotation(mouseXRotation);
-        ApplyVerticalRotation(mouseYRotation);
+        float rotationX;
+        float rotationY;
+
+        if (isGamepad)
+        {
+            rotationX = rotationInput.x * _gamepadSensitivity * Time.deltaTime;
+            rotationY = rotationInput.y * _gamepadSensitivity * Time.deltaTime;
+        }
+        else
+        {
+            rotationX = rotationInput.x * _mouseSensitivity;
+            rotationY = rotationInput.y * _mouseSensitivity;
+        }
+
+        ApplyHorizontalRotation(rotationX);
+        ApplyVerticalRotation(rotationY);
     }
     
     public void ResetVerticalRotation()

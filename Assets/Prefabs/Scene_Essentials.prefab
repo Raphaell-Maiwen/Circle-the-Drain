@@ -393,7 +393,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FirstPersonCharacterController
   _movementSpeed: 15
-  _mouseSensitivity: 0.01
+  _mouseSensitivity: 0.025
   _upDownLookRange: 60
   _rigidbody: {fileID: 5553977459211622836}
   _mainCamera: {fileID: 3286673676766712371}
@@ -440,10 +440,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TeleportAction
   _progress: {fileID: 11400000, guid: 94a659f7522d762458bab7479e8deab2, type: 2}
   _messenger: {fileID: 11400000, guid: c3fe3f675f61cbb48ae1a72ab2063f8f, type: 2}
-  _rocketCollectableZoneChannel: {fileID: 11400000, guid: 0eb0eeb2cffd1c447ba76e589b1f95b8,
-    type: 2}
-  _rocketLaunchZoneChannel: {fileID: 11400000, guid: fbabe64171828e54586321d3aff25662,
-    type: 2}
+  _disableTeleportChannels: []
   _player: {fileID: 4703277841331496194}
   _camera: {fileID: 7897064300433677084}
   _teleportPointArray:
@@ -469,6 +466,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c1951c245aa234a4b946969edafa7de5, type: 2}
   _targetFocalLength: 1.5
   _focalLengthLerpDuration: 5
+  _prideLevel: 
   _alienLabLevel: HauntedHouse
 --- !u!1 &7479853191661231291
 GameObject:

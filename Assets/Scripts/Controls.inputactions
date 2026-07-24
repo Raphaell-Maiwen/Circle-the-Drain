@@ -59,8 +59,30 @@
                 },
                 {
                     "name": "",
+                    "id": "595b6f17-f48b-43a6-8742-5b01a3839af9",
+                    "path": "<Gamepad>/rightStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Rotation",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "253c083c-21ec-444a-8eeb-2287526c5bb3",
                     "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Interact",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8eb334e2-9cf1-4857-bd54-fc5304ae1816",
+                    "path": "<Gamepad>/buttonSouth",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -564,6 +586,17 @@
                 },
                 {
                     "name": "",
+                    "id": "216f1cde-6c65-47b0-bdd8-57fa36ce36ef",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Interact",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "891424b2-5fde-4a6b-9888-e7bd25998fbe",
                     "path": "<XRController>/devicePosition",
                     "interactions": "",
@@ -605,6 +638,17 @@
                     "name": "",
                     "id": "dd5ceeda-5d84-44f8-bfca-f297123d3cda",
                     "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Interact",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "600c30a0-ce91-44d3-a078-cdc11dd8a598",
+                    "path": "<Gamepad>/buttonSouth",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
