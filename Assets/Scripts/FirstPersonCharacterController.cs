@@ -48,7 +48,15 @@ public class FirstPersonCharacterController : MonoBehaviour
 
     private void Move()
     {
-        if (_characterInputHandler.MovementTriggered)
+        Vector2 gamepadInput = _characterInputHandler.GamepadMovementInput;
+
+        if (gamepadInput.sqrMagnitude > 0.0001f)
+        {
+            Vector3 direction = transform.right * gamepadInput.x + transform.forward * gamepadInput.y;
+            direction = Vector3.ClampMagnitude(direction, 1f);
+            _rigidbody.linearVelocity = direction * _movementSpeed;
+        }
+        else if (_characterInputHandler.MovementTriggered)
         {
             _rigidbody.linearVelocity = transform.forward * _movementSpeed;
         }

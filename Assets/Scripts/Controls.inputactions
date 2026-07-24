@@ -32,6 +32,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "GamepadMovement",
+                    "type": "Value",
+                    "id": "c49b54e8-c2f9-430d-ba18-7e4c72884f1f",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -62,7 +71,7 @@
                     "id": "595b6f17-f48b-43a6-8742-5b01a3839af9",
                     "path": "<Gamepad>/rightStick",
                     "interactions": "",
-                    "processors": "",
+                    "processors": "StickDeadzone",
                     "groups": "",
                     "action": "Rotation",
                     "isComposite": false,
@@ -87,6 +96,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Interact",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b8f8112c-2ae5-4098-a345-583179b93513",
+                    "path": "<Gamepad>/leftStick",
+                    "interactions": "",
+                    "processors": "StickDeadzone",
+                    "groups": "",
+                    "action": "GamepadMovement",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

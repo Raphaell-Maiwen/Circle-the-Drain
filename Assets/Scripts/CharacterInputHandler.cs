@@ -16,10 +16,12 @@ public class CharacterInputHandler : MonoBehaviour
     [SerializeField] private string _dialoguesMapName = "Dialogues";
 
     [SerializeField] private string _movement = "Movement";
+    [SerializeField] private string _gamepadMovement = "GamepadMovement"; 
     [SerializeField] private string _rotation = "Rotation";
     [SerializeField] private string _interact = "Interact";
 
     private InputAction _movementAction;
+    private InputAction _gamepadMovementAction;
     private InputAction _rotationAction;
     private InputAction _interactAction;
     private InputAction _cutsceneInteractAction;
@@ -31,6 +33,7 @@ public class CharacterInputHandler : MonoBehaviour
     public Vector2 RotationInput { get; private set; }
     public bool IsGamepadRotation { get; private set; }
     public bool MovementTriggered { get; private set; }
+    public Vector2 GamepadMovementInput { get; private set; } 
 
     public bool InteractTriggered { get; private set; }
     public bool CutsceneInteractTriggered { get; private set; }
@@ -46,6 +49,7 @@ public class CharacterInputHandler : MonoBehaviour
         InputActionMap mapReference = _playerControls.FindActionMap(_actionMapName);
 
         _movementAction = mapReference.FindAction(_movement);
+        _gamepadMovementAction = mapReference.FindAction(_gamepadMovement);
         _rotationAction = mapReference.FindAction(_rotation);
         _interactAction = mapReference.FindAction(_interact);
 
@@ -75,6 +79,9 @@ public class CharacterInputHandler : MonoBehaviour
 
         _movementAction.performed += inputInfo => MovementTriggered = true;
         _movementAction.canceled += inputInfo => MovementTriggered = false;
+        
+        _gamepadMovementAction.performed += inputInfo => GamepadMovementInput = inputInfo.ReadValue<Vector2>();
+        _gamepadMovementAction.canceled += inputInfo => GamepadMovementInput = Vector2.zero;
 
         _interactAction.performed += inputInfo => InteractTriggered = true;
         _interactAction.canceled += inputInfo => InteractTriggered = false;
