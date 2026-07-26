@@ -107,6 +107,22 @@ public class AudioManager : MonoBehaviour
         newFilter.depth = 1f;
     }
 
+    public void AddReverbFilter(AudioReverbPreset preset)
+    {
+        AudioReverbFilter newFilter = gameObject.AddComponent<AudioReverbFilter>();
+        newFilter.reverbPreset = preset; 
+    }
+
+    public void RemoveReverbFilter()
+    {
+        gameObject.TryGetComponent<AudioReverbFilter>(out AudioReverbFilter reverbFilter);
+
+        if (reverbFilter)
+        {
+            DestroyImmediate(reverbFilter);
+        }
+    }
+
     public void SetDistortionFilter(float distortionLevel, bool increment = false)
     {
         gameObject.TryGetComponent<AudioDistortionFilter>(out AudioDistortionFilter distortionFilter);

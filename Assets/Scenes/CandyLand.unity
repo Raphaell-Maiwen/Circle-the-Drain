@@ -3551,11 +3551,51 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5385439167237485621, guid: b89466388898691498051bdd140fab2a,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5385439167237485621, guid: b89466388898691498051bdd140fab2a,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5385439167237485621, guid: b89466388898691498051bdd140fab2a,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5906183314595851520, guid: b89466388898691498051bdd140fab2a,
         type: 3}
       propertyPath: _root
       value: 
       objectReference: {fileID: 136524778}
+    - target: {fileID: 5906183314595851520, guid: b89466388898691498051bdd140fab2a,
+        type: 3}
+      propertyPath: _onCollectedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5906183314595851520, guid: b89466388898691498051bdd140fab2a,
+        type: 3}
+      propertyPath: _onCollectedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1121724003536997454}
+    - target: {fileID: 5906183314595851520, guid: b89466388898691498051bdd140fab2a,
+        type: 3}
+      propertyPath: _onCollectedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: StartTrip
+      objectReference: {fileID: 0}
+    - target: {fileID: 5906183314595851520, guid: b89466388898691498051bdd140fab2a,
+        type: 3}
+      propertyPath: _onCollectedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Trippy, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5906183314595851520, guid: b89466388898691498051bdd140fab2a,
+        type: 3}
+      propertyPath: _onCollectedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 6382189603179772731, guid: b89466388898691498051bdd140fab2a,
         type: 3}
       propertyPath: m_Name
@@ -3579,7 +3619,7 @@ PrefabInstance:
     - target: {fileID: 8910238893954217439, guid: b89466388898691498051bdd140fab2a,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.1
+      value: 1.57
       objectReference: {fileID: 0}
     - target: {fileID: 8910238893954217439, guid: b89466388898691498051bdd140fab2a,
         type: 3}
@@ -3629,7 +3669,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6382189603179772731, guid: b89466388898691498051bdd140fab2a,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1121724003536997454}
   m_SourcePrefab: {fileID: 100100000, guid: b89466388898691498051bdd140fab2a, type: 3}
 --- !u!1001 &232840391
 PrefabInstance:
@@ -9212,10 +9256,55 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3514546712544808204, guid: b89466388898691498051bdd140fab2a,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 3.44
+      objectReference: {fileID: 0}
+    - target: {fileID: 3514546712544808204, guid: b89466388898691498051bdd140fab2a,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 4.61
+      objectReference: {fileID: 0}
+    - target: {fileID: 3514546712544808204, guid: b89466388898691498051bdd140fab2a,
+        type: 3}
+      propertyPath: m_Size.z
+      value: 3.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 3514546712544808204, guid: b89466388898691498051bdd140fab2a,
+        type: 3}
+      propertyPath: m_Center.z
+      value: -0.8
+      objectReference: {fileID: 0}
     - target: {fileID: 5906183314595851520, guid: b89466388898691498051bdd140fab2a,
         type: 3}
       propertyPath: _audioManager
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5906183314595851520, guid: b89466388898691498051bdd140fab2a,
+        type: 3}
+      propertyPath: _onCollectedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5906183314595851520, guid: b89466388898691498051bdd140fab2a,
+        type: 3}
+      propertyPath: _onCollectedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 586005257}
+    - target: {fileID: 5906183314595851520, guid: b89466388898691498051bdd140fab2a,
+        type: 3}
+      propertyPath: _onCollectedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: StartTrip
+      objectReference: {fileID: 0}
+    - target: {fileID: 5906183314595851520, guid: b89466388898691498051bdd140fab2a,
+        type: 3}
+      propertyPath: _onCollectedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Trippy, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5906183314595851520, guid: b89466388898691498051bdd140fab2a,
+        type: 3}
+      propertyPath: _onCollectedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 6382189603179772731, guid: b89466388898691498051bdd140fab2a,
         type: 3}
@@ -9285,7 +9374,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6382189603179772731, guid: b89466388898691498051bdd140fab2a,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 586005257}
   m_SourcePrefab: {fileID: 100100000, guid: b89466388898691498051bdd140fab2a, type: 3}
 --- !u!4 &586005255 stripped
 Transform:
@@ -9293,6 +9386,27 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 586005254}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &586005256 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6382189603179772731, guid: b89466388898691498051bdd140fab2a,
+    type: 3}
+  m_PrefabInstance: {fileID: 586005254}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &586005257
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 586005256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46b161aa1718d3c4091ba7b402ec64b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Trippy
+  _tripDuration: 15
+  _tripBloomIntensity: 1.5
+  _volume: {fileID: 104795648}
 --- !u!1001 &587495048
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27409,6 +27523,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chocolate_01 (28)
       objectReference: {fileID: 0}
+    - target: {fileID: 403074113009667717, guid: 4bc020b3c29d9ba4f8d6f8c3a8ef2582,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1068427788583212095, guid: 4bc020b3c29d9ba4f8d6f8c3a8ef2582,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -32980,6 +33099,21 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 232412566}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1121724003536997454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 136524778}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46b161aa1718d3c4091ba7b402ec64b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Trippy
+  _tripDuration: 15
+  _tripBloomIntensity: 0
+  _volume: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
