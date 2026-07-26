@@ -1,16 +1,29 @@
+using System.Collections;
 using UnityEngine;
 
 public class PlayCanadianBoys : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    [SerializeField] private string _canadianBoysSong;
+
+    public void PlayCanadianRemix()
     {
-        
+        AudioManager.Instance.StopSound(AudioManager.Instance.GetLevelSong());
+        AudioManager.Instance.PlaySound(_canadianBoysSong);
+
+        StartCoroutine(ResumeRegularSong());
     }
 
-    // Update is called once per frame
-    void Update()
+    IEnumerator ResumeRegularSong()
     {
+        AudioManager audioManager = AudioManager.Instance;
         
+        yield return new WaitForSeconds(5f);
+        
+        while (audioManager.GetAudioSource(_canadianBoysSong).isPlaying)
+        {
+            yield return null;
+        }
+        
+        audioManager.PlaySound(AudioManager.Instance.GetLevelSong(), true);
     }
 }

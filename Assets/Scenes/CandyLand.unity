@@ -7672,6 +7672,12 @@ MonoBehaviour:
   _gummyCamera: {fileID: 1905551876}
   _blendSpeed: 1
   _inDialogueChannel: {fileID: 11400000, guid: 6f0fe4f9a059ad741a9170076ef9bb7f, type: 2}
+--- !u!1 &473099744 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6382189603179772731, guid: b89466388898691498051bdd140fab2a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1713808244}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &474197489
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26586,6 +26592,31 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1603756370}
     m_Modifications:
+    - target: {fileID: 5906183314595851520, guid: b89466388898691498051bdd140fab2a,
+        type: 3}
+      propertyPath: _onCollectedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5906183314595851520, guid: b89466388898691498051bdd140fab2a,
+        type: 3}
+      propertyPath: _onCollectedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1713808246}
+    - target: {fileID: 5906183314595851520, guid: b89466388898691498051bdd140fab2a,
+        type: 3}
+      propertyPath: _onCollectedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayCanadianRemix
+      objectReference: {fileID: 0}
+    - target: {fileID: 5906183314595851520, guid: b89466388898691498051bdd140fab2a,
+        type: 3}
+      propertyPath: _onCollectedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PlayCanadianBoys, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5906183314595851520, guid: b89466388898691498051bdd140fab2a,
+        type: 3}
+      propertyPath: _onCollectedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 6382189603179772731, guid: b89466388898691498051bdd140fab2a,
         type: 3}
       propertyPath: m_Name
@@ -26659,7 +26690,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6382189603179772731, guid: b89466388898691498051bdd140fab2a,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1713808246}
   m_SourcePrefab: {fileID: 100100000, guid: b89466388898691498051bdd140fab2a, type: 3}
 --- !u!4 &1713808245 stripped
 Transform:
@@ -26667,6 +26702,19 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1713808244}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1713808246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 473099744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7eaf889c6d6af49449fbc1f6eb283f89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayCanadianBoys
+  _canadianBoysSong: CanadianBoys
 --- !u!1001 &1715023309
 PrefabInstance:
   m_ObjectHideFlags: 0

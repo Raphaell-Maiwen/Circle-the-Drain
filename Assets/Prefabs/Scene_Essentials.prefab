@@ -52,6 +52,7 @@ MonoBehaviour:
   _cutSceneMapName: Cutscene
   _dialoguesMapName: Dialogues
   _movement: Movement
+  _gamepadMovement: GamepadMovement
   _rotation: Rotation
   _interact: Interact
   _interactMessenger: {fileID: 11400000, guid: c3fe3f675f61cbb48ae1a72ab2063f8f, type: 2}
@@ -394,6 +395,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FirstPersonCharacterController
   _movementSpeed: 15
   _mouseSensitivity: 0.025
+  _gamepadSensitivity: 0
   _upDownLookRange: 60
   _rigidbody: {fileID: 5553977459211622836}
   _mainCamera: {fileID: 3286673676766712371}
@@ -813,6 +815,8 @@ MonoBehaviour:
     _serializedList:
     - Key: CaliforniaGurls
       Value: {fileID: 8300000, guid: 44a73f4aa9a6f7d47bb2c56e0de330ea, type: 3}
+    - Key: CanadianBoys
+      Value: {fileID: 8300000, guid: c721a4ed29fc22f499a9d3b00f507dcb, type: 3}
     - Key: Fireworks
       Value: {fileID: 8300000, guid: f78151216cb94ab49b0f0b1b65546923, type: 3}
     - Key: UrSoGayTransition
