@@ -1,9 +1,11 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class RocketCollectableTriggerZone : InteractableTriggerZone
 {
     [SerializeField] private GameObject _root;
     [SerializeField] private CandyLevelProgress _progress;
+    [SerializeField] private UnityEvent _onCollectedEvent;
 
     private void Awake()
     {
@@ -25,10 +27,10 @@ public class RocketCollectableTriggerZone : InteractableTriggerZone
     {
         _interactMessenger.OnInteractPressed?.Invoke(null);
         _progress.Add();
-
-        //Add something on Audio Manager?
-
         OnPlayerExit();
+        
+        _onCollectedEvent?.Invoke();
+        
         Destroy(_root);
     }
 }

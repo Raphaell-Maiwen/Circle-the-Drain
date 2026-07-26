@@ -12,8 +12,6 @@ public static class CamerasManager
     public static CinemachineBrain CameraBrain = null;
 
     public static CinemachineCamera MainCamera = null;
-    
-    public static GameObject MainCameraGO = null;
 
     public static bool IsActiveCamera(CinemachineCamera camera)
     {
@@ -33,7 +31,6 @@ public static class CamerasManager
     public static void SetMainCamera(CinemachineCamera camera)
     {
         MainCamera = camera;
-        MainCameraGO = camera.gameObject;
     }
 
     public static void SetBrain(CinemachineBrain brain)
