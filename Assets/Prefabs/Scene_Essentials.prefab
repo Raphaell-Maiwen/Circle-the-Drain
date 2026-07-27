@@ -824,6 +824,6 @@ MonoBehaviour:
     - Key: UrSoGayLoop
       Value: {fileID: 8300000, guid: 220433b1a0ccf9a4eb2f798858f52310, type: 3}
     - Key: PrideMedley
-      Value: {fileID: 8300000, guid: c39aa58a31e05db4a8121779dea48e69, type: 3}
+      Value: {fileID: 8300000, guid: 707a20a5b0e402c429bd8a72aa9826fc, type: 3}
   _sfx:
     _serializedList: []
