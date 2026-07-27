@@ -19,6 +19,11 @@ public class PrideParadeProgress : ScriptableObject
         IsEndReached = true;
         OnEndReached?.Invoke();
     }
-    
+
+    public void LevelDone()
+    {
+        OnLevelDone?.Invoke();
+    }
+
     public void Reset() => IsEndReached = false;
 }

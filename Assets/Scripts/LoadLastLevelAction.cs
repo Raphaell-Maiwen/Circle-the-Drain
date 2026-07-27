@@ -56,6 +56,8 @@ public class LoadLastLevelAction : MonoBehaviour
     private void LoadLastLevel()
     {
         AudioManager.Instance.StopAllSounds();
+
+        _prideParadeProgress.LevelDone();
         
         StartCoroutine(LastLevelTranstion());
         _interactMessenger.OnInteractInput -= LoadLastLevel;
