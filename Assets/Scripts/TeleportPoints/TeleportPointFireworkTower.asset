@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: TeleportPointFireworkTower
   m_EditorClassIdentifier: Assembly-CSharp::TeleportPointData
   position: {x: 175.15082, y: 2.3102078, z: 283.72626}
-  rotation: {x: -0.09010891, y: -0.45628533, z: -0.046508666, w: 0.8840368}
+  rotation: {x: -18.55, y: -79.3, z: 0}

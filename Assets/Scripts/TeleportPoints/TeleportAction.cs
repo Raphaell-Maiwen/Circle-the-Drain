@@ -11,6 +11,7 @@ public class TeleportAction : MonoBehaviour
     [SerializeField] private Transform _player;
     [SerializeField] private Transform _camera;
     [SerializeField] private TeleportPointData[] _teleportPointArray;
+    [SerializeField] private FirstPersonCharacterController _firstPersonController;
 
     private void OnEnable()
     {
@@ -49,13 +50,13 @@ public class TeleportAction : MonoBehaviour
     private void Teleport()
     {
         Vector3 teleportPointPosition = _teleportPointArray[0].position;
-        Vector3 teleportPointRotation = _teleportPointArray[0].rotation.eulerAngles;
+        Vector3 teleportPointRotation = _teleportPointArray[0].rotation;
 
         teleportPointPosition.y = _player.position.y;
 
         _player.position = teleportPointPosition;
 
         _player.localEulerAngles = new Vector3(0, teleportPointRotation.y, 0);
-        _camera.localEulerAngles = new Vector3(teleportPointRotation.x, 0, 0);
+        _firstPersonController.SetVerticalRotation(teleportPointRotation.x);
     }
 }

@@ -447,6 +447,7 @@ MonoBehaviour:
   _camera: {fileID: 7897064300433677084}
   _teleportPointArray:
   - {fileID: 11400000, guid: 6e7afea166254c24cb37b51a7081e5ac, type: 2}
+  _firstPersonController: {fileID: 7491613928143439379}
 --- !u!114 &8783736431894321111
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -535,7 +536,7 @@ Transform:
   m_GameObject: {fileID: 8178727333345138256}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -76.64504, y: 1.0800002, z: -247.17587}
+  m_LocalPosition: {x: 0.000006198883, y: 1.0800002, z: -0.0000038146973}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

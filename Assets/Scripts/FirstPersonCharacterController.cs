@@ -102,6 +102,12 @@ public class FirstPersonCharacterController : MonoBehaviour
         ApplyVerticalRotation(rotationY);
     }
     
+    public void SetVerticalRotation(float pitch)
+    {
+        _verticalRotation = pitch;
+        _mainCamera.transform.localRotation = Quaternion.Euler(_verticalRotation, 0, 0);
+    }
+    
     public void ResetVerticalRotation()
     {
         _verticalRotation = 0f;

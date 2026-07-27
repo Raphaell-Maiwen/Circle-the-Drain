@@ -4,5 +4,5 @@ using UnityEngine;
 public class TeleportPointData : ScriptableObject
 {
     public Vector3 position;
-    public Quaternion rotation;
+    public Vector3 rotation;
 }
