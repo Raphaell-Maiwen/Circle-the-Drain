@@ -395,7 +395,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FirstPersonCharacterController
   _movementSpeed: 15
   _mouseSensitivity: 0.025
-  _gamepadSensitivity: 0
+  _gamepadSensitivity: 120
   _upDownLookRange: 60
   _rigidbody: {fileID: 5553977459211622836}
   _mainCamera: {fileID: 3286673676766712371}

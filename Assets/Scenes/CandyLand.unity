@@ -3573,6 +3573,11 @@ PrefabInstance:
       objectReference: {fileID: 136524778}
     - target: {fileID: 5906183314595851520, guid: b89466388898691498051bdd140fab2a,
         type: 3}
+      propertyPath: _onCollectedEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5906183314595851520, guid: b89466388898691498051bdd140fab2a,
+        type: 3}
       propertyPath: _onCollectedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 1
       objectReference: {fileID: 0}
@@ -3580,11 +3585,12 @@ PrefabInstance:
         type: 3}
       propertyPath: _onCollectedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1121724003536997454}
+      objectReference: {fileID: 102900000, guid: e816bd6ebcf52a8409467595e15670af,
+        type: 3}
     - target: {fileID: 5906183314595851520, guid: b89466388898691498051bdd140fab2a,
         type: 3}
       propertyPath: _onCollectedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: StartTrip
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5906183314595851520, guid: b89466388898691498051bdd140fab2a,
         type: 3}
@@ -3669,11 +3675,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6382189603179772731, guid: b89466388898691498051bdd140fab2a,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1121724003536997454}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b89466388898691498051bdd140fab2a, type: 3}
 --- !u!1001 &232840391
 PrefabInstance:
@@ -33099,21 +33101,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 232412566}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1121724003536997454
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 136524778}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46b161aa1718d3c4091ba7b402ec64b8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Trippy
-  _tripDuration: 15
-  _tripBloomIntensity: 0
-  _volume: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
