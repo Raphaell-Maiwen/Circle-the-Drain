@@ -4,16 +4,24 @@ using UnityEngine;
 public class CreditsManager : MonoBehaviour
 {
     [SerializeField] private float _speed;
-    [SerializeField] private RectTransform[] _transforms;
-    
-    //Faire un scriptable avec toutes les infos des credits
-    //Populate on Start
+    [SerializeField] private Transform[] _transforms;
+
+    [SerializeField] private RectTransform _finalMessage;
+    [SerializeField] private GameObject _replayMessage;
+
+    [SerializeField] private float _finalHeight;
 
     private void Update()
     {
         foreach (var t in _transforms)
         {
-            t.anchoredPosition += new Vector2(0, _speed * Time.deltaTime);
+            t.Translate(Vector3.up * _speed * Time.deltaTime, Space.World);
+        }
+        
+        if (_finalMessage.position.y >= _finalHeight)
+        {
+            _replayMessage.SetActive(true);
+            enabled = false;
         }
     }
 }
