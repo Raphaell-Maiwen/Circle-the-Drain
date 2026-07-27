@@ -16,6 +16,7 @@ public class CandyLevelProgress : ScriptableObject
     public event Action OnLevelDone;
 
     public bool IsThresholdReached => Count >= Threshold;
+    public bool IsLevelDone;
 
 
     //Temporary solution; remove this once we have our Single Entry Point
@@ -36,8 +37,13 @@ public class CandyLevelProgress : ScriptableObject
 
     public void LevelDone()
     {
+        IsLevelDone = true;
         OnLevelDone?.Invoke();
     }
 
-    public void Reset() => Count = 0;
+    public void Reset()
+    {
+        Count = 0;
+        IsLevelDone = false;
+    }
 }

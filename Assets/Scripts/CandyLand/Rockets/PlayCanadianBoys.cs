@@ -4,6 +4,7 @@ using UnityEngine;
 public class PlayCanadianBoys : MonoBehaviour
 {
     [SerializeField] private string _canadianBoysSong;
+    [SerializeField] private CandyLevelProgress _candyLevelProgress;
 
     public void PlayCanadianRemix()
     {
@@ -23,7 +24,10 @@ public class PlayCanadianBoys : MonoBehaviour
         {
             yield return null;
         }
-        
-        audioManager.PlaySound(AudioManager.Instance.GetLevelSong(), true);
+
+        if (!_candyLevelProgress.IsLevelDone)
+        {
+            audioManager.PlaySound(AudioManager.Instance.GetLevelSong(), true);
+        }
     }
 }

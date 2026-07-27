@@ -26831,6 +26831,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayCanadianBoys
   _canadianBoysSong: CanadianBoys
+  _candyLevelProgress: {fileID: 11400000, guid: 94a659f7522d762458bab7479e8deab2,
+    type: 2}
 --- !u!1001 &1715023309
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27528,7 +27530,7 @@ PrefabInstance:
     - target: {fileID: 403074113009667717, guid: 4bc020b3c29d9ba4f8d6f8c3a8ef2582,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1068427788583212095, guid: 4bc020b3c29d9ba4f8d6f8c3a8ef2582,
         type: 3}
