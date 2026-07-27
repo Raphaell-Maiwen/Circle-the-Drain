@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19b2a4bb0bb294c489e66f447d606b6b, type: 3}
   m_Name: TeleportPointFireworkTower
   m_EditorClassIdentifier: Assembly-CSharp::TeleportPointData
-  position: {x: 0, y: 0, z: 0}
-  rotation: {x: 0, y: 0, z: 0, w: 0}
+  position: {x: 175.15082, y: 2.3102078, z: 283.72626}
+  rotation: {x: -0.09010891, y: -0.45628533, z: -0.046508666, w: 0.8840368}
