@@ -82,8 +82,16 @@ public class LoadLastLevelAction : MonoBehaviour
         
         CamerasManager.SetFocalLength(_targetFocalLength);
         
+        ////////////////
         SceneManager.UnloadSceneAsync(_prideLevel);
-        SceneManager.LoadSceneAsync(_alienLabLevel, LoadSceneMode.Additive);
+
+        AsyncOperation loadOp = SceneManager.LoadSceneAsync(_alienLabLevel, LoadSceneMode.Additive);
+        yield return loadOp;
+
+        Scene newScene = SceneManager.GetSceneByName(_alienLabLevel);
+        SceneManager.SetActiveScene(newScene);
+
+        Camera.main.clearFlags = CameraClearFlags.Skybox;
         
         elapsedTime = 0;
         while (elapsedTime <  _focalLengthLerpDuration)
