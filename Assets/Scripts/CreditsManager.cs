@@ -11,6 +11,11 @@ public class CreditsManager : MonoBehaviour
 
     [SerializeField] private float _finalHeight;
 
+    private void Start()
+    {
+        
+    }
+
     private void Update()
     {
         foreach (var t in _transforms)

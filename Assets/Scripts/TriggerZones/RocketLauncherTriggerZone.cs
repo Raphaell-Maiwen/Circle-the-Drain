@@ -12,7 +12,7 @@ public class RocketLauncherTriggerZone : InteractableTriggerZone
     private void Awake()
     {
         _zoneChannel.GetMessage = () => _progress.IsThresholdReached
-            ? "Right-click to launch rockets"
+            ? "Press A to launch rockets"
             : $"You need {_progress.Threshold - _progress.Count} more rockets.";
     }
 

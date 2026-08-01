@@ -15,6 +15,6 @@ MonoBehaviour:
   _dialogue:
   - Welcome to the Teenage Dream land!
   - You need to collect at least 3 firework rockets to start the show.
-  - Move the mouse to look around.
-  - Left-click to move forward.
+  - Use the left joystick to move.
+  - Use the right joystick to look around.
   - I believe in you <3

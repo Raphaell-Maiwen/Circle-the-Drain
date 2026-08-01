@@ -2713,6 +2713,7 @@ GameObject:
   - component: {fileID: 527218975}
   - component: {fileID: 527218974}
   - component: {fileID: 527218976}
+  - component: {fileID: 527218977}
   m_Layer: 5
   m_Name: Replay
   m_TagString: Untagged
@@ -2759,7 +2760,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Right-click to replay
+  m_text: Press A to replay
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2851,7 +2852,44 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f7fee00fdf2c53489af82369f788944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Replay
+  _playerInput: {fileID: 527218977}
+  _inputActionAsset: {fileID: -944628639613478452, guid: 9c1265597de4bdc49ac12a4d675daae6,
+    type: 3}
+  _interactMessenger: {fileID: 11400000, guid: c3fe3f675f61cbb48ae1a72ab2063f8f, type: 2}
+  _dialoguesMapName: Dialogues
+  _interact: Interact
   _bootstrapScene: Bootstrap
+--- !u!114 &527218977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 527218972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.PlayerInput
+  m_Actions: {fileID: -944628639613478452, guid: 9c1265597de4bdc49ac12a4d675daae6,
+    type: 3}
+  m_NotificationBehavior: 0
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents: []
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: Dialogues
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!1 &570376470
 GameObject:
   m_ObjectHideFlags: 0
@@ -7154,12 +7192,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 336081e0ba3d33441a4843052d109194, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CreditsManager
-  _speed: 100
+  _speed: 50
   _transforms:
   - {fileID: 205602906}
   _finalMessage: {fileID: 1266580579}
   _replayMessage: {fileID: 527218972}
-  _finalHeight: 158
+  _finalHeight: 200
 --- !u!1 &2105358661
 GameObject:
   m_ObjectHideFlags: 0

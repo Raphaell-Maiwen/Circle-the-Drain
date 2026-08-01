@@ -120,7 +120,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 48d24f79b653c1f4cb04f69c33898481, type: 2}
   - {fileID: 11400000, guid: c8103412c30319141978bdfc8ca8a4c8, type: 2}
   - {fileID: 11400000, guid: c1951c245aa234a4b946969edafa7de5, type: 2}
+  _subtitlesEventChannel: {fileID: 0}
   _zoneMessage: {fileID: 2063944537916769498}
+  _subtitlesText: {fileID: 0}
   _goToNextLevelMessage: {fileID: 880894390580226250}
   _progress: {fileID: 11400000, guid: 0b2b4a87f176be94ba3112cb1e03a478, type: 2}
 --- !u!1 &7999744581845446796
@@ -188,7 +190,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Right-click to enter the lab
+  m_text: Press A to enter the lab
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
