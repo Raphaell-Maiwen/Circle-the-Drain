@@ -8,8 +8,8 @@ public class RadioTriggerZone : InteractableTriggerZone
     private void Awake()
     {
         _zoneChannel.GetMessage = () => _audioSource.isPlaying
-            ? "Right-click to turn off radio."
-            : "Right-click to turn on radio.";
+            ? "Press A to turn off radio."
+            : "Press A to turn on radio.";
     }
 
     protected override void OnInteractPressed(string str)
