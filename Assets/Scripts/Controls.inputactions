@@ -584,6 +584,17 @@
                 },
                 {
                     "name": "",
+                    "id": "5bd54dee-15e5-4c8e-bfea-f30a9a09e0fc",
+                    "path": "<Gamepad>/leftStick",
+                    "interactions": "",
+                    "processors": "ScaleVector2(y=50)",
+                    "groups": "",
+                    "action": "ScrollWheel",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "088b7fbb-ebf1-4bae-8b32-9036e412e12b",
                     "path": "<Mouse>/middleButton",
                     "interactions": "",

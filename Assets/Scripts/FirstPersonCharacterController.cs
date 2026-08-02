@@ -33,8 +33,6 @@ public class FirstPersonCharacterController : MonoBehaviour
         Cursor.visible = false;
 
         CamerasManager.SetBrain(_brain);
-        
-        Debug.Log("Camera mode " + Camera.main.clearFlags);
     }
 
     private void Update()

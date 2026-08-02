@@ -1,6 +1,7 @@
 using System;
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class HauntedLevelUI : ContextualUI
@@ -8,6 +9,7 @@ public class HauntedLevelUI : ContextualUI
     [SerializeField] private HauntedHouseProgress _progress;
     [SerializeField] private ScrollRect _scrollView;
     [SerializeField] private TextMeshProUGUI _scrollViewText;
+    [SerializeField] private Scrollbar _scrollbar;
     [SerializeField] private InteractMessenger _interactMessenger;
     [SerializeField] private TextMeshProUGUI _closeBookMsg;
     [SerializeField] private TextMeshProUGUI _continueReadingBooksMessage;
@@ -43,6 +45,10 @@ public class HauntedLevelUI : ContextualUI
             EraseAllMessages();
             _scrollView.verticalNormalizedPosition = 1f;
             _closeBookMsg.gameObject.SetActive(true);
+            
+            //Coroutine?
+            EventSystem.current.SetSelectedGameObject(null); // clear first, avoids ignored-reselect bug
+            EventSystem.current.SetSelectedGameObject(_scrollbar.gameObject);
         }
     }
 

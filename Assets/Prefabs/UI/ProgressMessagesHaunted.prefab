@@ -1345,6 +1345,7 @@ MonoBehaviour:
   _progress: {fileID: 11400000, guid: 7fa1812360bd6684ebd5bd22cec28fca, type: 2}
   _scrollView: {fileID: 3443000197320215477}
   _scrollViewText: {fileID: 5993025769711889603}
+  _scrollbar: {fileID: 2482295435215332484}
   _interactMessenger: {fileID: 11400000, guid: c3fe3f675f61cbb48ae1a72ab2063f8f, type: 2}
   _closeBookMsg: {fileID: 7646007561951824150}
   _continueReadingBooksMessage: {fileID: 9095101904843581291}
