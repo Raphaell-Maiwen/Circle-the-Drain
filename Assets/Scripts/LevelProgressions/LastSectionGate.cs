@@ -11,9 +11,12 @@ public class LastSectionGate : InteractableTriggerZone
 
     private void Awake()
     {
-        _zoneChannel.GetMessage = () => _progress.AreAllBooksRead
-            ? ""
-            : $"There are {_progress.BooksRemaining} books left to read.";
+        _zoneChannel.GetMessage = () => _progress.BooksRemaining switch
+        {
+            0 => "",
+            1 => "There is 1 book left to read.",
+            _ => $"There are {_progress.BooksRemaining} books left to read."
+        };
     }
     
     private void OnEnable()
