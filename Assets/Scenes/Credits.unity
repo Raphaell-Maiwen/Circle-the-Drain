@@ -7192,12 +7192,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 336081e0ba3d33441a4843052d109194, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CreditsManager
-  _speed: 50
+  _speed: 40
   _transforms:
   - {fileID: 205602906}
   _finalMessage: {fileID: 1266580579}
   _replayMessage: {fileID: 527218972}
-  _finalHeight: 200
+  _finalHeight: 500
 --- !u!1 &2105358661
 GameObject:
   m_ObjectHideFlags: 0

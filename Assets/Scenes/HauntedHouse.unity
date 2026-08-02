@@ -654,9 +654,9 @@ VideoPlayer:
   - 1
   m_Url: 
   m_EnabledAudioTracks: 01
-  m_DirectAudioMutes: 01
+  m_DirectAudioMutes: 00
   m_ControlledAudioTrackCount: 1
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_SkipOnDrop: 1
   m_Looping: 1
   m_WaitForFirstFrame: 1
@@ -766,8 +766,8 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: a52a2c4a4fc0c374aa974403734946c7, type: 3}
-  m_PlayOnAwake: 1
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 1
@@ -4337,6 +4337,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::HauntedHouseInitializer
   _levelInfo: {fileID: 11400000, guid: 577c392a85c68954685c049d98702690, type: 2}
   _playerShrinkedSize: 0.398
+  _videoPlayer: {fileID: 263043627}
+  _audioSource: {fileID: 263043632}
 --- !u!4 &993520102
 Transform:
   m_ObjectHideFlags: 0

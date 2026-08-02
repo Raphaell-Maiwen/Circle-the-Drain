@@ -11,22 +11,17 @@ public class CreditsManager : MonoBehaviour
 
     [SerializeField] private float _finalHeight;
 
-    private void Start()
-    {
-        
-    }
-
     private void Update()
     {
-        foreach (var t in _transforms)
-        {
-            t.Translate(Vector3.up * _speed * Time.deltaTime, Space.World);
-        }
-        
         if (_finalMessage.position.y >= _finalHeight)
         {
             _replayMessage.SetActive(true);
             enabled = false;
+        }
+        
+        foreach (var t in _transforms)
+        {
+            t.Translate(Vector3.up * _speed * Time.deltaTime, Space.World);
         }
     }
 }

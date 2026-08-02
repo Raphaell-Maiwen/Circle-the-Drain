@@ -32,7 +32,6 @@ public class HauntedLevelUI : ContextualUI
     {
         if (string.IsNullOrEmpty(content))
         {
-            Debug.LogError("Book text is empty");
             _scrollView.gameObject.SetActive(false);
             ShowZoneMessage(_lastChannel);
             _closeBookMsg.gameObject.SetActive(false);

@@ -87,7 +87,7 @@ public class AudioManager : MonoBehaviour
     {
         if (_gameSounds.ContainsKey(soundName)) return true;
         
-        Debug.LogError("Sound name doesn't exist");
+        //Debug.LogError("Sound name doesn't exist");
         return false; ;
     }
 
