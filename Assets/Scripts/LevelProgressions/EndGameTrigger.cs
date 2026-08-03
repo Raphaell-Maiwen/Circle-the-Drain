@@ -8,6 +8,7 @@ public class EndGameTrigger : InteractableTriggerZone
     
     protected override void OnInteractPressed(string str)
     {
+        _interactMessenger.OnInteractInput -= base.TriggerInteract;
         SceneManager.LoadScene(_finalCutscene);
     }
 }

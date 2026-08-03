@@ -167,6 +167,16 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4646800397399197851, guid: d54cd60b1b1a0604da4727f61514c721,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5386367895610727223, guid: d54cd60b1b1a0604da4727f61514c721,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 5553977459211622836, guid: d54cd60b1b1a0604da4727f61514c721,
         type: 3}
       propertyPath: m_Constraints
@@ -241,6 +251,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OcclusionCulling
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8178727333345138256, guid: d54cd60b1b1a0604da4727f61514c721,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8590850876751877668, guid: d54cd60b1b1a0604da4727f61514c721,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8783736431894321111, guid: d54cd60b1b1a0604da4727f61514c721,
         type: 3}

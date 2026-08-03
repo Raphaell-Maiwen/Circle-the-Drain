@@ -18,7 +18,7 @@ public abstract class InteractableTriggerZone : TriggerZone
         _zoneChannel.PlayerExit();
     }
 
-    private void TriggerInteract()
+    protected void TriggerInteract()
     {
         OnInteractPressed(null);
     }
