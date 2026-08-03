@@ -12,20 +12,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c0c19ec64a5951479f60bf5ff4937e2, type: 3}
   m_Name: Subtitles_End
   m_EditorClassIdentifier: Assembly-CSharp::Subtitles
-  _subtitles:
-  - _text: Dialogue1
-    _duration: 2
-  - _text: Dialogue547537
-    _duration: 2
-  - _text: Dialoguefdwhe#hh
-    _duration: 2
-  - _text: Allo
-    _duration: 2
-  - _text: On s'aime
-    _duration: 2
-  - _text: Let's go
-    _duration: 2
-  - _text: Pikachu
-    _duration: 2
-  - _text: Kess ki spasse
-    _duration: 2
+  _subtitlesData:
+  - _text: You are officially an astronaut
+    _timeStamp: 46.667
+  - _text: This whole journey is not just about going to space
+    _timeStamp: 48.4
+  - _text: "It\u2019s the training, it\u2019s the team"
+    _timeStamp: 53.667
+  - _text: I feel super connected to love
+    _timeStamp: 57.2
+  - _text: So connected to love
+    _timeStamp: 60.267
+  - _text: I think has shown me
+    _timeStamp: 61.967
+  - _text: You never know how much love is inside of you
+    _timeStamp: 64.967
+  - _text: Like how much love you have to give
+    _timeStamp: 68.033
+  - _text: And how loved you are
+    _timeStamp: 71.333
+  - _text: Until the day you launch
+    _timeStamp: 73.933
+  - _text: 'This is experience is right '
+    _timeStamp: 75.867
+  - _text: Is second to being a mom
+    _timeStamp: 78.867

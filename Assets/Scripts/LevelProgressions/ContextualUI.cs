@@ -7,7 +7,7 @@ public class ContextualUI : MonoBehaviour
     [SerializeField] private InteractableTriggerZoneEventChannel[] _zoneChannels;
     [SerializeField] private SubtitlesEventChannel _subtitlesEventChannel;
     [SerializeField] private TextMeshProUGUI _zoneMessage;
-    [SerializeField] private TextMeshProUGUI _subtitlesText;
+    [SerializeField] protected TextMeshProUGUI _subtitlesText;
     protected UnityEvent _disableExtraUI = new UnityEvent();
     protected UnityEvent _restoreState = new UnityEvent();
 

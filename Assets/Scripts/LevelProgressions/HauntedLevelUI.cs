@@ -2,6 +2,7 @@ using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class HauntedLevelUI : ContextualUI
@@ -21,6 +22,14 @@ public class HauntedLevelUI : ContextualUI
 
         _interactMessenger.OnInteractPressed.AddListener(OnInteractPressed);
         _progress.OnBookRead += UpdateReadingBooksMessage;
+        
+        DontDestroyOnLoad(this.gameObject);
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    private void OnDestroy()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 
     private new void OnDisable()
@@ -29,6 +38,18 @@ public class HauntedLevelUI : ContextualUI
 
         _interactMessenger.OnInteractPressed.RemoveListener(OnInteractPressed);
         _progress.OnBookRead -= UpdateReadingBooksMessage;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        base.EraseAllMessages();
+        if (scene.name == "FinalCutscene")
+        {
+            var rt = _subtitlesText.GetComponent<RectTransform>();
+            var anchoredPos = rt.anchoredPosition;
+            anchoredPos.y = -306;
+            rt.anchoredPosition = anchoredPos;
+        }
     }
 
     private void OnInteractPressed(string content)
