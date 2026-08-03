@@ -1,10 +1,11 @@
 using System;
+using Unity.XR.CoreUtils;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "CandyLevelProgress", menuName = "Scriptable Objects/CandyLevelProgress")]
 public class CandyLevelProgress : ScriptableObject
 {
-    public int Count { get; private set; }
+    [ReadOnly] public int Count { get; private set; }
     [SerializeField] private int _threshold = 3;
     public int Threshold => _threshold;
 
@@ -17,9 +18,7 @@ public class CandyLevelProgress : ScriptableObject
 
     public bool IsThresholdReached => Count >= Threshold;
     public bool IsLevelDone;
-
-
-    //Temporary solution; remove this once we have our Single Entry Point
+    
     private void OnEnable()
     {
         Reset();

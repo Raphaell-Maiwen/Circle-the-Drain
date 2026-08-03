@@ -130,7 +130,7 @@ GameObject:
   - component: {fileID: 2037266192}
   - component: {fileID: 2037266193}
   m_Layer: 0
-  m_Name: Boostrap
+  m_Name: Bootstrap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -163,6 +163,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abe0973546448d64aa7aa8e13303c87c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Bootstrap
+  _boostrapScene: Bootstrap
   _startingScene: CandyLand
   _persitentObjects: Persistent_Objects
 --- !u!1660057539 &9223372036854775807

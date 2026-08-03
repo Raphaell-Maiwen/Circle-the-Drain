@@ -20,4 +20,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 82f94198cd0b9114089835fc83c7a763, type: 2}
   - {fileID: 11400000, guid: a06b7b1247cf2f646a3a4b6d0dd470d0, type: 2}
   - {fileID: 11400000, guid: f0a07022de5d4e44e94e35d40cc5bbf0, type: 2}
-  _startWithAllBooks: 0
+  _startWithAllBooks: 1

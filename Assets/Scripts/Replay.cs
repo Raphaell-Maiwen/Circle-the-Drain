@@ -26,8 +26,6 @@ public class Replay : MonoBehaviour
 
     public void SubscribeEvents()
     {
-        /*_cutsceneInteractAction.performed += inputInfo => CutsceneInteractTriggered = true;
-        _cutsceneInteractAction.canceled += inputInfo => CutsceneInteractTriggered = false;*/
         _cutsceneInteractAction.performed += _interactMessenger.SendInteractMessage;
     }
 

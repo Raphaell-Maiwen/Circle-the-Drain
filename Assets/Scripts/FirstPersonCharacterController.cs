@@ -112,9 +112,4 @@ public class FirstPersonCharacterController : MonoBehaviour
         _verticalRotation = 0f;
         _mainCamera.transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
     }
-
-    private void OnCollisionEnter(Collision other)
-    {
-        Debug.Log("Name: " +  other.gameObject.name);
-    }
 }

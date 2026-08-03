@@ -6,6 +6,7 @@ public class HauntedHouseInitializer: LevelInitialization
     [SerializeField] private float _playerShrinkedSize;
     [SerializeField] private VideoPlayer _videoPlayer;
     [SerializeField] private AudioSource _audioSource;
+    [SerializeField] private HauntedHouseProgress _progress;
 
     void Start()
     {
@@ -18,5 +19,7 @@ public class HauntedHouseInitializer: LevelInitialization
         _videoPlayer.SetTargetAudioSource(0, _audioSource);
         
         _videoPlayer.Play();
+        
+        _progress.Reset();
     }
 }

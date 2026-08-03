@@ -16,7 +16,8 @@ public class HauntedLevelUI : ContextualUI
 
     private void Start()
     {
-        OnEnable();
+        _interactMessenger.OnInteractPressed.RemoveListener(OnInteractPressed);
+        _progress.OnBookRead -= UpdateReadingBooksMessage;
 
         _interactMessenger.OnInteractPressed.AddListener(OnInteractPressed);
         _progress.OnBookRead += UpdateReadingBooksMessage;

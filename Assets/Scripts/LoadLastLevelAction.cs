@@ -82,7 +82,7 @@ public class LoadLastLevelAction : MonoBehaviour
         
         CamerasManager.SetFocalLength(_targetFocalLength);
         
-        SceneManager.UnloadSceneAsync(_prideLevel);
+        yield return SceneManager.UnloadSceneAsync(_prideLevel);
 
         AsyncOperation loadOp = SceneManager.LoadSceneAsync(_alienLabLevel, LoadSceneMode.Additive);
         yield return loadOp;
