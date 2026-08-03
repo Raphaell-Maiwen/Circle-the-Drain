@@ -46,6 +46,9 @@ public class BookTriggerZone : InteractableTriggerZone
         CharacterInputHandler.Instance.PlayerInput.actions.FindActionMap("Player").Disable();
         CharacterInputHandler.Instance.PlayerInput.actions.FindActionMap("Cutscene").Enable();
         
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+        
         CamerasManager.SwitchActiveCamera(_bookCamera, _blendSpeed);
         
         if(_changingStateCoroutine == null)
@@ -106,6 +109,9 @@ public class BookTriggerZone : InteractableTriggerZone
         CharacterInputHandler.Instance.PlayerInput.actions.FindActionMap("Player").Enable();
         CharacterInputHandler.Instance.PlayerInput.actions.FindActionMap("Cutscene").Disable();
 
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+        
         CharacterInputHandler.Instance.DisableToggleReadingBook();
     }
 }
