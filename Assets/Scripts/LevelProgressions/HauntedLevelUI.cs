@@ -47,7 +47,6 @@ public class HauntedLevelUI : ContextualUI
             _scrollView.verticalNormalizedPosition = 1f;
             _closeBookMsg.gameObject.SetActive(true);
             
-            //Coroutine?
             EventSystem.current.SetSelectedGameObject(null); // clear first, avoids ignored-reselect bug
             EventSystem.current.SetSelectedGameObject(_scrollbar.gameObject);
         }

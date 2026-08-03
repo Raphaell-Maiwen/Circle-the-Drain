@@ -5779,6 +5779,9 @@ MonoBehaviour:
   _renderer: {fileID: 1269452093}
   _collider: {fileID: 1269452097}
   _speed: 0.45
+  _subtitlesKey: {fileID: 11400000, guid: ca1987afae1fd42468857e616f9352a1, type: 2}
+  _subtitlesEventChannel: {fileID: 11400000, guid: 49794a7b81f9ac04fbf267da4b86f0a1,
+    type: 2}
   _test: 0
 --- !u!65 &1269452097
 BoxCollider:

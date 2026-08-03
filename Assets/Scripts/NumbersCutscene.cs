@@ -11,6 +11,8 @@ public class NumbersCutscene : MonoBehaviour
     [SerializeField] private MeshRenderer _renderer;
     [SerializeField] private Collider _collider;
     [SerializeField] private float _speed;
+    [SerializeField] private Subtitles _subtitlesKey;
+    [SerializeField] private SubtitlesEventChannel _subtitlesEventChannel;
 
     [SerializeField] private bool _test;
 
@@ -42,6 +44,7 @@ public class NumbersCutscene : MonoBehaviour
         yield return null;
         //Maybe just a yield return null?
 
+        _subtitlesEventChannel.SubtitlesStarted(_subtitlesKey);
         while (_videoPlayer.isPlaying)
         {
             transform.position += transform.up * _speed * Time.deltaTime;
