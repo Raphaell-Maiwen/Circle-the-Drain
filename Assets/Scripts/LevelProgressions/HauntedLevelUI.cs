@@ -15,6 +15,8 @@ public class HauntedLevelUI : ContextualUI
     [SerializeField] private TextMeshProUGUI _closeBookMsg;
     [SerializeField] private TextMeshProUGUI _continueReadingBooksMessage;
 
+    [SerializeField] private float _heightInCutscene = -306f;
+
     private void Start()
     {
         _interactMessenger.OnInteractPressed.RemoveListener(OnInteractPressed);
@@ -43,13 +45,22 @@ public class HauntedLevelUI : ContextualUI
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         base.EraseAllMessages();
-        if (scene.name == "FinalCutscene")
+        
+        if (scene.name == "Credits" || scene.name == "Bootstrap")
+        {
+            Destroy(this.gameObject);
+        }
+        /*if (scene.name == "FinalCutscene")
         {
             var rt = _subtitlesText.GetComponent<RectTransform>();
             var anchoredPos = rt.anchoredPosition;
-            anchoredPos.y = -306;
+            anchoredPos.y = _heightInCutscene;
             rt.anchoredPosition = anchoredPos;
         }
+        else if (scene.name == "Credits" || scene.name == "Bootstrap")
+        {
+            Destroy(this.gameObject);
+        }*/
     }
 
     private void OnInteractPressed(string content)

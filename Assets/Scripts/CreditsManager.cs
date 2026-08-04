@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 
 public class CreditsManager : MonoBehaviour
@@ -9,19 +10,27 @@ public class CreditsManager : MonoBehaviour
     [SerializeField] private RectTransform _finalMessage;
     [SerializeField] private GameObject _replayMessage;
 
-    [SerializeField] private float _finalHeight;
+    //[SerializeField] private float _finalHeight;
+    [SerializeField] private float _timeStop;
+
+    private void Start()
+    {
+        StartCoroutine(AllowReplay());
+    }
 
     private void Update()
     {
-        if (_finalMessage.position.y >= _finalHeight)
-        {
-            _replayMessage.SetActive(true);
-            enabled = false;
-        }
-        
         foreach (var t in _transforms)
         {
             t.Translate(Vector3.up * _speed * Time.deltaTime, Space.World);
         }
+    }
+
+    IEnumerator AllowReplay()
+    {
+        yield return new WaitForSeconds(_timeStop);
+        
+        _replayMessage.SetActive(true);
+        enabled = false;
     }
 }
