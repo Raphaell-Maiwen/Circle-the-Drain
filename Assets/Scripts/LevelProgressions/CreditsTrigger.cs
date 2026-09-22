@@ -24,8 +24,7 @@ public class CreditsTrigger : MonoBehaviour
         yield return new WaitForSeconds(2f);
         
         while(_videoPlayer.isPlaying) yield return null;
-
-        Destroy(GameObject.Find("ProgressMessagesHaunted"));
+        
         SceneManager.LoadScene(_creditsScene);
     }
 }

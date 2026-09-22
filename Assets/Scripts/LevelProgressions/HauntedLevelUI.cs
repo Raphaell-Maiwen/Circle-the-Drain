@@ -25,7 +25,6 @@ public class HauntedLevelUI : ContextualUI
         _interactMessenger.OnInteractPressed.AddListener(OnInteractPressed);
         _progress.OnBookRead += UpdateReadingBooksMessage;
         
-        DontDestroyOnLoad(this.gameObject);
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
@@ -50,17 +49,6 @@ public class HauntedLevelUI : ContextualUI
         {
             Destroy(this.gameObject);
         }
-        /*if (scene.name == "FinalCutscene")
-        {
-            var rt = _subtitlesText.GetComponent<RectTransform>();
-            var anchoredPos = rt.anchoredPosition;
-            anchoredPos.y = _heightInCutscene;
-            rt.anchoredPosition = anchoredPos;
-        }
-        else if (scene.name == "Credits" || scene.name == "Bootstrap")
-        {
-            Destroy(this.gameObject);
-        }*/
     }
 
     private void OnInteractPressed(string content)
