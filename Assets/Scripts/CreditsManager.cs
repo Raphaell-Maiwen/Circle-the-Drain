@@ -9,8 +9,7 @@ public class CreditsManager : MonoBehaviour
 
     [SerializeField] private RectTransform _finalMessage;
     [SerializeField] private GameObject _replayMessage;
-
-    //[SerializeField] private float _finalHeight;
+    
     [SerializeField] private float _timeStop;
 
     private void Start()
