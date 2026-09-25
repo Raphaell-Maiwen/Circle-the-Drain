@@ -63,6 +63,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 36338854d010c444995d6d155fd342f6,
+        type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 36338854d010c444995d6d155fd342f6,
+        type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ad0974441f0ed61458db1b71f87d29be, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 36338854d010c444995d6d155fd342f6,
+        type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: f803b207ea218a7499c97b1a6c21ab3a, type: 2}
     - target: {fileID: 919132149155446097, guid: 36338854d010c444995d6d155fd342f6,
         type: 3}
       propertyPath: m_Name
@@ -382,3 +397,6 @@ MonoBehaviour:
   _dialogueWindow: {fileID: 4713866616453822635}
   _dialogue: {fileID: 1353114328863180458}
   _text: {fileID: 0}
+  _gummyCamera: {fileID: 0}
+  _blendSpeed: 0
+  _inDialogueChannel: {fileID: 0}

@@ -107,6 +107,22 @@ public class AudioManager : MonoBehaviour
         newFilter.depth = 1f;
     }
 
+    public void AddLowPassFilter(float cutoffFrequency)
+    {
+        AudioLowPassFilter newFilter = gameObject.AddComponent<AudioLowPassFilter>();
+        newFilter.cutoffFrequency = cutoffFrequency;
+    }
+
+    public void RemoveLowPassFilter()
+    {
+        gameObject.TryGetComponent<AudioLowPassFilter>(out AudioLowPassFilter lowPassFilter);
+
+        if (lowPassFilter)
+        {
+            DestroyImmediate(lowPassFilter);
+        }
+    }
+
     public void AddReverbFilter(AudioReverbPreset preset)
     {
         AudioReverbFilter newFilter = gameObject.AddComponent<AudioReverbFilter>();
