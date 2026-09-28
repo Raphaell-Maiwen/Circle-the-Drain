@@ -1617,6 +1617,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 140941417}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &141408084 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6382189603179772731, guid: b89466388898691498051bdd140fab2a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1981816797}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &142611857
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30844,8 +30850,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 8910238893954217439, guid: b89466388898691498051bdd140fab2a,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2067296340}
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6382189603179772731, guid: b89466388898691498051bdd140fab2a,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1981816799}
   m_SourcePrefab: {fileID: 100100000, guid: b89466388898691498051bdd140fab2a, type: 3}
 --- !u!4 &1981816798 stripped
 Transform:
@@ -30853,6 +30867,27 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1981816797}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1981816799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 141408084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1eb7778cce20cb4d91f3357e5f3b390, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AccelerateDonuts
+  _readyToCollect: 0
+  _acceleration: 4
+  _rotateDonuts:
+  - {fileID: 1726124180}
+  - {fileID: 1378815452}
+  - {fileID: 2120998172}
+  _camera: {fileID: 0}
+  _watchTime: 3
+  _blendSpeed: 1
 --- !u!1001 &1988778207
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31993,6 +32028,81 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2063059517}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2067296339
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2067296340}
+  - component: {fileID: 2067296341}
+  m_Layer: 0
+  m_Name: CinemachineCamera
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2067296340
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2067296339}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.11027073, y: 0.52557385, z: 0.072672606, w: 0.84043515}
+  m_LocalPosition: {x: -122.00611, y: 0.05923876, z: 69.72311}
+  m_LocalScale: {x: 2.6164846, y: 0.4993168, z: 2.3784292}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1981816798}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2067296341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2067296339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9dfa5b682dcd46bda6128250e975f58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineCamera
+  Priority:
+    Enabled: 1
+    m_Value: 0
+  OutputChannel: 1
+  StandbyUpdate: 2
+  m_StreamingVersion: 20241001
+  m_LegacyPriority: 0
+  Target:
+    TrackingTarget: {fileID: 0}
+    LookAtTarget: {fileID: 0}
+    CustomLookAtTarget: 0
+  Lens:
+    FieldOfView: 60.000004
+    OrthographicSize: 5
+    NearClipPlane: 0.3
+    FarClipPlane: 1000
+    Dutch: 0
+    ModeOverride: 0
+    PhysicalProperties:
+      GateFit: 1
+      SensorSize: {x: 36, y: 24}
+      LensShift: {x: 0, y: 0}
+      FocusDistance: 10
+      Iso: 200
+      ShutterSpeed: 0.005
+      Aperture: 16
+      BladeCount: 5
+      Curvature: {x: 2, y: 11}
+      BarrelClipping: 0.25
+      Anamorphism: 0
+  BlendHint: 0
 --- !u!4 &2070825354 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8769946999152684317, guid: cf609a4e6ef141e4f88f0f3e609d3ac2,

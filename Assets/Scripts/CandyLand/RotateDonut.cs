@@ -8,4 +8,9 @@ public class RotateDonut : MonoBehaviour
     {
         transform.Rotate(Vector3.up * _rotationSpeed * Time.deltaTime);
     }
+
+    public void Accelerate(float acceleration)
+    {
+        _rotationSpeed *= acceleration;
+    }
 }
