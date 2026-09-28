@@ -5,9 +5,9 @@ using UnityEngine;
 
 public class AccelerateDonuts : Rocket
 {
-    //Particles too!
     [SerializeField] private AnimationCurve _acceleration;
     [SerializeField] private RotateDonut[] _rotateDonuts;
+    [SerializeField] private MeshRenderer _renderer;
     
     [SerializeField] private CinemachineCamera _camera;
     [SerializeField] private float _blendSpeed = 1f;
@@ -16,7 +16,8 @@ public class AccelerateDonuts : Rocket
     {
         CamerasManager.SwitchActiveCamera(_camera, _blendSpeed);
         CharacterInputHandler.Instance.PlayerInput.SwitchCurrentActionMap("Cutscene");
-
+        _renderer.enabled = false;
+        
         StartCoroutine(ApplyEffect());
     }
 
