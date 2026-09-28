@@ -6,11 +6,10 @@ using UnityEngine;
 public class AccelerateDonuts : Rocket
 {
     //Particles too!
-    [SerializeField] private float _acceleration;
+    [SerializeField] private AnimationCurve _acceleration;
     [SerializeField] private RotateDonut[] _rotateDonuts;
     
     [SerializeField] private CinemachineCamera _camera;
-    [SerializeField] private float _watchTime = 3f;
     [SerializeField] private float _blendSpeed = 1f;
 
     public void Accelerate()
@@ -24,18 +23,32 @@ public class AccelerateDonuts : Rocket
     IEnumerator ApplyEffect()
     {
         yield return new WaitForSeconds(_blendSpeed);
-        
+
+        float _timePassed = 0f;
+
+        while (_timePassed < _acceleration.keys[^1].time)
+        {
+            foreach (var rotateDonut in _rotateDonuts)
+            {
+                rotateDonut.Accelerate(_acceleration.Evaluate(_timePassed));
+            }
+            
+            _timePassed += Time.deltaTime;
+            yield return null;
+        }
+
         foreach (var rotateDonut in _rotateDonuts)
         {
-            rotateDonut.Accelerate(_acceleration);
+            rotateDonut.Accelerate(_acceleration.Evaluate(_acceleration.keys[^1].time));
         }
+
+        yield return null;
         
         StartCoroutine(StopWatching());
     }
     
     IEnumerator StopWatching()
     {
-        yield return new WaitForSeconds(_watchTime);
         CharacterInputHandler.Instance.PlayerInput.SwitchCurrentActionMap("Player");
         CamerasManager.SwitchActiveCamera(CamerasManager.MainCamera, _blendSpeed);
         

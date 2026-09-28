@@ -30778,6 +30778,36 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1603756370}
     m_Modifications:
+    - target: {fileID: 5906183314595851520, guid: b89466388898691498051bdd140fab2a,
+        type: 3}
+      propertyPath: _rocket
+      value: 
+      objectReference: {fileID: 1981816799}
+    - target: {fileID: 5906183314595851520, guid: b89466388898691498051bdd140fab2a,
+        type: 3}
+      propertyPath: _onCollectedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5906183314595851520, guid: b89466388898691498051bdd140fab2a,
+        type: 3}
+      propertyPath: _onCollectedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1981816799}
+    - target: {fileID: 5906183314595851520, guid: b89466388898691498051bdd140fab2a,
+        type: 3}
+      propertyPath: _onCollectedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Accelerate
+      objectReference: {fileID: 0}
+    - target: {fileID: 5906183314595851520, guid: b89466388898691498051bdd140fab2a,
+        type: 3}
+      propertyPath: _onCollectedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AccelerateDonuts, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5906183314595851520, guid: b89466388898691498051bdd140fab2a,
+        type: 3}
+      propertyPath: _onCollectedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 6382189603179772731, guid: b89466388898691498051bdd140fab2a,
         type: 3}
       propertyPath: m_Name
@@ -30880,12 +30910,35 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AccelerateDonuts
   _readyToCollect: 0
-  _acceleration: 4
+  _acceleration:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 3
+      value: 4
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   _rotateDonuts:
   - {fileID: 1726124180}
   - {fileID: 1378815452}
   - {fileID: 2120998172}
-  _camera: {fileID: 0}
+  _camera: {fileID: 2067296341}
   _watchTime: 3
   _blendSpeed: 1
 --- !u!1001 &1988778207

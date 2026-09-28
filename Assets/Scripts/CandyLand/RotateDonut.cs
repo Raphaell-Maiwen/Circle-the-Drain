@@ -1,8 +1,15 @@
+using System;
 using UnityEngine;
 
 public class RotateDonut : MonoBehaviour
 {
     [SerializeField] private float _rotationSpeed;
+    private float _originalSpeed;
+
+    private void Start()
+    {
+        _originalSpeed = _rotationSpeed;
+    }
 
     private void Update()
     {
@@ -11,6 +18,6 @@ public class RotateDonut : MonoBehaviour
 
     public void Accelerate(float acceleration)
     {
-        _rotationSpeed *= acceleration;
+        _rotationSpeed = _originalSpeed * acceleration;
     }
 }
