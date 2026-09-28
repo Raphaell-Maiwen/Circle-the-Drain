@@ -7636,8 +7636,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46b161aa1718d3c4091ba7b402ec64b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Trippy
+  _volumeDefaultValues: {fileID: 11400000, guid: 9ed2952d9aa84604ba904edc5a68a020,
+    type: 2}
   _tripDuration: 20
-  _tripBloomIntensity: 5
+  _tripBloomIntensity: 1.5
   _chromaticAberrationIntensity: 1
   _volume: {fileID: 104795648}
 --- !u!1001 &472925891
@@ -9451,6 +9453,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7ffffb2d38530e45b01dfcdc4ace7a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DarkWorld
+  _volumeDefaultValues: {fileID: 0}
   _light: {fileID: 157207113}
   _volume: {fileID: 104795648}
   _bloomIntensity: 149
@@ -31300,6 +31303,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46b161aa1718d3c4091ba7b402ec64b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Trippy
+  _volumeDefaultValues: {fileID: 11400000, guid: 9ed2952d9aa84604ba904edc5a68a020,
+    type: 2}
   _tripDuration: 2
   _tripBloomIntensity: 5
   _chromaticAberrationIntensity: 1
