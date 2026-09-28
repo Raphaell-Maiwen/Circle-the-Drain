@@ -34,6 +34,9 @@ public class CandyLevelUI : ContextualUI
         _progress.OnRocketCollected -= UpdateCollectingRocketMessage;
         base._disableExtraUI.RemoveListener(DisableTeleportUI);
         base._restoreState.RemoveListener(RestoreState);
+        
+        _dialogEventChannel.OnStartDialog -= ShowContinueDialogMessage;
+        _dialogEventChannel.OnEndDialog -= HideContinueDialogMessage;
     }
 
     private void ShowContinueDialogMessage()
