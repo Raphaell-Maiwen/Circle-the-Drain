@@ -4,7 +4,7 @@ using UnityEngine.Rendering;
 using UnityEngine.Rendering.PostProcessing;
 using Bloom = UnityEngine.Rendering.Universal.Bloom;
 
-public class DarkWorld : MonoBehaviour
+public class DarkWorld : Rocket
 {
     [SerializeField] private VolumeDefaultValues _volumeDefaultValues;
     

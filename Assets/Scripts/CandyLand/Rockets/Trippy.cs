@@ -5,7 +5,7 @@ using UnityEngine.Rendering.PostProcessing;
 using Bloom = UnityEngine.Rendering.Universal.Bloom;
 using ChromaticAberration = UnityEngine.Rendering.Universal.ChromaticAberration;
 
-public class Trippy : MonoBehaviour
+public class Trippy : Rocket
 {
     [SerializeField] private VolumeDefaultValues _volumeDefaultValues;
     

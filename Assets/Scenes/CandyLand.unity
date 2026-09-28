@@ -1632,6 +1632,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5906183314595851520, guid: b89466388898691498051bdd140fab2a,
         type: 3}
+      propertyPath: _rocket
+      value: 
+      objectReference: {fileID: 379539549}
+    - target: {fileID: 5906183314595851520, guid: b89466388898691498051bdd140fab2a,
+        type: 3}
       propertyPath: _audioManager
       value: 
       objectReference: {fileID: 0}
@@ -5787,6 +5792,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f08fca938039c849ae5721532dd3936, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LaunchHotBalloons
+  _readyToCollect: 0
   _balloons:
   - {fileID: 1532744078}
   - {fileID: 2024747598}
@@ -5801,12 +5807,19 @@ MonoBehaviour:
   - {fileID: 722749785}
   - {fileID: 462211213}
   _camera: {fileID: 1961086438}
+  _renderer: {fileID: 941204742}
   _watchTime: 3
   _blendSpeed: 1
   minUpwardForce: 8
   maxUpwardForce: 14
   horizontalSpread: 3
   maxTorque: 2
+--- !u!1 &389716354 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6382189603179772731, guid: b89466388898691498051bdd140fab2a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1101875368}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &391692517
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7515,6 +7528,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5906183314595851520, guid: b89466388898691498051bdd140fab2a,
         type: 3}
+      propertyPath: _rocket
+      value: 
+      objectReference: {fileID: 472842598}
+    - target: {fileID: 5906183314595851520, guid: b89466388898691498051bdd140fab2a,
+        type: 3}
       propertyPath: _onCollectedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 1
       objectReference: {fileID: 0}
@@ -7636,6 +7654,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46b161aa1718d3c4091ba7b402ec64b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Trippy
+  _readyToCollect: 1
   _volumeDefaultValues: {fileID: 11400000, guid: 9ed2952d9aa84604ba904edc5a68a020,
     type: 2}
   _tripDuration: 20
@@ -9327,6 +9346,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5906183314595851520, guid: b89466388898691498051bdd140fab2a,
         type: 3}
+      propertyPath: _rocket
+      value: 
+      objectReference: {fileID: 586005257}
+    - target: {fileID: 5906183314595851520, guid: b89466388898691498051bdd140fab2a,
+        type: 3}
       propertyPath: _audioManager
       value: 
       objectReference: {fileID: 0}
@@ -9453,7 +9477,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7ffffb2d38530e45b01dfcdc4ace7a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DarkWorld
-  _volumeDefaultValues: {fileID: 0}
+  _readyToCollect: 1
+  _volumeDefaultValues: {fileID: 11400000, guid: 9ed2952d9aa84604ba904edc5a68a020,
+    type: 2}
   _light: {fileID: 157207113}
   _volume: {fileID: 104795648}
   _bloomIntensity: 149
@@ -14751,6 +14777,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 934247183}
   m_PrefabAsset: {fileID: 0}
+--- !u!23 &941204742 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 6554919709344894810, guid: b89466388898691498051bdd140fab2a,
+    type: 3}
+  m_PrefabInstance: {fileID: 142611857}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &943451350
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17606,6 +17638,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5906183314595851520, guid: b89466388898691498051bdd140fab2a,
         type: 3}
+      propertyPath: _rocket
+      value: 
+      objectReference: {fileID: 1101875370}
+    - target: {fileID: 5906183314595851520, guid: b89466388898691498051bdd140fab2a,
+        type: 3}
       propertyPath: _audioManager
       value: 
       objectReference: {fileID: 0}
@@ -17677,7 +17714,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6382189603179772731, guid: b89466388898691498051bdd140fab2a,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1101875370}
   m_SourcePrefab: {fileID: 100100000, guid: b89466388898691498051bdd140fab2a, type: 3}
 --- !u!4 &1101875369 stripped
 Transform:
@@ -17685,6 +17726,27 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1101875368}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1101875370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 389716354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7ffffb2d38530e45b01dfcdc4ace7a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DarkWorld
+  _readyToCollect: 1
+  _volumeDefaultValues: {fileID: 11400000, guid: 9ed2952d9aa84604ba904edc5a68a020,
+    type: 2}
+  _light: {fileID: 157207113}
+  _volume: {fileID: 104795648}
+  _bloomIntensity: 149
+  _bloomScatter: 0
+  _lowPassCutoffFrequency: 900
+  _darkWorldDuration: 12
 --- !u!1001 &1114320941
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26763,6 +26825,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5906183314595851520, guid: b89466388898691498051bdd140fab2a,
         type: 3}
+      propertyPath: _rocket
+      value: 
+      objectReference: {fileID: 1713808246}
+    - target: {fileID: 5906183314595851520, guid: b89466388898691498051bdd140fab2a,
+        type: 3}
       propertyPath: _onCollectedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 1
       objectReference: {fileID: 0}
@@ -26883,6 +26950,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7eaf889c6d6af49449fbc1f6eb283f89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayCanadianBoys
+  _readyToCollect: 1
   _canadianBoysSong: CanadianBoys
   _candyLevelProgress: {fileID: 11400000, guid: 94a659f7522d762458bab7479e8deab2,
     type: 2}
@@ -31177,6 +31245,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5906183314595851520, guid: b89466388898691498051bdd140fab2a,
         type: 3}
+      propertyPath: _rocket
+      value: 
+      objectReference: {fileID: 2026614318}
+    - target: {fileID: 5906183314595851520, guid: b89466388898691498051bdd140fab2a,
+        type: 3}
       propertyPath: _audioManager
       value: 
       objectReference: {fileID: 0}
@@ -31189,7 +31262,7 @@ PrefabInstance:
         type: 3}
       propertyPath: _onCollectedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 2026614318}
+      objectReference: {fileID: 0}
     - target: {fileID: 5906183314595851520, guid: b89466388898691498051bdd140fab2a,
         type: 3}
       propertyPath: _onCollectedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -31300,15 +31373,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 2026614317}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46b161aa1718d3c4091ba7b402ec64b8, type: 3}
+  m_Script: {fileID: 11500000, guid: f7ffffb2d38530e45b01dfcdc4ace7a9, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Trippy
+  m_EditorClassIdentifier: Assembly-CSharp::DarkWorld
+  _readyToCollect: 1
   _volumeDefaultValues: {fileID: 11400000, guid: 9ed2952d9aa84604ba904edc5a68a020,
     type: 2}
-  _tripDuration: 2
-  _tripBloomIntensity: 5
-  _chromaticAberrationIntensity: 1
+  _light: {fileID: 157207113}
   _volume: {fileID: 104795648}
+  _bloomIntensity: 149
+  _bloomScatter: 0
+  _lowPassCutoffFrequency: 900
+  _darkWorldDuration: 12
 --- !u!4 &2031385893 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7359676715867858841, guid: 07d103824c18fe54286abed6bc56cb8e,

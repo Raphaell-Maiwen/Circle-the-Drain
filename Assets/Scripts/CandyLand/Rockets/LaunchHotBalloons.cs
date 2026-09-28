@@ -2,10 +2,11 @@ using System.Collections;
 using Unity.Cinemachine;
 using UnityEngine;
 
-public class LaunchHotBalloons : MonoBehaviour
+public class LaunchHotBalloons : Rocket
 {
     [SerializeField] private Rigidbody[] _balloons;
     [SerializeField] private CinemachineCamera _camera;
+    [SerializeField] private MeshRenderer _renderer;
     [SerializeField] private float _watchTime = 3f;
     [SerializeField] private float _blendSpeed = 1f;
     
@@ -18,6 +19,7 @@ public class LaunchHotBalloons : MonoBehaviour
     {
         CamerasManager.SwitchActiveCamera(_camera, _blendSpeed);
         CharacterInputHandler.Instance.PlayerInput.SwitchCurrentActionMap("Cutscene");
+        _renderer.enabled = false;
         StartCoroutine(ApplyForce());
     }
 
@@ -43,5 +45,8 @@ public class LaunchHotBalloons : MonoBehaviour
         yield return new WaitForSeconds(_watchTime);
         CharacterInputHandler.Instance.PlayerInput.SwitchCurrentActionMap("Player");
         CamerasManager.SwitchActiveCamera(CamerasManager.MainCamera, _blendSpeed);
+        
+        yield return new WaitForSeconds(_blendSpeed);
+        _readyToCollect = true;
     }
 }

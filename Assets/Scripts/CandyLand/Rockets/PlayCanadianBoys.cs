@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class PlayCanadianBoys : MonoBehaviour
+public class PlayCanadianBoys : Rocket
 {
     [SerializeField] private string _canadianBoysSong;
     [SerializeField] private CandyLevelProgress _candyLevelProgress;
