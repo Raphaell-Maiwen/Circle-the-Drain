@@ -6,6 +6,8 @@ public class InteractableTriggerZoneEventChannel : ScriptableObject
 {
     public string DefaultMessage;
     public Func<string> GetMessage;
+    
+    public bool IsBusy { get; private set; }
 
     public bool IsTriggered { get; private set; }
     public event Action<InteractableTriggerZoneEventChannel> OnPlayerEntered;
@@ -13,6 +15,20 @@ public class InteractableTriggerZoneEventChannel : ScriptableObject
 
     public event Action<InteractableTriggerZoneEventChannel> OnUpdatedMessage;
 
+
+    private void OnEnable()
+    {
+        IsBusy = false;
+        IsTriggered = false;
+        GetMessage = null;
+    }
+
+    public void SetBusy(bool busy)
+    {
+        IsBusy = busy;
+        UpdateMessage();
+    }
+    
     public void PlayerEnter()
     {
         IsTriggered = true;
@@ -24,11 +40,8 @@ public class InteractableTriggerZoneEventChannel : ScriptableObject
         IsTriggered = false;
         OnPlayerExited?.Invoke();
     }
-
-    public void UpdateMessage()
-    {
-        OnUpdatedMessage?.Invoke(this);
-    }
+    
+    public void UpdateMessage() => OnUpdatedMessage?.Invoke(this);
 
     public string ResolveMessage() => GetMessage != null ? GetMessage() : DefaultMessage;
 }

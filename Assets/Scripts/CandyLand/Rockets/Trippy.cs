@@ -15,6 +15,8 @@ public class Trippy : Rocket
     [SerializeField] private Volume _volume;
     private Bloom bloom;
     private ChromaticAberration _chromaticAberration;
+    
+    private Coroutine _coroutine;
 
     public void StartTrip()
     {
@@ -24,7 +26,10 @@ public class Trippy : Rocket
         
         bloom.intensity.value = _tripBloomIntensity;
         _chromaticAberration.intensity.value = _chromaticAberrationIntensity;
-        StartCoroutine(EndTrip());
+
+        _coroutine = StartCoroutine(EndTrip());
+        
+        _volumeDefaultValues.AddCoroutine(_coroutine);
     }
 
     IEnumerator EndTrip()
@@ -36,5 +41,7 @@ public class Trippy : Rocket
         
         bloom.intensity.value = _volumeDefaultValues.BloomIntensity;
         _chromaticAberration.intensity.value = _volumeDefaultValues.ChromaticAberrationIntensity;
+        
+        _volumeDefaultValues.RemoveCoroutine(_coroutine);
     }
 }

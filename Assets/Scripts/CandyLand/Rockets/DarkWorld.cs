@@ -18,6 +18,8 @@ public class DarkWorld : Rocket
 
     [SerializeField] private float _darkWorldDuration;
 
+    private Coroutine _coroutine;
+
     public void GetInDarkWorld()
     {
         _light.enabled = false;
@@ -28,7 +30,8 @@ public class DarkWorld : Rocket
         
         AudioManager.Instance.AddLowPassFilter(_lowPassCutoffFrequency);
 
-        StartCoroutine(LeaveDarkWorld());
+        _coroutine = StartCoroutine(LeaveDarkWorld());
+        _volumeDefaultValues.AddCoroutine(_coroutine);
     }
 
     IEnumerator LeaveDarkWorld()
@@ -41,5 +44,7 @@ public class DarkWorld : Rocket
         RenderSettings.ambientMode = AmbientMode.Flat;
         
         AudioManager.Instance.RemoveLowPassFilter();
+        
+        _volumeDefaultValues.RemoveCoroutine(_coroutine);
     }
 }

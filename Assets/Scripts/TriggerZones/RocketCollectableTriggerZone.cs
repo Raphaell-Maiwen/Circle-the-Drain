@@ -24,9 +24,11 @@ public class RocketCollectableTriggerZone : InteractableTriggerZone
             _root = parent.gameObject;
         }
         
-        _zoneChannel.GetMessage = () => _collecting
-            ? ""
-            : _zoneChannel.DefaultMessage;
+        if (_zoneChannel.GetMessage == null)
+        {
+            var channel = _zoneChannel;
+            channel.GetMessage = () => channel.IsBusy ? " " : channel.DefaultMessage;
+        }
     }
 
     protected override void OnInteractPressed(string str)
@@ -42,7 +44,7 @@ public class RocketCollectableTriggerZone : InteractableTriggerZone
     private IEnumerator CollectRocketRoutine()
     {
         _collecting = true;
-        _zoneChannel.UpdateMessage();
+        _zoneChannel.SetBusy(true); 
         
         yield return null;
 
@@ -52,8 +54,14 @@ public class RocketCollectableTriggerZone : InteractableTriggerZone
         }
 
         _progress.Add();
+        _zoneChannel.SetBusy(false);
         OnPlayerExit();
         
         Destroy(_root);
+    }
+    
+    private void OnDestroy()
+    {
+        if (_collecting && _zoneChannel.IsBusy) _zoneChannel.SetBusy(false);
     }
 }

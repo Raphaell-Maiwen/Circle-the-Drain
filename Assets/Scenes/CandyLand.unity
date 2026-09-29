@@ -19920,6 +19920,9 @@ MonoBehaviour:
   _objectsToActivate:
   - {fileID: 399966335}
   - {fileID: 2025313881}
+  _volume: {fileID: 104795648}
+  _volumeDefaultValues: {fileID: 11400000, guid: 9ed2952d9aa84604ba904edc5a68a020,
+    type: 2}
 --- !u!23 &1219300124 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 1109867424022713440, guid: 63a0968ce3fea374ea4ffa24e39297a9,
